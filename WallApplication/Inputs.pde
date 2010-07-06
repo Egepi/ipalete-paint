@@ -29,13 +29,6 @@ void getInput()
   }
   else
   {
-      inputStorage[0][0] = inputStorage[1][0];
-      inputStorage[0][1] = inputStorage[1][1];
-      inputStorage[1][0] = inputStorage[2][0];
-      inputStorage[1][1] = inputStorage[2][1];
-      inputStorage[2][0] = inputStorage[3][0];
-      inputStorage[2][1] = inputStorage[3][1];
-      inputStorage[3][0] = mouseX;
-      inputStorage[3][1] = mouseY;  
+    
   }
 }

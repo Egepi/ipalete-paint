@@ -20,7 +20,7 @@ void setup()
 } 
  
 void draw() { 
-  debugCode();
+  //  debugCode();
   drawStuff();
 }
 

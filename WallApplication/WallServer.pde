@@ -16,23 +16,6 @@ BufferedReader inFromClient;
 String dataFromClient;
 int port = 13337;
 
-
-void startWallServer()
-{
-    //try-catch block for starting the server on WALL.
-  try
-   {
-       myServer = new ServerSocket(port);
-       mySocket = myServer.accept();
-       System.out.println( " THE CLIENT"+" "+ mySocket.getInetAddress() +":"+mySocket.getPort()+" IS CONNECTED ");
-       connectionEstablished = true;
-   }
-  catch(Exception e)
-   {
-       println("Server connection had an error!!!");
-   }
-}
-
 void CheckClients()
 {
   if(connectionEstablished)
@@ -50,7 +33,7 @@ void CheckClients()
             System.out.println("Received: " + dataFromClient);
             dataFromClient = null;
 
-            //ipadColor = color( r, g, b, a );
+            //paintColor = color( r, g, b, a );
           }
         }
        }

@@ -9,6 +9,8 @@ import tacTile.net.*;
 boolean connectToTacTile = false;
 boolean connectToiPad = false;
 int[][] inputStorage = new int[4][2];
+int myWidth = screen.width;
+int myHeight = screen.height;
 
 void setup() 
 {
@@ -21,6 +23,7 @@ void setup()
  
 void draw() { 
   //  debugCode();
+  CheckClients();
   drawStuff();
 }
 

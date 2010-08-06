@@ -11,12 +11,14 @@ int msgPort = 7340;
 
 void startTactile() {
    if ( connectToTacTile){
-      size(screen.width, screen.height, OPENGL);
+     myWidth = 1360 * 6;
+     myHeight = 768 *3;
+      size(myWidth, myHeight, OPENGL);
       //Create connection to Touch Server
       tacTile = new TouchAPI( this, dataPort, msgPort, tacTileMachine);
 
   } else {    
-      size(screen.width, screen.height);
+      size(myWidth, myHeight);
       tacTile = new TouchAPI( this, dataPort, msgPort, localMachine);
   }
 }

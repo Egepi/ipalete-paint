@@ -13,7 +13,7 @@ boolean connectionEstablished = false;
 ServerSocket myServer;
 Socket mySocket;
 BufferedReader inFromClient;
-String fromclient;
+String dataFromClient;
 int port = 13337;
 
 
@@ -41,11 +41,18 @@ void CheckClients()
        try
        {
          inFromClient = new BufferedReader(new InputStreamReader(mySocket.getInputStream()));
-         fromclient = inFromClient.readLine();
-         if(fromclient != null)
-         {
-           System.out.println( "RECIEVED:" + fromclient );
-         }
+        if(inFromClient.ready() == true)
+        {
+          dataFromClient = inFromClient.readLine();
+
+          if(dataFromClient != null)
+          {
+            System.out.println("Received: " + dataFromClient);
+            dataFromClient = null;
+
+            //ipadColor = color( r, g, b, a );
+          }
+        }
        }
        catch(Exception e)
        {

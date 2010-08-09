@@ -25,8 +25,23 @@ void drawStuff()
   }
   else
   {
+    connectionStatus();
     fill( paintColor );
     stroke( paintColor );
     ellipse( mouseX, mouseY, 10, 10);
   }
+}
+
+void connectionStatus()
+{
+  if(connectionEstablished)
+  {
+    fill(0,255,255);
+    text("Connection Established", width - 200, height - 100);
+  } 
+  else
+  {
+    fill(0,255,255);
+    text("Connection Waiting", width - 200, height - 100);
+  } 
 }

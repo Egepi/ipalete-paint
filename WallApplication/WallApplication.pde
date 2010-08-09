@@ -38,7 +38,7 @@ void draw() {
   debugCode();
   if (connectToiPad)
   {
-    CheckClients();
+    readData();
   }
   drawStuff();
 }
@@ -54,5 +54,9 @@ void keyPressed()
     {
     }
     exit();
+  }
+  else if(key == 'c' || key == 'C')
+  {
+    background(0);
   }
 }

@@ -43,10 +43,6 @@ void CheckClients()
        }
      
   }
-  else
-  {
-    connectClient();
-  }
 }
 
 void connectClient()

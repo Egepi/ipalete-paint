@@ -22,10 +22,25 @@ void readData()
       {
         dataFromClient = inFromClient.readLine();
         if(dataFromClient != null)
-        {
-          System.out.println("Received: " + dataFromClient);
+        {          
+          StringTokenizer data = new StringTokenizer(dataFromClient); 
+          int arrayLoc = -1;
+          while(data.hasMoreTokens()) 
+          {
+            String temp = data.nextToken();
+            int tempInt = parseInt(temp);
+            if(arrayLoc == -1)
+            {
+              tool = tempInt - 100;
+              arrayLoc++;
+            }
+            else
+            {
+              paintColors[arrayLoc] = tempInt - 100;
+              arrayLoc++;
+            }
+          }  
           dataFromClient = null;
-          //paintColor = color( r, g, b, a );
         }
       }
     }

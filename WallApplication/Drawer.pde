@@ -1,11 +1,14 @@
 int paintColor = 255;
+int paintColors[] = new int[4];
+int tool;
 color painterColor = color(0,0,0,1);
 void drawStuff()
 {
+  painterColor = color(paintColors[0], paintColors[1], paintColors[2], paintColors[3]);
   if(connectToTacTile)
   {
-    ArrayList touchList = tacTile.getManagedList();
-    if( !tacTile.managedListIsEmpty() )
+    ArrayList touchList = touchMachine.getManagedList();
+    if( !touchMachine.managedListIsEmpty() )
     {
       for(int i = 0; i < touchList.size(); i++)
       {
@@ -17,17 +20,15 @@ void drawStuff()
         float yWidth = curTouch.getYWidth() * height;
         
         //Draw touch
-        fill( paintColor );
-        stroke( paintColor );
-        ellipse( xCoord, yCoord, xWidth, yWidth );
+        fill(paintColors[0], paintColors[1], paintColors[2], paintColors[3]);
+        ellipse(xCoord, yCoord, xWidth, yWidth);
       }
     }
   }
   else
   {
     connectionStatus();
-    fill( paintColor );
-    stroke( paintColor );
+    fill(paintColors[0], paintColors[1], paintColors[2], paintColors[3]);
     ellipse( mouseX, mouseY, 10, 10);
   }
 }

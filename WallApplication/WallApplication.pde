@@ -17,13 +17,12 @@ Thread thread;
 void setup() 
 {
   // Create the object with the run() method
-  Runnable runnable = new BasicThread();
-    
+  Runnable runnable = new BasicThread();  
   // Create the thread supplying it with the runnable object
   thread = new Thread(runnable);
 
-  //readConfigFile("config.cfg");
-  startTactile();
+  readConfigFile("config.cfg");
+  startTouchConnection();
   background(0);  
 } 
  

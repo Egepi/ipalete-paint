@@ -1,4 +1,3 @@
-
 /**
  * Parses a config file for touch tracker information.
  * By Arthur Nishimoto
@@ -8,7 +7,7 @@
 void readConfigFile(String config_file){
   String[] rawConfig = loadStrings(config_file);
 
-  tacTileMachine = "localhost";
+  trackerMachine = "localhost";
   if( rawConfig == null ){
     println("No tracker information provided by config.cfg. Connecting to localhost.");
   }
@@ -24,7 +23,7 @@ void readConfigFile(String config_file){
           rawConfig[i] = rawConfig[i].substring( 0 , rawConfig[i].indexOf("//") );
 
       if( rawConfig[i].contains("TRACKER_MACHINE") ){
-        tacTileMachine = rawConfig[i].substring( rawConfig[i].indexOf("\"")+1, rawConfig[i].lastIndexOf("\"") );
+        trackerMachine = rawConfig[i].substring( rawConfig[i].indexOf("\"")+1, rawConfig[i].lastIndexOf("\"") );
         continue;
       }
       if( rawConfig[i].contains("DATA_PORT") ){
@@ -39,6 +38,6 @@ void readConfigFile(String config_file){
       }
 
     }// for
-    println("Connecting to Tracker: '"+tacTileMachine+"' Data port: "+dataPort+" Message port: "+msgPort+".");
+    println("Connecting to Tracker: '"+touchMachine+"' Data port: "+dataPort+" Message port: "+msgPort+".");
   }
 }// readConfigFile

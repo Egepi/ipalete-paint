@@ -10,7 +10,7 @@ boolean connectToTacTile = false;
 boolean connectToiPad = true;
 boolean firstTime = true;
 //Set false in linux to make it work.
-boolean threadOn = false;
+boolean threadOn = true;
 int myWidth = screen.width;
 int myHeight = screen.height;
 

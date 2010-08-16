@@ -9,6 +9,8 @@ import tacTile.net.*;
 boolean connectToTacTile = false;
 boolean connectToiPad = true;
 boolean firstTime = true;
+//Set false in linux to make it work.
+boolean threadOn = false;
 int myWidth = screen.width;
 int myHeight = screen.height;
 
@@ -16,11 +18,13 @@ Thread thread;
 
 void setup() 
 {
-  // Create the object with the run() method
-  Runnable runnable = new BasicThread();  
-  // Create the thread supplying it with the runnable object
-  thread = new Thread(runnable);
-
+  if(threadOn)
+  {
+    // Create the object with the run() method
+    Runnable runnable = new BasicThread();  
+    // Create the thread supplying it with the runnable object
+    thread = new Thread(runnable);
+  }
   readConfigFile("config.cfg");
   startTouchConnection();
   background(0);  
@@ -29,7 +33,7 @@ void setup()
 void draw() {
   
   // Start the thread
-  if(firstTime)
+  if(firstTime && threadOn)
   {
     thread.start();
     firstTime = false;

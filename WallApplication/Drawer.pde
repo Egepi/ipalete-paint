@@ -39,15 +39,7 @@ void drawStuff()
     if( !newUp.isEmpty() ){
       for(int i = 0; i < newUp.size(); i++){
         Touches curTouch = ((Touches) newUp.get(i));
-        float xCoord = curTouch.getXPos() * width;    
-        float yCoord = height - curTouch.getYPos() * height;
-        float xWidth = curTouch.getXWidth() * width;
-        float yWidth = curTouch.getYWidth() * height;
- 
-        //Draw touch
-        fill( paintColors[0], paintColors[1], paintColors[2], paintColors[3] );
-        stroke( paintColors[0], paintColors[1], paintColors[2], paintColors[3] );
-        ellipse( xCoord, yCoord, xWidth, yWidth );
+
       }
     }// if up
   }
@@ -59,6 +51,25 @@ void drawStuff()
   }
 }
 
+void drawTouches(Touch theTouch)
+{
+  float xCoord = curTouch.getXPos() * width;    
+  float yCoord = height - curTouch.getYPos() * height;
+  float xWidth = curTouch.getXWidth() * width;
+  float yWidth = curTouch.getYWidth() * height;
+ 
+  //Draw touch
+  fill( paintColors[0], paintColors[1], paintColors[2], paintColors[3]*0.6);
+  stroke( paintColors[0], paintColors[1], paintColors[2], 0);
+  ellipse( xCoord, yCoord, xWidth, yWidth );
+  fill( paintColors[0], paintColors[1], paintColors[2], paintColors[3]*1);
+  stroke( paintColors[0], paintColors[1], paintColors[2], 0);
+  ellipse( xCoord, yCoord, xWidth, yWidth );
+  fill( paintColors[0], paintColors[1], paintColors[2], paintColors[3]*0.8);
+  stroke( paintColors[0], paintColors[1], paintColors[2], 0);
+  ellipse( xCoord, yCoord, xWidth, yWidth );
+  
+}
 void connectionStatus()
 {
   if(connectionEstablished)

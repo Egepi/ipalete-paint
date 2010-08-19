@@ -10,7 +10,9 @@ boolean connectToTacTile = false;
 boolean connectToiPad = true;
 boolean firstTime = true;
 //Set false in linux to make it work.
-boolean threadOn = true;
+boolean threadOn = false;
+//debug text
+boolean DEBUG_MODE = false;
 int myWidth = screen.width;
 int myHeight = screen.height;
 
@@ -38,7 +40,10 @@ void draw() {
     thread.start();
     firstTime = false;
   }
-  debugCode();
+  if(DEBUG_MODE)
+  {
+    debugCode();
+  }
   if (connectToiPad)
   {
     readData();
@@ -61,5 +66,9 @@ void keyPressed()
   else if(key == 'c' || key == 'C')
   {
     background(0);
+  }
+  else if(key == 'd' || key == 'D')
+  {
+    DEBUG_MODE = !DEBUG_MODE;
   }
 }

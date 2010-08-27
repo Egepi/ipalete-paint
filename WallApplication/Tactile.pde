@@ -3,7 +3,7 @@
 TouchAPI touchMachine;
 //Names of machines you might use
 ArrayList touchList = new ArrayList();
-String trackerMachine = "131.193.77.211";
+String trackerMachine = "131.193.77.104";
 //Port for data transfer
 int dataPort = 7100;
 int msgPort = 7340;

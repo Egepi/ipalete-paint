@@ -35,16 +35,48 @@ void drawStuff()
 
 void drawTouches(float xCoordinate, float yCoordinate, float theXWidth, float theYWidth)
 {
-  //Draw touch
-  fill( paintColors[0]-5, paintColors[1]-5, paintColors[2]-5, paintColors[3]*0.6);
-  stroke( paintColors[0], paintColors[1], paintColors[2], 0);
-  ellipse( xCoordinate-5, yCoordinate-5, theXWidth, theYWidth);
-  fill( paintColors[0]+5, paintColors[1]+5, paintColors[2]+5, paintColors[3]*1);
+  //top left
+  
+  /*
+  for (int a = 1; a <= 40; a++)
+  {
+    fill( paintColors[0], paintColors[1], paintColors[2], paintColors[3]*(1-(0.025*a)));
+    stroke( paintColors[0], paintColors[1], paintColors[2], 0);
+    ellipse( xCoordinate, yCoordinate, theXWidth+(a*1), theYWidth+(a*1));
+  }
+  */
+  
+  
+    fill( paintColors[0], paintColors[1], paintColors[2], paintColors[3]);
+    stroke( paintColors[0], paintColors[1], paintColors[2], 0);
+    translate(xCoordinate, yCoordinate);
+    sphere(theXWidth);
+  
+ 
+  
+  /*
+  //Bottom right
+  fill( paintColors[0]+5, paintColors[1]+5, paintColors[2]+5, paintColors[3]*0.6);
   stroke( paintColors[0], paintColors[1], paintColors[2], 0);
   ellipse( xCoordinate+5, yCoordinate+5, theXWidth, theYWidth);
-  fill( paintColors[0], paintColors[1], paintColors[2], paintColors[3]*0.8);
+  */
+  
+  /*
+    //Actual touch
+  fill( paintColors[0]+5, paintColors[1]+5, paintColors[2]+5, paintColors[3]);
+  stroke( paintColors[0], paintColors[1], paintColors[2], 0);
+  ellipse( xCoordinate-5, yCoordinate-5, theXWidth, theYWidth);
+
+  //Actual touch
+  fill( paintColors[0]-5, paintColors[1]-5, paintColors[2]+5, paintColors[3]);
+  stroke( paintColors[0], paintColors[1], paintColors[2], 0);
+  ellipse( xCoordinate+5, yCoordinate+5, theXWidth, theYWidth);
+
+  //Actual touch
+  fill( paintColors[0], paintColors[1], paintColors[2], paintColors[3]);
   stroke( paintColors[0], paintColors[1], paintColors[2], 0);
   ellipse( xCoordinate, yCoordinate, theXWidth, theYWidth);
+*/
   
 }
 void connectionStatus()

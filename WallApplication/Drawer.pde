@@ -1,6 +1,8 @@
 int paintColor = 255;
 int paintColors[] = new int[4];
 int tool;
+float prevxCoordinate, prevyCoordinate, prevtheXWidth, prevtheYWidth;
+
 void drawStuff()
 {
   if(connectToTacTile)
@@ -35,48 +37,39 @@ void drawStuff()
 
 void drawTouches(float xCoordinate, float yCoordinate, float theXWidth, float theYWidth)
 {
-  //top left
-  
-  /*
-  for (int a = 1; a <= 40; a++)
+  if(tool == 1)
   {
-    fill( paintColors[0], paintColors[1], paintColors[2], paintColors[3]*(1-(0.025*a)));
-    stroke( paintColors[0], paintColors[1], paintColors[2], 0);
-    ellipse( xCoordinate, yCoordinate, theXWidth+(a*1), theYWidth+(a*1));
+    if(TOUCH_MODE.equals("ELLIPSE")) 
+    {
+      
+      for (int a = 1; a <= 40; a++)
+      {
+        fill( paintColors[0], paintColors[1], paintColors[2], paintColors[3]*(1-(0.025*a)));
+        stroke( paintColors[0], paintColors[1], paintColors[2], 0);
+        ellipse( xCoordinate, yCoordinate, theXWidth+(a*1), theYWidth+(a*1));
+      }
+      
+      //Actual touch
+      fill( paintColors[0], paintColors[1], paintColors[2], paintColors[3]);
+      stroke( paintColors[0], paintColors[1], paintColors[2], 0);
+      ellipse( xCoordinate, yCoordinate, theXWidth, theYWidth);
+    }
+    else if(TOUCH_MODE.equals("SPHERE"))
+    {
+      fill( paintColors[0], paintColors[1], paintColors[2], paintColors[3]);
+      stroke( paintColors[0], paintColors[1], paintColors[2], 0);
+      translate(xCoordinate, yCoordinate);
+      sphere(theXWidth);
+    }
   }
-  */
-  
-  
-    fill( paintColors[0], paintColors[1], paintColors[2], paintColors[3]);
-    stroke( paintColors[0], paintColors[1], paintColors[2], 0);
-    translate(xCoordinate, yCoordinate);
-    sphere(theXWidth);
-  
- 
-  
-  /*
-  //Bottom right
-  fill( paintColors[0]+5, paintColors[1]+5, paintColors[2]+5, paintColors[3]*0.6);
-  stroke( paintColors[0], paintColors[1], paintColors[2], 0);
-  ellipse( xCoordinate+5, yCoordinate+5, theXWidth, theYWidth);
-  */
-  
-  /*
-    //Actual touch
-  fill( paintColors[0]+5, paintColors[1]+5, paintColors[2]+5, paintColors[3]);
-  stroke( paintColors[0], paintColors[1], paintColors[2], 0);
-  ellipse( xCoordinate-5, yCoordinate-5, theXWidth, theYWidth);
-
-  //Actual touch
-  fill( paintColors[0]-5, paintColors[1]-5, paintColors[2]+5, paintColors[3]);
-  stroke( paintColors[0], paintColors[1], paintColors[2], 0);
-  ellipse( xCoordinate+5, yCoordinate+5, theXWidth, theYWidth);
-
-  //Actual touch
-  fill( paintColors[0], paintColors[1], paintColors[2], paintColors[3]);
-  stroke( paintColors[0], paintColors[1], paintColors[2], 0);
-  ellipse( xCoordinate, yCoordinate, theXWidth, theYWidth);
-*/
+  else
+  {
+    line(xCoordinate, yCoordinate, prevxCoordinate, prevyCoordinate);
+  }
+  prevxCoordinate = xCoordinate;
+  prevyCoordinate = yCoordinate;
+  prevtheXWidth = theXWidth;
+  prevtheYWidth = theYWidth;
   
 }
 void connectionStatus()

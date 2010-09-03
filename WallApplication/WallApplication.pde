@@ -6,13 +6,17 @@ import hypermedia.net.*;
 import tacTile.net.*;
 
 //Globals
-boolean connectToTacTile = true;
+boolean connectToTacTile = false;
 boolean connectToiPad = true;
 boolean firstTime = true;
 //Set false in linux to make it work.
 boolean threadOn = false;
 //debug text
 boolean DEBUG_MODE = false;
+
+String TOUCH_MODE = "ELLIPSE";
+//String TOUCH_MODE = "SPHERE";
+
 int myWidth = screen.width;
 int myHeight = screen.height;
 

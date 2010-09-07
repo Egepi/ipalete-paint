@@ -67,7 +67,7 @@ void connectClient()
      mySocket = myServer.accept();
      System.out.println( " THE CLIENT"+" "+ mySocket.getInetAddress() +":"+mySocket.getPort()+" IS CONNECTED ");
      connectionEstablished = true;
-     background(0);
+    
    }
   catch(Exception e)
    {

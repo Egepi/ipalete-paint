@@ -64,6 +64,8 @@ void drawTouches(float xCoordinate, float yCoordinate, float theXWidth, float th
   }
   else
   {
+    stroke(0);
+    //line(mouseX, mouseY, pmouseX, pmouseY);
     line(xCoordinate, yCoordinate, prevxCoordinate, prevyCoordinate);
   }
   prevxCoordinate = xCoordinate;

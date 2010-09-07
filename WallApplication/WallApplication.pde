@@ -6,7 +6,7 @@ import hypermedia.net.*;
 import tacTile.net.*;
 
 //Globals
-boolean connectToTacTile = false;
+boolean connectToTacTile = true;
 boolean connectToiPad = true;
 boolean firstTime = true;
 //Set false in linux to make it work.
@@ -35,7 +35,7 @@ void setup()
   startTouchConnection();
   ortho(-width/2 , width/2, -height/2, height/2, 100, 10000);
   hint(DISABLE_DEPTH_TEST);
-  background(0);  
+  background(250);  
 } 
  
 void draw() {
@@ -71,7 +71,7 @@ void keyPressed()
   }
   else if(key == 'c' || key == 'C')
   {
-    background(0);
+    background(255);
   }
   else if(key == 'd' || key == 'D')
   {

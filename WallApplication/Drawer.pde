@@ -30,7 +30,6 @@ void drawStuff()
     }// if up
   }
   else{
-    connectionStatus();
     drawTouches(mouseX, mouseY,  10, 10);
   }
 }
@@ -73,15 +72,4 @@ void drawTouches(float xCoordinate, float yCoordinate, float theXWidth, float th
   prevtheXWidth = theXWidth;
   prevtheYWidth = theYWidth;
   
-}
-void connectionStatus()
-{
-  if(connectionEstablished){
-    fill(0,255,255);
-    text("Connection Established", width - 200, height - 100);
-  } 
-  else{
-    fill(0,255,255);
-    text("Connection Waiting", width - 200, height - 100);
-  } 
 }

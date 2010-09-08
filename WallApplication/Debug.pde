@@ -1,5 +1,4 @@
-void debugCode()
-{
+void debugCode() {
   // Memory Check
   int debugX = 0;
   int debugY = 0;

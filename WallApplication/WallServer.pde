@@ -13,29 +13,22 @@ int port = 13337;
 
 void readData()
 {
-  if(connectionEstablished)
-  {
-    try
-    {
+  if(connectionEstablished) {
+    try {
       inFromClient = new BufferedReader(new InputStreamReader(mySocket.getInputStream()));
-      if(inFromClient.ready() == true)
-      {
+      if(inFromClient.ready() == true) {
         dataFromClient = inFromClient.readLine();
-        if(dataFromClient != null)
-        {          
+        if(dataFromClient != null) {          
           StringTokenizer data = new StringTokenizer(dataFromClient); 
           int arrayLoc = -1;
-          while(data.hasMoreTokens()) 
-          {
+          while(data.hasMoreTokens()) {
             String temp = data.nextToken();
             int tempInt = parseInt(temp);
-            if(arrayLoc == -1)
-            {
+            if(arrayLoc == -1) {
               tool = tempInt - 100;
               arrayLoc++;
             }
-            else
-            {
+            else {
               paintColors[arrayLoc] = tempInt - 100;
               arrayLoc++;
             }
@@ -44,33 +37,26 @@ void readData()
         }
       }
     }
-    catch(Exception e)
-    {
+    catch(Exception e) {
       print(e);
     }
   }
-  else
-  {
-    if(!threadOn)
-    {
+  else {
+    if(!threadOn) {
       connectClient();
     }
   }
 }
 
-void connectClient()
-{
+void connectClient() {
   //try-catch block for starting the server on WALL.
-  try
-   {
-     myServer = new ServerSocket(13337);
-     mySocket = myServer.accept();
-     System.out.println( " THE CLIENT"+" "+ mySocket.getInetAddress() +":"+mySocket.getPort()+" IS CONNECTED ");
-     connectionEstablished = true;
-    
-   }
-  catch(Exception e)
-   {
-     println("Server connection had an error!!!");
-   }
+  try {
+    myServer = new ServerSocket(port);
+    mySocket = myServer.accept();
+    System.out.println( " THE CLIENT"+" "+ mySocket.getInetAddress() +":"+mySocket.getPort()+" IS CONNECTED ");
+    connectionEstablished = true;
+  }
+  catch(Exception e) {
+    println("Server connection had an error!!!");
+  }
 }

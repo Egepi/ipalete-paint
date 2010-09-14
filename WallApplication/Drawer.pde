@@ -55,6 +55,7 @@ void drawTouches(float xCoordinate, float yCoordinate, float theXWidth, float th
     }
     else if(TOUCH_MODE.equals("SPHERE"))
     {
+      lights();
       fill( paintColors[0], paintColors[1], paintColors[2], paintColors[3]);
       stroke( paintColors[0], paintColors[1], paintColors[2], 0);
       translate(xCoordinate, yCoordinate);

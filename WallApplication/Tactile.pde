@@ -18,7 +18,7 @@ void startTouchConnection() {
    }
    else {
      size(myWidth, myHeight);
-     touchMachine = new TouchAPI(this, dataPort, msgPort, trackerMachine);
+     //touchMachine = new TouchAPI(this, dataPort, msgPort, trackerMachine);
    }
 }
 

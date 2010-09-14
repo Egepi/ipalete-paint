@@ -4,8 +4,8 @@ import hypermedia.net.*;
 import tacTile.net.*;
 
 //Globals
-boolean connectToTacTile = true;
-boolean connectToiPad = true;
+boolean connectToTacTile = false;
+boolean connectToiPad = false;
 boolean firstTime = true;
 //Set false in linux to make it work.
 boolean threadOn = false;
@@ -27,13 +27,16 @@ void setup() {
   }
   readConfigFile("config.cfg");
   startTouchConnection();
-  ortho(-width/2 , width/2, -height/2, height/2, 100, 10000);
-  hint(DISABLE_DEPTH_TEST);
+  if(connectToTacTile)
+  {
+    ortho(-width/2 , width/2, -height/2, height/2, 100, 10000);
+    hint(DISABLE_DEPTH_TEST);
+    }
   background(255);  
 } 
  
 void draw() {
-  lights();
+
   // Start the thread
   if(firstTime && threadOn) {
     thread.start();

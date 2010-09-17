@@ -5,7 +5,7 @@ import tacTile.net.*;
 
 //Globals
 boolean connectToTacTile = false;
-boolean connectToiPad = false;
+boolean connectToiPad = true;
 boolean firstTime = true;
 //Set false in linux to make it work.
 boolean threadOn = false;
@@ -31,7 +31,7 @@ void setup() {
   {
     ortho(-width/2 , width/2, -height/2, height/2, 100, 10000);
     hint(DISABLE_DEPTH_TEST);
-    }
+  }
   background(255);  
 } 
  
@@ -57,5 +57,13 @@ void keyPressed() {
   }
   else if(key == 'd' || key == 'D') {
     DEBUG_MODE = !DEBUG_MODE;
+  }
+  else if(key == 'm' || key == 'M') {
+    if(TOUCH_MODE.equals("SPHERE")) {
+      TOUCH_MODE = "ELLIPSE";
+    }
+    else {
+      TOUCH_MODE = "SPHERE";
+    }
   }
 }

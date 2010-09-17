@@ -18,7 +18,8 @@ void readData()
       inFromClient = new BufferedReader(new InputStreamReader(mySocket.getInputStream()));
       if(inFromClient.ready() == true) {
         dataFromClient = inFromClient.readLine();
-        if(dataFromClient != null) {          
+        if(dataFromClient != null) {
+          print(dataFromClient + "\n");          
           StringTokenizer data = new StringTokenizer(dataFromClient); 
           int arrayLoc = -1;
           while(data.hasMoreTokens()) {

@@ -62,8 +62,7 @@ void drawTouches(float xCoordinate, float yCoordinate, float theXWidth, float th
       sphere(theXWidth);
     }
   }
-  else
-  {
+  else {
     stroke(0);
     //line(mouseX, mouseY, pmouseX, pmouseY);
     line(xCoordinate, yCoordinate, prevxCoordinate, prevyCoordinate);
@@ -72,5 +71,4 @@ void drawTouches(float xCoordinate, float yCoordinate, float theXWidth, float th
   prevyCoordinate = yCoordinate;
   prevtheXWidth = theXWidth;
   prevtheYWidth = theYWidth;
-  
 }

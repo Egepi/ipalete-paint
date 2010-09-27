@@ -1,4 +1,6 @@
-//Imports
+/**************************************************
+ * Imports
+ */
 import java.lang.*;
 import java.net.*;
 import java.io.*;
@@ -17,6 +19,7 @@ void readData()
     try {
       inFromClient = new BufferedReader(new InputStreamReader(mySocket.getInputStream()));
       if(inFromClient.ready() == true) {
+        //Data read in from touch server
         dataFromClient = inFromClient.readLine();
         if(dataFromClient != null) {
           print(dataFromClient + "\n");          

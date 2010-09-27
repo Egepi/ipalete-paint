@@ -1,9 +1,14 @@
+/**************************************************
+ * Imports
+ */
 import processing.opengl.*;
 import processing.net.*; 
 import hypermedia.net.*;
 import tacTile.net.*;
 
-//Globals
+/**************************************************
+ * Globals
+ */
 boolean connectToTacTile = false;
 boolean connectToiPad = true;
 boolean firstTime = true;
@@ -18,6 +23,10 @@ String TOUCH_MODE = "ELLIPSE";
 int myWidth = screen.width;
 int myHeight = screen.height;
 
+/**************************************************
+ * setup() - a nessecary function for processing called
+ * on startup
+ */
 void setup() {
   if(threadOn) {
     // Create the object with the run() method
@@ -34,7 +43,11 @@ void setup() {
   }
   background(255);  
 } 
- 
+
+/**************************************************
+ * Called automatically, and controlls all drawing
+ * to screen.
+ */
 void draw() {
 
   // Start the thread
@@ -46,6 +59,10 @@ void draw() {
   if(connectToiPad) { readData(); }
   drawStuff();
 }
+
+/**************************************************
+ * Is called when any key is pressed automagically 
+ */
 void keyPressed() {
   if(key == 'q' || key == 'Q') {
     try { mySocket.close(); }

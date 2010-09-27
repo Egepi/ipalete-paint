@@ -3,6 +3,9 @@ int paintColors[] = new int[4];
 int tool;
 float prevxCoordinate, prevyCoordinate, prevtheXWidth, prevtheYWidth;
 
+/**************************************************
+ * Description needed
+ */
 void drawStuff()
 {
   if(connectToTacTile)
@@ -34,6 +37,9 @@ void drawStuff()
   }
 }
 
+/**************************************************
+ * Description needed
+ */
 void drawTouches(float xCoordinate, float yCoordinate, float theXWidth, float theYWidth)
 {
   if(tool == 1)

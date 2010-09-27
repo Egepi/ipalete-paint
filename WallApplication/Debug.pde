@@ -1,3 +1,7 @@
+/**************************************************
+ * Displays the debug info in top left side of screen
+ * Is toggled by the 'd' key
+ */
 void debugCode() {
   // Memory Check
   int debugX = 0;

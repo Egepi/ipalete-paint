@@ -7,13 +7,18 @@
 #   files inside it and place the list of files into text
 #   file for reading in by the wall app.
 #----------------------------------------------------------
+#################################
+# Need to account of rm save file if it is already gone
+#################################
 
 use warnings;
 use strict;
 
-#print "Hello\n";
-chdir ( "/home/crazyprofessor/sketchbook/WallApplication");
-system ( "ls -1 > theFiles.fil" );
+my $saveFile = "theFiles.fil";
+
+chdir ( "/home/crazyprofessor/sketchbook/WallApplication" );
+system ( "rm $saveFile" );
+system ( "ls -1 > $saveFile" );
 
 exit;
 

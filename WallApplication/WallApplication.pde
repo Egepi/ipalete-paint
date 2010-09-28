@@ -49,7 +49,6 @@ void setup() {
  * to screen.
  */
 void draw() {
-
   // Start the thread
   if(firstTime && threadOn) {
     thread.start();

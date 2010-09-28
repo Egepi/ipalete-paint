@@ -4,8 +4,12 @@
  */
 
 class ImageMenu {
-  private String[] savedImages;
-  private int maxPageSize;
+  private String[] savedImages; //Array of all image names
+  private PImage[] pageImages;  //Array of all images on current page
+  private int maxPageSize;      //Max number of images per page
+  private int currPageCount;    //How many images to be in the current page
+  private int nextPageCount;    //How many images to be in the next page
+  private int pageNumber;       //How many pages (number of images / maxPageSize )
   
   /**************************************************
    * Default Constructor
@@ -24,7 +28,7 @@ class ImageMenu {
    * Loads all images specified in a generated file
    */
   void loadSavedImages() {
-     int loadCounter;
+     pageNumber = 1;
      
      //Loads the data and sketch path, then runs the listFiles perl script
      String perlFile = sketchPath("listFiles.pl");
@@ -41,16 +45,16 @@ class ImageMenu {
        return;
      }
    
-     //More then max per page set to max if less then max
+     //More then max per page, set to max if less then max
      //then set to just the number of images.
      if(savedImages.length <= maxPageSize) {
-       loadCounter = savedImages.length;
+       currPageCount = savedImages.length;
      } else {
-       loadCounter = maxPageSize;
+       currPageCount = maxPageSize;
      }
    
      //Load the first page of the menu then return
-     loadImagePage(loadCounter);
+     loadImagePage(currPageCount, pageNumber);
      return;
   }// End loadSavedImages()
 
@@ -58,8 +62,12 @@ class ImageMenu {
    * Loads one "full page" worth of images to the 
    * screen to be displayed to the user
    */
-  private void loadImagePage(int pageSize) {
-  
+  private void loadImagePage(int pageSize, int pageCount) {
+    pageImages = new PImage[pageSize];
+    for(int i = 0; i < pageSize; i++) {
+      pageImages[i] = loadImage("Images/" + savedImages[i*pageCount]); 
+      pageImages[i].resize(width/6, height/3);
+    }  
   }// End loadImagePage()
 
   /**************************************************
@@ -69,4 +77,19 @@ class ImageMenu {
   void checkMenuInput() {
   
   }// End checkMenuInput()
+  
+  void displayPage() {
+    int theMinX = (width/4);
+    int theX = theMinX;
+    int theY = 0;
+    int perRow = 3;
+    for(int j = 0; j <  currPageCount; j++) {
+      image(pageImages[j],  theX, theY);
+      theX = theX + pageImages[j].width;
+      if(((j+1)%3) == 0) {
+        theY = theY + pageImages[j].height;
+        theX = theMinX; 
+      }
+    }
+  }
 }// End ImageMenu {}

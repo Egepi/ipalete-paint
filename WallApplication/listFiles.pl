@@ -14,11 +14,17 @@
 use warnings;
 use strict;
 
-my $saveFile = "theFiles.fil";
+my $argSize = @ARGV;
+if($argSize < 1) {
+	print "No folder path found";
+}
 
-chdir ( "/home/crazyprofessor/sketchbook/WallApplication" );
+my $saveFile = "theFiles.fil";
+my $imgDir = $ARGV[0];
+
+chdir ( "$imgDir" );
 system ( "rm $saveFile" );
-system ( "ls -1 > $saveFile" );
+system ( "ls -1 > ../../$saveFile" );
 
 exit;
 

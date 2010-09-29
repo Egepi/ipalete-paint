@@ -10,42 +10,43 @@ import tacTile.net.*;
  * Globals
  */
 boolean connectToTacTile = false;
-boolean connectToiPad = false;
+boolean connectToiPad = true;
 boolean firstTime = true;
 //Set false in linux to make it work.
 boolean threadOn = false;
 //debug text
 boolean DEBUG_MODE = false;
-boolean MENU_MODE = false;
+
 String TOUCH_MODE = "ELLIPSE";
 //String TOUCH_MODE = "SPHERE";
 
 int myWidth = screen.width;
 int myHeight = screen.height;
 
-
-ImageMenu myImageMenu;
-
 /**************************************************
  * setup() - a nessecary function for processing called
  * on startup
  */
+  ImageMenu myImageMenu;
 void setup() {
-  readConfigFile("config.cfg");
-  startTouchConnection();
-  myImageMenu = new ImageMenu();
-  if(threadOn) {
+    myWidth = 1360 * 6;
+    myHeight = 768 *3;
+    size(myWidth, myHeight);
+    myImageMenu = new ImageMenu();
+//    if(threadOn) {
     // Create the object with the run() method
-    Runnable runnable = new BasicThread();
+//    Runnable runnable = new BasicThread();  
     // Create the thread supplying it with the runnable object
-    thread = new Thread(runnable);
-  }
-
-  if(connectToTacTile) {
-    ortho(-width/2 , width/2, -height/2, height/2, 100, 10000);
-    hint(DISABLE_DEPTH_TEST);
-  }
-  background(255);
+//    thread = new Thread(runnable);*/
+//  }
+//  readConfigFile("config.cfg");
+//  startTouchConnection();
+//  if(connectToTacTile)
+//  {
+//    ortho(-width/2 , width/2, -height/2, height/2, 100, 10000);
+//    hint(DISABLE_DEPTH_TEST);
+//  }
+//  background(255);
 } 
 
 /**************************************************
@@ -53,20 +54,15 @@ void setup() {
  * to screen.
  */
 void draw() { 
-   
+   myImageMenu.displayPage(); 
   // Start the thread
-  if(firstTime && threadOn) {
+  /*if(firstTime && threadOn) {
     thread.start();
     firstTime = false;
   }
   if(DEBUG_MODE) { debugCode(); }
   if(connectToiPad) { readData(); }
-  if(MENU_MODE) {
-    myImageMenu.displayPage(); 
-  }
-  else {
-    drawStuff();
-  }
+  drawStuff();*/
 }
 
 /**************************************************
@@ -83,13 +79,6 @@ void keyPressed() {
   }
   else if(key == 'd' || key == 'D') {
     DEBUG_MODE = !DEBUG_MODE;
-  }
-  else if(key == 's' || key == 'S') {
-    saveFrame("screenshot-"+year()+"-"+month()+"-"+day()+"-"+hour()+"-"+minute()+"-"+second()+"-"+millis()+".tif");
-  }
-  else if(key == 'i' || key == 'I') {
-     background(255);
-     MENU_MODE = !MENU_MODE;
   }
   else if(key == 'm' || key == 'M') {
     if(TOUCH_MODE.equals("SPHERE")) {

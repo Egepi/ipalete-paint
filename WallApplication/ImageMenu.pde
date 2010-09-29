@@ -10,6 +10,8 @@ class ImageMenu {
   private int currPageCount;    //How many images to be in the current page
   private int nextPageCount;    //How many images to be in the next page
   private int pageNumber;       //How many pages (number of images / maxPageSize )
+  private PImage nextArrow;
+  private PImage prevArrow;
   
   /**************************************************
    * Default Constructor
@@ -18,12 +20,7 @@ class ImageMenu {
     maxPageSize = 6;
     loadSavedImages();
   }// End ImageMenu()
-  
-  public ImageMenu(int theMaxPage) {
-    maxPageSize = theMaxPage;
-    loadSavedImages();
-  }// End ImageMenu(int)
-  
+    
   /**************************************************
    * Loads all images specified in a generated file
    */
@@ -67,8 +64,10 @@ class ImageMenu {
     pageImages = new PImage[pageSize];
     for(int i = 0; i < pageSize; i++) {
       pageImages[i] = loadImage("Images/" + savedImages[i*pageCount]); 
-      pageImages[i].resize(width/3, height/3);
-    }  
+      pageImages[i].resize(width/3, (height/3));
+    } 
+    nextArrow = loadImage("RightArrow.png");
+    prevArrow = loadImage("RightArrow.png"); 
   }// End loadImagePage()
 
   /**************************************************
@@ -80,10 +79,12 @@ class ImageMenu {
   }// End checkMenuInput()
   
   void displayPage() {
+    background(0);  //Sets the background to black.
     int theMinX = (width/6);
     int theX = theMinX;
     int theY = 0;
     int perRow = 2;
+    //Loop through the images and display them
     for(int j = 0; j <  currPageCount; j++) {
       image(pageImages[j],  theX, theY);
       theX = theX + pageImages[j].width;
@@ -92,5 +93,15 @@ class ImageMenu {
         theX = theMinX; 
       }
     }
-  }
+    
+    //Display the navigation buttons
+    image(nextArrow, ((width/6)*5.5) , height/2);
+    image(prevArrow, ((width/6)*0.5) , height/2);
+    
+  }// End displayPage()
+  
+  void imageMenuInput(int touchX, int touchY) {
+    return; 
+  }// End imageMenuInput()
+  
 }// End ImageMenu {}

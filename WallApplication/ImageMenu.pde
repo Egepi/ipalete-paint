@@ -53,6 +53,7 @@ class ImageMenu {
        currPageCount = maxPageSize;
      }
    
+     print("gonna load " + currPageCount + " images\n");
      //Load the first page of the menu then return
      loadImagePage(currPageCount, pageNumber);
      return;
@@ -66,7 +67,7 @@ class ImageMenu {
     pageImages = new PImage[pageSize];
     for(int i = 0; i < pageSize; i++) {
       pageImages[i] = loadImage("Images/" + savedImages[i*pageCount]); 
-      pageImages[i].resize(width/6, height/3);
+      pageImages[i].resize(width/3, height/3);
     }  
   }// End loadImagePage()
 
@@ -79,14 +80,14 @@ class ImageMenu {
   }// End checkMenuInput()
   
   void displayPage() {
-    int theMinX = (width/4);
+    int theMinX = (width/6);
     int theX = theMinX;
     int theY = 0;
-    int perRow = 3;
+    int perRow = 2;
     for(int j = 0; j <  currPageCount; j++) {
       image(pageImages[j],  theX, theY);
       theX = theX + pageImages[j].width;
-      if(((j+1)%3) == 0) {
+      if(((j+1)%perRow) == 0) {
         theY = theY + pageImages[j].height;
         theX = theMinX; 
       }

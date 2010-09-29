@@ -27,8 +27,13 @@ int myHeight = screen.height;
  * setup() - a nessecary function for processing called
  * on startup
  */
+  //ImageMenu myImageMenu;
 void setup() {
-  if(threadOn) {
+    /*myWidth = 1360 * 6;
+    myHeight = 768 *3;
+    size(myWidth, myHeight);
+    myImageMenu = new ImageMenu();*/
+    if(threadOn) {
     // Create the object with the run() method
     Runnable runnable = new BasicThread();  
     // Create the thread supplying it with the runnable object
@@ -48,7 +53,8 @@ void setup() {
  * Called automatically, and controlls all drawing
  * to screen.
  */
-void draw() {
+void draw() { 
+   //myImageMenu.displayPage(); 
   // Start the thread
   if(firstTime && threadOn) {
     thread.start();

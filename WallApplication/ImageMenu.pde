@@ -15,7 +15,7 @@ class ImageMenu {
    * Default Constructor
    */
   public ImageMenu() {
-    maxPageSize = 9;
+    maxPageSize = 6;
     loadSavedImages();
   }// End ImageMenu()
   

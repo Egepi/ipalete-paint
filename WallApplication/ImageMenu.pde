@@ -10,8 +10,10 @@ class ImageMenu {
   private int currPageCount;    //How many images to be in the current page
   private int nextPageCount;    //How many images to be in the next page
   private int pageNumber;       //How many pages (number of images / maxPageSize )
-  private PImage nextArrow;
-  private PImage prevArrow;
+  private Button nextArrow;
+  private Button prevArrow;
+  private boolean firstPage;
+  private boolean lastPage;
   
   /**************************************************
    * Default Constructor
@@ -19,6 +21,7 @@ class ImageMenu {
   public ImageMenu() {
     maxPageSize = 6;
     loadSavedImages();
+    firstPage = true;
   }// End ImageMenu()
     
   /**************************************************
@@ -66,18 +69,22 @@ class ImageMenu {
       pageImages[i] = loadImage("Images/" + savedImages[i*pageCount]); 
       pageImages[i].resize(width/3, (height/3));
     } 
-    nextArrow = loadImage("RightArrow.png");
-    prevArrow = loadImage("RightArrow.png"); 
+    //Load arrow buttons and resize them depending on resolution of current screen compared to
+    //Sage's resolution.
+    PImage tempNext = loadImage("RightArrow.png");
+    PImage tempPrev = loadImage("RightArrow.png");
+    tempNext.resize((tempNext.width)/((1360*6)/width), (tempNext.height)/((768*3)/height));
+    tempPrev.resize((tempPrev.width)/((1360*6)/width), (tempPrev.height)/((768*3)/height));
+    
+    float arrowY = height/2-(tempNext.height/2);
+    float arrowX = width/6;
+    nextArrow = new Button(tempNext, (arrowX*5.5)-tempNext.width, arrowY);
+    prevArrow = new Button(tempPrev, arrowX*0.5, arrowY);
   }// End loadImagePage()
-
+  
   /**************************************************
-   * Checks the input from the user to determine if
-   * any menu manipulation needs to be made
+   * Displays a page worth of images
    */
-  void checkMenuInput() {
-  
-  }// End checkMenuInput()
-  
   void displayPage() {
     background(0);  //Sets the background to black.
     int theMinX = (width/6);
@@ -95,13 +102,30 @@ class ImageMenu {
     }
     
     //Display the navigation buttons
-    image(nextArrow, ((width/6)*5.5) , height/2);
-    image(prevArrow, ((width/6)*0.5) , height/2);
+    nextArrow.drawIt();
+    prevArrow.drawIt();
     
   }// End displayPage()
   
+  /**************************************************
+   * Checks if any touches/clicks were on any object
+   * in the menu
+   */ 
   void imageMenuInput(int touchX, int touchY) {
-    return; 
+    if(nextArrow.checkBounds() == 1) {
+      prevPage();
+    } else if(prevArrow.checkBounds() == 1) {
+      nextPage();
+    }
   }// End imageMenuInput()
+  
+  private void nextPage() {
+    
+  }// End nextPage()
+  
+  private void prevPage() {
+    
+  }// End prePage()
+  
   
 }// End ImageMenu {}

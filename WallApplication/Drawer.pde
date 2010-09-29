@@ -28,15 +28,30 @@ void drawStuff()
     if( !newUp.isEmpty()){
       for(int i = 0; i < newUp.size(); i++){
         Touches curTouch = ((Touches) newUp.get(i));
-        drawTouches(curTouch.getXPos() * width, height - curTouch.getYPos() * height, curTouch.getXWidth() * width, curTouch.getYWidth() * height);
+        sendTouch(curTouch);
       }
     }// if up
   }
   else{
-    drawTouches(mouseX, mouseY,  10, 10);
+   if(MENU_MODE) {
+     myImageMenu.imageMenuInput(mouseX, mouseY);
+   }
+   else {
+     drawTouches(mouseX, mouseY,  10, 10);
+   }
+    
   }
 }
 
+void sendTouch(Touches curTouch)
+{
+  if(MENU_MODE) {
+    myImageMenu.imageMenuInput((int)(curTouch.getXPos()) * width, (int)(height - curTouch.getYPos() * height));
+  }
+  else {
+    drawTouches(curTouch.getXPos() * width, height - curTouch.getYPos() * height, curTouch.getXWidth() * width, curTouch.getYWidth() * height);
+  }
+}
 /**************************************************
  * Description needed
  */
@@ -44,11 +59,9 @@ void drawTouches(float xCoordinate, float yCoordinate, float theXWidth, float th
 {
   if(tool == 1)
   {
-    if(TOUCH_MODE.equals("ELLIPSE")) 
-    {
-      
-      for (int a = 1; a <= 40; a++)
-      {
+    if(TOUCH_MODE.equals("ELLIPSE")) {
+
+      for (int a = 1; a <= 40; a++) {
         fill( paintColors[0], paintColors[1], paintColors[2], paintColors[3]*(1-(0.025*a)));
         stroke( paintColors[0], paintColors[1], paintColors[2], 0);
         ellipse( xCoordinate, yCoordinate, theXWidth+(a*1), theYWidth+(a*1));

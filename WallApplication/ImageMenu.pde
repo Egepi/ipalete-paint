@@ -122,7 +122,7 @@ class ImageMenu {
       print("I got a click at: " + touchX + " " + touchY + "\n");
       nextPage();
     } else if((prevArrow.checkBounds() == 1)&&(disPrevArrow == true)) {
-      //nextPage();
+      prevPage();
     }
   }// End imageMenuInput()
   
@@ -141,11 +141,11 @@ class ImageMenu {
     //If there are more images then can fit on the next page 
     if(savedImages.length > (maxPageSize * pageNumber)) {
        disNextArrow = true;
-       tempPageCount = 6;
+       tempPageCount = maxPageSize;
     } else if(savedImages.length == (maxPageSize * pageNumber)) {
       //If there are exactly enough images to fit on the next page
        disNextArrow = false;
-       tempPageCount = 6; 
+       tempPageCount = maxPageSize; 
     } else if(savedImages.length < (maxPageSize * pageNumber)) {
        disNextArrow = false;
        tempPageCount = (maxPageSize - ((maxPageSize * pageNumber) - savedImages.length)); 
@@ -159,7 +159,15 @@ class ImageMenu {
    * Sets up the variables/settings for the previous page to load
    */
   private void prevPage() {
-    
+    pageNumber--;
+    if(pageNumber < 2) {
+      disPrevArrow = false; 
+    } else {
+      disPrevArrow = true; 
+    }
+    disNextArrow = true;
+    currPageCount = maxPageSize;
+    loadImagePage(currPageCount, pageNumber);
   }// End prePage()
   
   

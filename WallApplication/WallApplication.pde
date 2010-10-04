@@ -64,9 +64,7 @@ void draw() {
   if(MENU_MODE) {
     myImageMenu.displayPage(); 
   }
-  else {
-    drawStuff();
-  }
+  drawStuff();
 }
 
 /**************************************************

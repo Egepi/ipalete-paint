@@ -20,6 +20,7 @@ class ImageMenu {
    */
   public ImageMenu() {
     maxPageSize = 6;
+    disPrevArrow = false;
     loadSavedImages();
   }// End ImageMenu()
     
@@ -43,16 +44,13 @@ class ImageMenu {
        print("No files to load were found\n");
        return;
      }
-   
      //More then max per page, set to max if less then max
      //then set to just the number of images.
      if(savedImages.length <= maxPageSize) {
        currPageCount = savedImages.length;
-       disPrevArrow = false;
        disNextArrow = false;
      } else {
        currPageCount = maxPageSize;
-       disPrevArrow = false;
        disNextArrow = true;
      }
    
@@ -68,8 +66,9 @@ class ImageMenu {
    */
   private void loadImagePage(int pageSize, int pageCount) {
     pageImages = new PImage[pageSize];
+    int imageNumber = (pageCount - 1)*maxPageSize;
     for(int i = 0; i < pageSize; i++) {
-      pageImages[i] = loadImage("Images/" + savedImages[i*pageCount]); 
+      pageImages[i] = loadImage("Images/" + savedImages[imageNumber + i]); 
       pageImages[i].resize(width/3, (height/3));
     } 
     //Load arrow buttons and resize them depending on resolution of current screen compared to
@@ -119,17 +118,46 @@ class ImageMenu {
    * in the menu
    */ 
   void imageMenuInput(int touchX, int touchY) {
-    if(nextArrow.checkBounds() == 1) {
-      prevPage();
-    } else if(prevArrow.checkBounds() == 1) {
+    if((nextArrow.checkBounds() == 1)&&(disNextArrow == true)) {
+      print("I got a click at: " + touchX + " " + touchY + "\n");
       nextPage();
+    } else if((prevArrow.checkBounds() == 1)&&(disPrevArrow == true)) {
+      //nextPage();
     }
   }// End imageMenuInput()
   
+  /**************************************************
+   * Sets up variables/settings for the next image page to load
+   */
   private void nextPage() {
-    
+    pageNumber++; //Increase the page number
+    if(pageNumber > 1) {
+      disPrevArrow = true; 
+    } else {
+      disPrevArrow = false; 
+    }
+
+    int tempPageCount = 0;
+    //If there are more images then can fit on the next page 
+    if(savedImages.length > (maxPageSize * pageNumber)) {
+       disNextArrow = true;
+       tempPageCount = 6;
+    } else if(savedImages.length == (maxPageSize * pageNumber)) {
+      //If there are exactly enough images to fit on the next page
+       disNextArrow = false;
+       tempPageCount = 6; 
+    } else if(savedImages.length < (maxPageSize * pageNumber)) {
+       disNextArrow = false;
+       tempPageCount = (maxPageSize - ((maxPageSize * pageNumber) - savedImages.length)); 
+    }
+    print("The page count: " + tempPageCount + " Page number: " + pageNumber + "\n");
+    currPageCount = tempPageCount;
+    loadImagePage(tempPageCount, pageNumber);
   }// End nextPage()
   
+  /**************************************************
+   * Sets up the variables/settings for the previous page to load
+   */
   private void prevPage() {
     
   }// End prePage()

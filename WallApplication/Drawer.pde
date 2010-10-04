@@ -34,7 +34,9 @@ void drawStuff()
   }
   else{
    if(MENU_MODE) {
-     myImageMenu.imageMenuInput(mouseX, mouseY);
+     if(mousePressed) {
+       myImageMenu.imageMenuInput(mouseX, mouseY);
+     }  
    }
    else {
      drawTouches(mouseX, mouseY,  10, 10);

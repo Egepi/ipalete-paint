@@ -12,8 +12,8 @@ class ImageMenu {
   private int pageNumber;       //How many pages (number of images / maxPageSize )
   private Button nextArrow;
   private Button prevArrow;
-  private boolean firstPage;
-  private boolean lastPage;
+  private boolean disPrevArrow;
+  private boolean disNextArrow;
   
   /**************************************************
    * Default Constructor
@@ -21,7 +21,6 @@ class ImageMenu {
   public ImageMenu() {
     maxPageSize = 6;
     loadSavedImages();
-    firstPage = true;
   }// End ImageMenu()
     
   /**************************************************
@@ -49,8 +48,12 @@ class ImageMenu {
      //then set to just the number of images.
      if(savedImages.length <= maxPageSize) {
        currPageCount = savedImages.length;
+       disPrevArrow = false;
+       disNextArrow = false;
      } else {
        currPageCount = maxPageSize;
+       disPrevArrow = false;
+       disNextArrow = true;
      }
    
      print("gonna load " + currPageCount + " images\n");
@@ -72,7 +75,7 @@ class ImageMenu {
     //Load arrow buttons and resize them depending on resolution of current screen compared to
     //Sage's resolution.
     PImage tempNext = loadImage("RightArrow.png");
-    PImage tempPrev = loadImage("RightArrow.png");
+    PImage tempPrev = loadImage("LeftArrow.png");
     tempNext.resize((tempNext.width)/((1360*6)/width), (tempNext.height)/((768*3)/height));
     tempPrev.resize((tempPrev.width)/((1360*6)/width), (tempPrev.height)/((768*3)/height));
     
@@ -102,8 +105,12 @@ class ImageMenu {
     }
     
     //Display the navigation buttons
-    nextArrow.drawIt();
-    prevArrow.drawIt();
+    if(disNextArrow == true) {
+      nextArrow.drawIt();
+    }
+    if(disPrevArrow == true) {
+      prevArrow.drawIt();
+    }
     
   }// End displayPage()
   

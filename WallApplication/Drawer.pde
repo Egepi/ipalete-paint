@@ -3,6 +3,10 @@ int paintColors[] = new int[4];
 int tool;
 float prevxCoordinate, prevyCoordinate, prevtheXWidth, prevtheYWidth;
 
+boolean newBackground = false;
+PImage newBackgroundImage = null;
+
+
 /**************************************************
  * Description needed
  */

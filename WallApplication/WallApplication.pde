@@ -86,8 +86,23 @@ void keyPressed() {
     saveFrame("screenshot-"+year()+"-"+month()+"-"+day()+"-"+hour()+"-"+minute()+"-"+second()+"-"+millis()+".tif");
   }
   else if(key == 'i' || key == 'I') {
-     background(255);
-     MENU_MODE = !MENU_MODE;
+     if(MENU_MODE) {
+       if(newBackground) {
+         background(255);
+         image(newBackgroundImage, 0, 0);
+       }
+       else {
+         background(255);
+         image(loadImage("tempback.tif"), 0, 0);
+       }
+       MENU_MODE = !MENU_MODE;
+     }
+     else
+     {
+       saveFrame("tempback.tif");
+       background(255);
+       MENU_MODE = !MENU_MODE;       
+     }
   }
   else if(key == 'm' || key == 'M') {
     if(TOUCH_MODE.equals("SPHERE")) {

@@ -45,7 +45,7 @@ void setup() {
     ortho(-width/2 , width/2, -height/2, height/2, 100, 10000);
     hint(DISABLE_DEPTH_TEST);
   }
-  background(255);
+  clearScreen();
 } 
 
 /**************************************************
@@ -74,10 +74,13 @@ void keyPressed() {
   if(key == 'q' || key == 'Q') {
     try { mySocket.close(); }
     catch(Exception e) {}
-    exit();
+    File f = new File(sketchPath("tempback.tif"));
+    if(f.delete()) {
+      exit();
+    }
   }
   else if(key == 'c' || key == 'C') {
-    background(255);
+    clearScreen();
   }
   else if(key == 'd' || key == 'D') {
     DEBUG_MODE = !DEBUG_MODE;
@@ -88,11 +91,11 @@ void keyPressed() {
   else if(key == 'i' || key == 'I') {
      if(MENU_MODE) {
        if(newBackground) {
-         background(255);
+         clearScreen();
          image(newBackgroundImage, 0, 0);
        }
        else {
-         background(255);
+         clearScreen();
          image(loadImage("tempback.tif"), 0, 0);
        }
        MENU_MODE = !MENU_MODE;

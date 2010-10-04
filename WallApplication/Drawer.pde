@@ -97,3 +97,7 @@ void drawTouches(float xCoordinate, float yCoordinate, float theXWidth, float th
   prevtheXWidth = theXWidth;
   prevtheYWidth = theYWidth;
 }
+
+void clearScreen() {
+   background(255);
+}

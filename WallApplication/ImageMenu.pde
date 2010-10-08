@@ -195,8 +195,8 @@ class ImagePreview{
   }
   
   private boolean isTouched(int checkX, int checkY) {
-    if((checkX >= locX)&&(checkX <= (locX + thePreviewImage.width))) {
-      if((checkY >= locY)&&(checkY <= (locY + thePreviewImage.height))) {
+    if((checkX >= theImageX)&&(checkX <= (theImageX + thePreviewImage.width))) {
+      if((checkY >= theImageY)&&(checkY <= (theImageY + thePreviewImage.height))) {
         return true;  
       }
     }

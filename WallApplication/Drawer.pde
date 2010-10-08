@@ -63,6 +63,7 @@ void sendTouch(Touches curTouch)
  */
 void drawTouches(float xCoordinate, float yCoordinate, float theXWidth, float theYWidth)
 {
+  //drawObject newObject = new drawObject( xCoordinate, yCoordinate, theXWidth, theYWidth
   if(tool == 1)
   {
     if(TOUCH_MODE.equals("ELLIPSE")) {

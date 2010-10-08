@@ -5,7 +5,7 @@
 
 class ImageMenu {
   private String[] savedImages; //Array of all image names
-  private PImage[] pageImages;  //Array of all images on current page
+  private ImagePreview[] pageImages;  //Array of all images on current page
   private int maxPageSize;      //Max number of images per page
   private int currPageCount;    //How many images to be in the current page
   private int nextPageCount;    //How many images to be in the next page
@@ -14,6 +14,7 @@ class ImageMenu {
   private Button prevArrow;
   private boolean disPrevArrow;
   private boolean disNextArrow;
+  private PImage menuBackground;
   
   /**************************************************
    * Default Constructor
@@ -21,6 +22,8 @@ class ImageMenu {
   public ImageMenu() {
     maxPageSize = 6;
     disPrevArrow = false;
+    menuBackground = loadImage("MenuBack.png");
+    menuBackground.resize(width,height);
     loadSavedImages();
   }// End ImageMenu()
     
@@ -37,7 +40,6 @@ class ImageMenu {
      exec(param);
           
      savedImages = loadStrings( "theFiles.fil" );
-     print("Number of files is: " + savedImages.length + "\n");
    
      //Checks if any image names were in the file to load
      if(savedImages.length <= 0) {
@@ -54,7 +56,6 @@ class ImageMenu {
        disNextArrow = true;
      }
    
-     print("gonna load " + currPageCount + " images\n");
      //Load the first page of the menu then return
      loadImagePage(currPageCount, pageNumber);
      return;
@@ -65,11 +66,11 @@ class ImageMenu {
    * screen to be displayed to the user
    */
   private void loadImagePage(int pageSize, int pageCount) {
-    pageImages = new PImage[pageSize];
+    pageImages = new ImagePreview[pageSize];
     int imageNumber = (pageCount - 1)*maxPageSize;
     for(int i = 0; i < pageSize; i++) {
-      pageImages[i] = loadImage("Images/" + savedImages[imageNumber + i]); 
-      pageImages[i].resize(width/3, (height/3));
+      pageImages[i] = new ImagePreview("Images/" + savedImages[imageNumber + i]); 
+      pageImages[i].getPImage().resize(width/3, (height/3));
     } 
     //Load arrow buttons and resize them depending on resolution of current screen compared to
     //Sage's resolution.
@@ -88,17 +89,19 @@ class ImageMenu {
    * Displays a page worth of images
    */
   void displayPage() {
-    background(0);  //Sets the background to black.
+    background(0,127);
+
     int theMinX = (width/6);
     int theX = theMinX;
     int theY = 0;
     int perRow = 2;
     //Loop through the images and display them
     for(int j = 0; j <  currPageCount; j++) {
-      image(pageImages[j],  theX, theY);
-      theX = theX + pageImages[j].width;
+      image(pageImages[j].getPImage(),  theX, theY);
+      pageImages[j].setLocation(theX, theY);
+      theX = theX + pageImages[j].getPImage().width;
       if(((j+1)%perRow) == 0) {
-        theY = theY + pageImages[j].height;
+        theY = theY + pageImages[j].getPImage().height;
         theX = theMinX; 
       }
     }
@@ -172,3 +175,45 @@ class ImageMenu {
   
   
 }// End ImageMenu {}
+
+
+/**************************************************
+ * Class for each image preview.
+ */
+class ImagePreview{
+  
+  private PImage thePreviewImage;
+  private int theImageX;
+  private int theImageY;
+  private int firstX;
+  private int firstY;
+  private int secondX;
+  private int secondY;
+  
+  public ImagePreview(String imageName) {
+    this.thePreviewImage = loadImage(imageName);
+  }
+  
+  private boolean isTouched(int checkX, int checkY) {
+    if((checkX >= locX)&&(checkX <= (locX + thePreviewImage.width))) {
+      if((checkY >= locY)&&(checkY <= (locY + thePreviewImage.height))) {
+        return true;  
+      }
+    }
+    return false;
+  }
+  
+  private void addPinchTouch() {
+    
+  }
+  
+  public void setLocation(int locX, int locY) {
+    this.theImageX = locX;
+    this.theImageY = locY;
+  }
+  
+  public PImage getPImage() {
+    return thePreviewImage; 
+  }
+  
+}

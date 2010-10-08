@@ -103,7 +103,7 @@ void keyPressed() {
      else
      {
        saveFrame("tempback.tif");
-       background(255);
+       //background(255);
        MENU_MODE = !MENU_MODE;       
      }
   }

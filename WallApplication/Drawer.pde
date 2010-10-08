@@ -1,7 +1,7 @@
 int paintColor = 255;
 int paintColors[] = new int[4];
 int tool;
-float prevxCoordinate, prevyCoordinate, prevtheXWidth, prevtheYWidth;
+int prevxCoordinate, prevyCoordinate, prevtheXWidth, prevtheYWidth;
 
 boolean newBackground = false;
 PImage newBackgroundImage = null;
@@ -20,13 +20,13 @@ void drawStuff()
     if( !newDown.isEmpty()){
       for(int i = 0; i < newDown.size(); i++){
         Touches curTouch = ((Touches) newDown.get(i));          
-        drawTouches(curTouch.getXPos() * width, height - curTouch.getYPos() * height, curTouch.getXWidth() * width, curTouch.getYWidth() * height);
+        sendTouch(curTouch);
       }
     }// if down
     if( !newMove.isEmpty()){
       for(int i = 0; i < newMove.size(); i++){
         Touches curTouch = ((Touches) newMove.get(i));  
-        drawTouches(curTouch.getXPos() * width, height - curTouch.getYPos() * height, curTouch.getXWidth() * width, curTouch.getYWidth() * height);
+        sendTouch(curTouch);
       }
     }// if move
     if( !newUp.isEmpty()){
@@ -55,19 +55,19 @@ void sendTouch(Touches curTouch)
     myImageMenu.imageMenuInput((int)(curTouch.getXPos()) * width, (int)(height - curTouch.getYPos() * height));
   }
   else {
-    drawTouches(curTouch.getXPos() * width, height - curTouch.getYPos() * height, curTouch.getXWidth() * width, curTouch.getYWidth() * height);
+    drawTouches((int)(curTouch.getXPos() * width), (int)(height - curTouch.getYPos() * height), (int)(curTouch.getXWidth() * width), (int)(curTouch.getYWidth() * height));
   }
 }
 /**************************************************
  * Description needed
  */
-void drawTouches(float xCoordinate, float yCoordinate, float theXWidth, float theYWidth)
+void drawTouches(int xCoordinate, int yCoordinate, int theXWidth, int theYWidth)
 {
-  //drawObject newObject = new drawObject( xCoordinate, yCoordinate, theXWidth, theYWidth
+  
   if(tool == 1)
   {
+    drawObject newObject = new drawObject(tool, xCoordinate, yCoordinate, theXWidth, theYWidth, paintColors[0], paintColors[1], paintColors[2], paintColors[3], TOUCH_MODE);
     if(TOUCH_MODE.equals("ELLIPSE")) {
-
       for (int a = 1; a <= 40; a++) {
         fill( paintColors[0], paintColors[1], paintColors[2], paintColors[3]*(1-(0.025*a)));
         stroke( paintColors[0], paintColors[1], paintColors[2], 0);
@@ -89,8 +89,8 @@ void drawTouches(float xCoordinate, float yCoordinate, float theXWidth, float th
     }
   }
   else {
+    drawObject newObject = new drawObject(tool, xCoordinate, yCoordinate, prevxCoordinate, prevyCoordinate);
     stroke(0);
-    //line(mouseX, mouseY, pmouseX, pmouseY);
     line(xCoordinate, yCoordinate, prevxCoordinate, prevyCoordinate);
   }
   prevxCoordinate = xCoordinate;

@@ -75,9 +75,7 @@ void keyPressed() {
     try { mySocket.close(); }
     catch(Exception e) {}
     File f = new File(sketchPath("tempback.tif"));
-    if(f.delete()) {
-      exit();
-    }
+    exit();
   }
   else if(key == 'c' || key == 'C') {
     clearScreen();
@@ -93,6 +91,8 @@ void keyPressed() {
        if(newBackground) {
          clearScreen();
          image(newBackgroundImage, 0, 0);
+         newBackgroundImage = null;
+         newBackground = false;
        }
        else {
          clearScreen();

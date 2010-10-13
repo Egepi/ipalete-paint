@@ -96,7 +96,7 @@ void drawTouches(int xCoordinate, int yCoordinate, int theXWidth, int theYWidth)
   prevyCoordinate = yCoordinate;
   prevtheXWidth = theXWidth;
   prevtheYWidth = theYWidth;
-  println(newObject.toString());
+  writeToFile(newObject.toString());
 }
 
 void clearScreen() {

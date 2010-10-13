@@ -46,6 +46,7 @@ void setup() {
     hint(DISABLE_DEPTH_TEST);
   }
   clearScreen();
+  prepareFile();
 } 
 
 /**************************************************
@@ -75,6 +76,8 @@ void keyPressed() {
     try { mySocket.close(); }
     catch(Exception e) {}
     File f = new File(sketchPath("tempback.tif"));
+    f.delete();
+    finishFile();
     exit();
   }
   else if(key == 'c' || key == 'C') {

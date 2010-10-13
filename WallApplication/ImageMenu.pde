@@ -69,7 +69,7 @@ class ImageMenu {
     pageImages = new ImagePreview[pageSize];
     int imageNumber = (pageCount - 1)*maxPageSize;
     for(int i = 0; i < pageSize; i++) {
-      pageImages[i] = new ImagePreview("Images/" + savedImages[imageNumber + i]); 
+      pageImages[i] = new ImagePreview("Images/" + savedImages[imageNumber + i], i+1); 
       pageImages[i].getPImage().resize(width/3, (height/3));
     } 
     //Load arrow buttons and resize them depending on resolution of current screen compared to
@@ -95,15 +95,28 @@ class ImageMenu {
     int theX = theMinX;
     int theY = 0;
     int perRow = 2;
+    int growingDraw = -1;
+    int growingX = 0;
+    int growingY = 0;
     //Loop through the images and display them
     for(int j = 0; j <  currPageCount; j++) {
-      image(pageImages[j].getPImage(),  theX, theY);
-      pageImages[j].setLocation(theX, theY);
-      theX = theX + pageImages[j].getPImage().width;
-      if(((j+1)%perRow) == 0) {
-        theY = theY + pageImages[j].getPImage().height;
-        theX = theMinX; 
+      if(pageImages[j].isGrowing == true) {
+        growingDraw = j;
+      } else {
+        image(pageImages[j].getPImage(),  theX, theY);
       }
+        pageImages[j].setLocation(theX, theY);
+        theX = theX + pageImages[j].getPImage().width;
+        if(((j+1)%perRow) == 0) {
+          theY = theY + pageImages[j].getPImage().height;
+          theX = theMinX; 
+        }
+    }
+    
+    if(growingDraw != -1) {
+     print("the growing num is " + growingDraw + "\n");
+     pageImages[growingDraw].drawPreview();
+     pageImages[growingDraw].calculateChange();
     }
     
     //Display the navigation buttons
@@ -113,6 +126,7 @@ class ImageMenu {
     if(disPrevArrow == true) {
       prevArrow.drawIt();
     }
+    
     
   }// End displayPage()
   
@@ -126,6 +140,13 @@ class ImageMenu {
       nextPage();
     } else if((prevArrow.checkBounds() == 1)&&(disPrevArrow == true)) {
       prevPage();
+    } else {
+      for(int i = 0; i < currPageCount; i++) {
+        if(pageImages[i].isTouched(touchX, touchY)) {
+          pageImages[i].changeView();
+          break; 
+        }
+      } 
     }
   }// End imageMenuInput()
   
@@ -183,15 +204,19 @@ class ImageMenu {
 class ImagePreview{
   
   private PImage thePreviewImage;
+  private String imageName;
   private int theImageX;
   private int theImageY;
-  private int firstX;
-  private int firstY;
-  private int secondX;
-  private int secondY;
+  private int menuLocation;
+  private boolean isBig;
+  private boolean isBehind;
+  private boolean isGrowing;
+  private int changedX;
   
-  public ImagePreview(String imageName) {
-    this.thePreviewImage = loadImage(imageName);
+  public ImagePreview(String theImageName, int theLocation) {
+    this.thePreviewImage = loadImage(theImageName);
+    this.imageName = theImageName;
+    this.menuLocation = theLocation;
   }
   
   private boolean isTouched(int checkX, int checkY) {
@@ -202,9 +227,25 @@ class ImagePreview{
     }
     return false;
   }
+
+  private void changeView() {
+    this.isGrowing = true;
+  }
   
-  private void addPinchTouch() {
-    
+  public void calculateChange() {
+    int changer = 1;
+    if(this.isBig == true) {
+      changer = changer * -1;  
+    }
+    if(this.menuLocation == 1) {
+      if(thePreviewImage.width < ((width/3)*2)) {//||(thePreviewImage.width > (width/3))) {
+        this.changedX = thePreviewImage.width + (32*changer);
+        print("the new width and height is " + thePreviewImage.width + " and height: " + thePreviewImage.height  + "\n");
+      } else {
+        this.isBig = !(this.isBig);
+        this.isGrowing = false;
+      }
+    }
   }
   
   public void setLocation(int locX, int locY) {
@@ -212,6 +253,14 @@ class ImagePreview{
     this.theImageY = locY;
   }
   
+  public void drawPreview() {
+//    print("the passedX " + passedX + " thepassed Y " + passedY + "\n");
+    PImage tempImage = loadImage(this.imageName);
+    tempImage.resize(this.changedX, 0);
+    image(tempImage, theImageX, theImageY);
+    thePreviewImage = tempImage;    
+  }
+    
   public PImage getPImage() {
     return thePreviewImage; 
   }

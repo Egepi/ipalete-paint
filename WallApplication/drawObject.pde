@@ -13,7 +13,7 @@ class drawObject {
   private int blueValue;
   private int alphaValue;
   private int tool;
-  private String drawMode;
+  private int drawMode;
   
   public drawObject(int toolNum, int x, int y, int prevxcoordinate, int prevycoordinate) {
     this.tool = toolNum;
@@ -32,7 +32,12 @@ class drawObject {
     this.greenValue = greenColor;
     this.blueValue = blueColor;
     this.alphaValue = alphaVal;
-    this.drawMode = drawType;
+    if(drawType.equals("ELLIPSE")) {
+      this.drawMode = 1;
+    }
+    else {
+      this.drawMode = 2;
+    }
   }
   
   public String toString() {
@@ -40,7 +45,7 @@ class drawObject {
       return(this.tool+"#"+this.theX+"#"+this.theY+"#"+this.theXwidth+"#"+this.theYwidth+"#"+this.redValue+"#"+this.greenValue+"#"+this.blueValue+"#"+this.alphaValue+"#"+this.drawMode);
     }
     else {
-      return(this.tool+"#"+this.theX+"#"+this.theY+"#"+this.prevXCoordinate+"#"+this.prevYCoordinate);
+      return(this.tool+"#"+this.theX+"#"+this.theY+"#"+this.prevXCoordinate+"#"+this.prevYCoordinate+"#0#0#0#0#0");
     }
   
   }

@@ -107,11 +107,11 @@ class ImageMenu {
         bigDraw = j;
       }else {
         image(pageImages[j].getPImage(),  theX, theY);
-      }
         pageImages[j].setLocation(theX, theY);
+      }
         theX = theX + (width/3);
         if(((j+1)%perRow) == 0) {
-          theY = theY + pageImages[j].getPImage().height;
+          theY = theY + (height/3);
           theX = theMinX; 
         }
     }
@@ -217,6 +217,7 @@ class ImagePreview{
   private boolean isGrowing;
   private int changedX;
   private int baseWidth;
+  private int changeInterval = 16;
   
   public ImagePreview(String theImageName, int theLocation) {
     this.thePreviewImage = loadImage(theImageName);
@@ -245,10 +246,48 @@ class ImagePreview{
     if(this.isBig == true) {
       changer = changer * -1;  
     }
+    this.changedX = (changeInterval*changer) + this.changedX;
+    
     if(this.menuLocation == 1) {
       if((thePreviewImage.width <= ((width/3)*2))&&(thePreviewImage.width >= (width/3))) {
-        this.changedX = (16*changer) + this.changedX;
-        print ("the resize to: " + this.changedX + "\n");
+      } else {
+        this.isBig = !(this.isBig);
+        this.isGrowing = false;
+      }
+    }else if(this.menuLocation == 2) {
+      if((thePreviewImage.width <= ((width/3)*2))&&(thePreviewImage.width >= (width/3))) {
+        theImageX = theImageX - changeInterval;
+      } else {
+        this.isBig = !(this.isBig);
+        this.isGrowing = false; 
+      }
+    } else if(this.menuLocation == 3) {
+      if((thePreviewImage.width <= ((width/3)*2))&&(thePreviewImage.width >= (width/3))) {
+        theImageY = theImageY - (int)(changeInterval / 4);
+        print("the changed y " + theImageY + "\n");
+      } else {
+        this.isBig = !(this.isBig);
+        this.isGrowing = false; 
+      } 
+    } else if(this.menuLocation == 4) {
+      if((thePreviewImage.width <= ((width/3)*2))&&(thePreviewImage.width >= (width/3))) {
+        theImageY = theImageY - (int)(changeInterval / 4);
+        theImageX = theImageX - changeInterval;
+      } else {
+        this.isBig = !(this.isBig);
+        this.isGrowing = false; 
+      }
+    } else if(this.menuLocation == 5) {
+       if((thePreviewImage.width <= ((width/3)*2))&&(thePreviewImage.width >= (width/3))) {
+         theImageY = theImageY - (int)(changeInterval / 2);
+       } else {
+         this.isBig = !(this.isBig);
+         this.isGrowing = false; 
+       } 
+    } else if(this.menuLocation == 6) {
+      if((thePreviewImage.width <= ((width/3)*2))&&(thePreviewImage.width >= (width/3))) {
+        theImageY = theImageY - (int)(changeInterval / 2);
+        theImageX = theImageX - changeInterval;
       } else {
         this.isBig = !(this.isBig);
         this.isGrowing = false;
@@ -264,8 +303,9 @@ class ImagePreview{
   public void drawPreview() {
     PImage tempImage = loadImage(this.imageName);
     tempImage.resize(this.changedX, 0);
+    
     image(tempImage, theImageX, theImageY);
-    thePreviewImage = tempImage;    
+    thePreviewImage = tempImage;
   }
     
   public PImage getPImage() {

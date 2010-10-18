@@ -1,6 +1,6 @@
 /**************************************************
  * This is used to control the background picking
- * functionality as well as saving screen shots.
+ * functionality as well as saving screen shots. 
  */
 
 class ImageMenu {
@@ -96,17 +96,20 @@ class ImageMenu {
     int theY = 0;
     int perRow = 2;
     int growingDraw = -1;
+    int bigDraw = -1;
     int growingX = 0;
     int growingY = 0;
     //Loop through the images and display them
     for(int j = 0; j <  currPageCount; j++) {
       if(pageImages[j].isGrowing == true) {
         growingDraw = j;
-      } else {
+      } else if(pageImages[j].isBig == true) {
+        bigDraw = j;
+      }else {
         image(pageImages[j].getPImage(),  theX, theY);
       }
         pageImages[j].setLocation(theX, theY);
-        theX = theX + pageImages[j].getPImage().width;
+        theX = theX + (width/3);
         if(((j+1)%perRow) == 0) {
           theY = theY + pageImages[j].getPImage().height;
           theX = theMinX; 
@@ -114,9 +117,10 @@ class ImageMenu {
     }
     
     if(growingDraw != -1) {
-     print("the growing num is " + growingDraw + "\n");
      pageImages[growingDraw].drawPreview();
      pageImages[growingDraw].calculateChange();
+    } else if(bigDraw != -1) {
+      pageImages[bigDraw].drawPreview(); 
     }
     
     //Display the navigation buttons
@@ -212,11 +216,13 @@ class ImagePreview{
   private boolean isBehind;
   private boolean isGrowing;
   private int changedX;
+  private int baseWidth;
   
   public ImagePreview(String theImageName, int theLocation) {
     this.thePreviewImage = loadImage(theImageName);
     this.imageName = theImageName;
     this.menuLocation = theLocation;
+    this.baseWidth = this.thePreviewImage.width;
   }
   
   private boolean isTouched(int checkX, int checkY) {
@@ -230,6 +236,8 @@ class ImagePreview{
 
   private void changeView() {
     this.isGrowing = true;
+    this.baseWidth = thePreviewImage.width;
+    this.changedX = this.baseWidth;
   }
   
   public void calculateChange() {
@@ -238,9 +246,9 @@ class ImagePreview{
       changer = changer * -1;  
     }
     if(this.menuLocation == 1) {
-      if(thePreviewImage.width < ((width/3)*2)) {//||(thePreviewImage.width > (width/3))) {
-        this.changedX = thePreviewImage.width + (32*changer);
-        print("the new width and height is " + thePreviewImage.width + " and height: " + thePreviewImage.height  + "\n");
+      if((thePreviewImage.width <= ((width/3)*2))&&(thePreviewImage.width >= (width/3))) {
+        this.changedX = (16*changer) + this.changedX;
+        print ("the resize to: " + this.changedX + "\n");
       } else {
         this.isBig = !(this.isBig);
         this.isGrowing = false;
@@ -254,7 +262,6 @@ class ImagePreview{
   }
   
   public void drawPreview() {
-//    print("the passedX " + passedX + " thepassed Y " + passedY + "\n");
     PImage tempImage = loadImage(this.imageName);
     tempImage.resize(this.changedX, 0);
     image(tempImage, theImageX, theImageY);

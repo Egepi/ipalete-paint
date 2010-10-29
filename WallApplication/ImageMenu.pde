@@ -139,6 +139,7 @@ class ImageMenu {
    * in the menu
    */ 
   void imageMenuInput(int touchX, int touchY) {
+      print("the x " + touchX + " the Y " + touchY + " \n");
     if((nextArrow.checkBounds() == 1)&&(disNextArrow == true)) {
       print("I got a click at: " + touchX + " " + touchY + "\n");
       nextPage();

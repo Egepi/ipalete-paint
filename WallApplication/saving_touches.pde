@@ -21,6 +21,7 @@ void finishFile() {
 }
 
 void recreate() {
+  /*
   clearScreen();
   FileReader infstream;
   BufferedReader in;
@@ -50,6 +51,7 @@ void recreate() {
       
     }
   }  catch(Exception e) {System.err.println("Error: " + e.getMessage());} 
+  */
 }
 
 void recreateTouches(String NEW_TOUCH_MODE, int xCoordinate, int yCoordinate, int theXWidth, int theYWidth, int newPaintColors[])
@@ -76,7 +78,7 @@ void recreateTouches(String NEW_TOUCH_MODE, int xCoordinate, int yCoordinate, in
   } 
 }
 
-void recreateTouches(int xCoordinate, int yCoordinate, int prevXCoord, int theYCoord,) {
+void recreateTouches(int xCoordinate, int yCoordinate, int prevXCoord, int prevYCoord) {
     stroke(0);
     line(xCoordinate, yCoordinate, prevXCoord, prevYCoord);
 }

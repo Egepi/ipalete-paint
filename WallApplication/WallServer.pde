@@ -55,11 +55,12 @@ void readData()
 void connectClient() {
   //try-catch block for starting the server on WALL.
   try {
+    println("Waiting for client");
     myServer = new ServerSocket(port);
     mySocket = myServer.accept();
     System.out.println( " THE CLIENT"+" "+ mySocket.getInetAddress() +":"+mySocket.getPort()+" IS CONNECTED ");
     connectionEstablished = true;
-    clearScreen();
+    //clearScreen();
   }
   catch(Exception e) {
     println("Server connection had an error!!!");

@@ -9,9 +9,14 @@ import tacTile.net.*;
 /**************************************************
  * Globals
  */
-boolean connectToTacTile = false;
-boolean connectToiPad = false;
+color backgroundColor = color( 0 ); 
+color textColor = color(255);
+color lineColor = color(255);
+
+boolean connectToTacTile = true;
+boolean connectToiPad = true;
 boolean firstTime = true;
+boolean showWaiting = true;
 //Set false in linux to make it work.
 boolean threadOn = false;
 //debug text
@@ -23,6 +28,8 @@ String TOUCH_MODE = "ELLIPSE";
 int myWidth = screen.width;
 int myHeight = screen.height;
 
+PFont font;
+Thread waitingThread;
 
 ImageMenu myImageMenu;
 
@@ -31,9 +38,9 @@ ImageMenu myImageMenu;
  * on startup
  */
 void setup() {
-  readConfigFile("config.cfg");
   startTouchConnection();
-  myImageMenu = new ImageMenu();
+  readConfigFile("config.cfg");
+  //myImageMenu = new ImageMenu();
   if(threadOn) {
     // Create the object with the run() method
     Runnable runnable = new BasicThread();
@@ -46,7 +53,16 @@ void setup() {
     hint(DISABLE_DEPTH_TEST);
   }
   clearScreen();
-  prepareFile();
+  //prepareFile();
+  
+  font = loadFont("ArialMT-36.vlw");
+  Runnable loader = new Runnable(){
+    public void run(){
+      readData();     
+    }
+  };
+  waitingThread = new Thread( loader );
+  waitingThread.start();
 } 
 
 /**************************************************
@@ -54,16 +70,33 @@ void setup() {
  * to screen.
  */
 void draw() { 
-   
+  
   // Start the thread
   if(firstTime && threadOn) {
     thread.start();
     firstTime = false;
   }
   if(DEBUG_MODE) { debugCode(); }
-  if(connectToiPad) { readData(); }
+  if(connectToiPad) {
+    
+    if( !connectionEstablished && showWaiting ){
+      frameRate(20);
+      background(backgroundColor);
+      fill(textColor);
+      textFont(font, 64);
+      textAlign(CENTER);
+      text("Waiting for iPad to connect...", width/2, height/2);
+      
+    } else if( connectionEstablished && showWaiting ){
+      frameRate(60);
+      background(backgroundColor);
+      showWaiting = false;
+    } else {
+      readData();
+    }    
+  }
   if(MENU_MODE) {
-    myImageMenu.displayPage(); 
+    //myImageMenu.displayPage(); 
   }
   drawStuff();
 }
@@ -87,9 +120,9 @@ void keyPressed() {
     DEBUG_MODE = !DEBUG_MODE;
   }
   else if(key == 's' || key == 'S') {
-    saveFrame("screenshot-"+year()+"-"+month()+"-"+day()+"-"+hour()+"-"+minute()+"-"+second()+"-"+millis()+".tif");
+    saveFrame("data/Images/screenshot-"+year()+"-"+month()+"-"+day()+"-"+hour()+"-"+minute()+"-"+second()+"-"+millis()+".tif");
   }
-  else if(key == 'i' || key == 'I') {
+ /* else if(key == 'i' || key == 'I') {
      if(MENU_MODE) {
        if(newBackground) {
          clearScreen();
@@ -109,7 +142,7 @@ void keyPressed() {
        //background(255);
        MENU_MODE = !MENU_MODE;       
      }
-  }
+  }*/
   else if(key == 'm' || key == 'M') {
     if(TOUCH_MODE.equals("SPHERE")) {
       TOUCH_MODE = "ELLIPSE";

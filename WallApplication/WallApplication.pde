@@ -14,7 +14,7 @@ color textColor = color(255);
 color lineColor = color(255);
 
 boolean connectToTacTile = true;
-boolean connectToiPad = false;
+boolean connectToiPad = true;
 boolean showWaiting = true;
 //debug text
 boolean DEBUG_MODE = false;

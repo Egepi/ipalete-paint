@@ -46,9 +46,7 @@ void readData()
     }
   }
   else {
-    if(!threadOn) {
-      connectClient();
-    }
+     connectClient();
   }
 }
 

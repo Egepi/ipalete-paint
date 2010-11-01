@@ -89,7 +89,7 @@ class ImageMenu {
    * Displays a page worth of images
    */
   void displayPage() {
-    background(0,127);
+    //background(0,127);
 
     int theMinX = (width/6);
     int theX = theMinX;

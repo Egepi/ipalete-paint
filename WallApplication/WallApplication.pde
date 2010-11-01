@@ -14,7 +14,7 @@ color textColor = color(255);
 color lineColor = color(255);
 
 boolean connectToTacTile = true;
-boolean connectToiPad = true;
+boolean connectToiPad = false;
 boolean showWaiting = true;
 //debug text
 boolean DEBUG_MODE = false;
@@ -47,13 +47,15 @@ void setup() {
   //prepareFile();
 
   font = loadFont("ArialMT-36.vlw");
-  Runnable loader = new Runnable() {
-    public void run() {
-      readData();
-    }
-  };
-  waitingThread = new Thread( loader );
-  waitingThread.start();
+  if(connectToiPad) {
+    Runnable loader = new Runnable() {
+      public void run() {
+        readData();
+      }
+    };
+    waitingThread = new Thread( loader );
+    waitingThread.start();
+  }
 } 
 
 /**************************************************

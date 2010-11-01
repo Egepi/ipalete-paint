@@ -15,10 +15,7 @@ color lineColor = color(255);
 
 boolean connectToTacTile = true;
 boolean connectToiPad = true;
-boolean firstTime = true;
 boolean showWaiting = true;
-//Set false in linux to make it work.
-boolean threadOn = false;
 //debug text
 boolean DEBUG_MODE = false;
 boolean MENU_MODE = false;
@@ -41,12 +38,6 @@ void setup() {
   startTouchConnection();
   readConfigFile("config.cfg");
   //myImageMenu = new ImageMenu();
-  if(threadOn) {
-    // Create the object with the run() method
-    Runnable runnable = new BasicThread();
-    // Create the thread supplying it with the runnable object
-    thread = new Thread(runnable);
-  }
 
   if(connectToTacTile) {
     ortho(-width/2 , width/2, -height/2, height/2, 100, 10000);
@@ -71,14 +62,8 @@ void setup() {
  */
 void draw() { 
   
-  // Start the thread
-  if(firstTime && threadOn) {
-    thread.start();
-    firstTime = false;
-  }
   if(DEBUG_MODE) { debugCode(); }
   if(connectToiPad) {
-    
     if( !connectionEstablished && showWaiting ){
       frameRate(20);
       background(backgroundColor);

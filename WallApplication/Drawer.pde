@@ -42,7 +42,7 @@ void drawStuff()
   else{
    if(mousePressed) {    
      if(MENU_MODE) {
-       myImageMenu.imageMenuInput(mouseX, mouseY);
+       //myImageMenu.imageMenuInput(mouseX, mouseY);
      }  
      else {
        drawTouches(0, 0, mouseX, mouseY,  10, 10);
@@ -54,7 +54,7 @@ void drawStuff()
 void sendTouch(Touches curTouch)
 {
   if(MENU_MODE) {
-    myImageMenu.imageMenuInput((int)(curTouch.getXPos() * width), (int)(height - curTouch.getYPos() * height));
+    //myImageMenu.imageMenuInput((int)(curTouch.getXPos() * width), (int)(height - curTouch.getYPos() * height));
   }
   else {
     drawTouches((int)curTouch.getGesture(), (int)curTouch.getFinger(), (int)(curTouch.getXPos() * width), (int)(height - curTouch.getYPos() * height), (int)(curTouch.getXWidth() * width), (int)(curTouch.getYWidth() * height));

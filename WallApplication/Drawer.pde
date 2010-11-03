@@ -71,59 +71,61 @@ void drawTouches(int gesture, int id, int xCoordinate, int yCoordinate, int theX
     stroke( col );
     ellipse( xCoordinate, yCoordinate, theXWidth, theYWidth);
   } 
-  if(tool == 1) {
-    newObject = new drawObject(tool, xCoordinate, yCoordinate, theXWidth, theYWidth, paintColors[0], paintColors[1], paintColors[2], paintColors[3], TOUCH_MODE);
-    if(TOUCH_MODE.equals("ELLIPSE")) {
-      for (int a = 1; a <= 40; a++) {
-        fill( paintColors[0], paintColors[1], paintColors[2], paintColors[3]*(1-(0.025*a)));
+  else{
+    if(tool == 1) {
+      newObject = new drawObject(tool, xCoordinate, yCoordinate, theXWidth, theYWidth, paintColors[0], paintColors[1], paintColors[2], paintColors[3], TOUCH_MODE);
+      if(TOUCH_MODE.equals("ELLIPSE")) {
+        for (int a = 1; a <= 40; a++) {
+          fill( paintColors[0], paintColors[1], paintColors[2], paintColors[3]*(1-(0.025*a)));
+          stroke( paintColors[0], paintColors[1], paintColors[2], 0);
+          ellipse( xCoordinate, yCoordinate, theXWidth+(a*1), theYWidth+(a*1));
+        }
+        
+        //Actual touch
+        fill( paintColors[0], paintColors[1], paintColors[2], paintColors[3]);
         stroke( paintColors[0], paintColors[1], paintColors[2], 0);
-        ellipse( xCoordinate, yCoordinate, theXWidth+(a*1), theYWidth+(a*1));
+        ellipse( xCoordinate, yCoordinate, theXWidth, theYWidth);
       }
-      
-      //Actual touch
-      fill( paintColors[0], paintColors[1], paintColors[2], paintColors[3]);
-      stroke( paintColors[0], paintColors[1], paintColors[2], 0);
-      ellipse( xCoordinate, yCoordinate, theXWidth, theYWidth);
+      else if(TOUCH_MODE.equals("SPHERE"))
+      {
+        lights();
+        fill( paintColors[0], paintColors[1], paintColors[2], paintColors[3]);
+        stroke( paintColors[0], paintColors[1], paintColors[2], 0);
+        translate(xCoordinate, yCoordinate);
+        sphere(theXWidth);
+      }
     }
-    else if(TOUCH_MODE.equals("SPHERE"))
-    {
-      lights();
-      fill( paintColors[0], paintColors[1], paintColors[2], paintColors[3]);
-      stroke( paintColors[0], paintColors[1], paintColors[2], 0);
-      translate(xCoordinate, yCoordinate);
-      sphere(theXWidth);
-    }
-  }
-  else if(tool == 2) {
-    newObject = new drawObject(tool, xCoordinate, yCoordinate, prevxCoordinate, prevyCoordinate);
-    //stroke(lineColor);
-    stroke( paintColors[0], paintColors[1], paintColors[2], paintColors[3]);
-    strokeWeight(5);
-    if( gesture == 0 ){ // down
-    //if( sqrt( sq(abs( xCoordinate - prevxCoordinate )) + sq(abs( yCoordinate - prevyCoordinate )) ) < 100 )
-      //line(xCoordinate, yCoordinate, prevxCoordinate, prevyCoordinate);
-      int[] prev = { xCoordinate, yCoordinate };
-      prevTouches.put( id, prev );
-    } else if( gesture == 1 ){ // move
-      if( prevTouches.containsKey( id ) ){
-        int[] prev = (int[])prevTouches.get(id);
-        prevxCoordinate = prev[0];
-        prevyCoordinate = prev[1];
-        line(xCoordinate, yCoordinate, prevxCoordinate, prevyCoordinate);
-        prev[0] = xCoordinate;
-        prev[1] = yCoordinate;
+    else if(tool == 2) {
+      newObject = new drawObject(tool, xCoordinate, yCoordinate, prevxCoordinate, prevyCoordinate);
+      //stroke(lineColor);
+      stroke( paintColors[0], paintColors[1], paintColors[2], paintColors[3]);
+      strokeWeight(5);
+      if( gesture == 0 ){ // down
+      //if( sqrt( sq(abs( xCoordinate - prevxCoordinate )) + sq(abs( yCoordinate - prevyCoordinate )) ) < 100 )
+        //line(xCoordinate, yCoordinate, prevxCoordinate, prevyCoordinate);
+        int[] prev = { xCoordinate, yCoordinate };
         prevTouches.put( id, prev );
+      } else if( gesture == 1 ){ // move
+        if( prevTouches.containsKey( id ) ){
+          int[] prev = (int[])prevTouches.get(id);
+          prevxCoordinate = prev[0];
+          prevyCoordinate = prev[1];
+          line(xCoordinate, yCoordinate, prevxCoordinate, prevyCoordinate);
+          prev[0] = xCoordinate;
+          prev[1] = yCoordinate;
+          prevTouches.put( id, prev );
+        }
+      } else if( gesture == 2 ) { // up
+        prevTouches.remove( id );
       }
-    } else if( gesture == 2 ) { // up
-      prevTouches.remove( id );
     }
+    prevxCoordinate = xCoordinate;
+    prevyCoordinate = yCoordinate;
+    prevtheXWidth = theXWidth;
+    prevtheYWidth = theYWidth;
+    //writeToFile(newObject.toString());
+    strokeWeight(1);
   }
-  prevxCoordinate = xCoordinate;
-  prevyCoordinate = yCoordinate;
-  prevtheXWidth = theXWidth;
-  prevtheYWidth = theYWidth;
-  writeToFile(newObject.toString());
-  strokeWeight(1);
 }
 
 void clearScreen() {

@@ -4,17 +4,18 @@
  */
 
 class ImageMenu {
-  private String[] savedImages; //Array of all image names
+  private String[] savedImages;       //Array of all image names
   private ImagePreview[] pageImages;  //Array of all images on current page
-  private int maxPageSize;      //Max number of images per page
-  private int currPageCount;    //How many images to be in the current page
-  private int nextPageCount;    //How many images to be in the next page
-  private int pageNumber;       //How many pages (number of images / maxPageSize )
-  private Button nextArrow;
-  private Button prevArrow;
-  private boolean disPrevArrow;
-  private boolean disNextArrow;
-  private PImage menuBackground;
+  private int maxPageSize;            //Max number of images per page
+  private int currPageCount;          //How many images to be in the current page
+  private int nextPageCount;          //How many images to be in the next page
+  private int pageNumber;             //How many pages (number of images / maxPageSize )
+  private Button nextArrow;           //Button object that holds the next arrow on the screen
+  private Button prevArrow;           //Button object that holds the prev arrow on the screen
+  private boolean disPrevArrow;       //Determine if the previous arrow should be drawn or not
+  private boolean disNextArrow;       //Determine if the next arrow should be drawn or not
+  private PImage menuBackground;      //Image for the background of the image menu
+  private int picInFocus;             //The number for the picture that is currently being selected
   
   /**************************************************
    * Default Constructor
@@ -24,15 +25,14 @@ class ImageMenu {
     disPrevArrow = false;
     menuBackground = loadImage("MenuBack.png");
     menuBackground.resize(width,height);
+    pageNumber = 1;
     loadSavedImages();
   }// End ImageMenu()
     
   /**************************************************
    * Loads all images specified in a generated file
    */
-  void loadSavedImages() {
-     pageNumber = 1;
-     
+  void loadSavedImages() {     
      //Loads the data and sketch path, then runs the listFiles perl script
      String perlFile = sketchPath("listFiles.pl");
      String imageFolder = dataPath("Images");
@@ -46,6 +46,7 @@ class ImageMenu {
        print("No files to load were found\n");
        return;
      }
+     
      //More then max per page, set to max if less then max
      //then set to just the number of images.
      if(savedImages.length <= maxPageSize) {
@@ -68,10 +69,30 @@ class ImageMenu {
   private void loadImagePage(int pageSize, int pageCount) {
     pageImages = new ImagePreview[pageSize];
     int imageNumber = (pageCount - 1)*maxPageSize;
+    picInFocus = 0;
+    
     for(int i = 0; i < pageSize; i++) {
       pageImages[i] = new ImagePreview("Images/" + savedImages[imageNumber + i], i+1); 
       pageImages[i].getPImage().resize(width/3, (height/3));
-    } 
+    }
+    
+    int theMinX = (width/6);
+    int theX = theMinX;
+    int theY = 0;
+    int perRow = 2;
+    
+    //Loop through the images and display them
+    for(int j = 0; j <  currPageCount; j++) {
+        //image(pageImages[j].getPImage(),  theX, theY);
+        pageImages[j].setImageX(theX);
+        pageImages[j].setImageY(theY);
+        theX = theX + (width/3);
+        if(((j+1)%perRow) == 0) {
+          theY = theY + (height/3);
+          theX = theMinX; 
+        }
+    }
+    
     //Load arrow buttons and resize them depending on resolution of current screen compared to
     //Sage's resolution.
     PImage tempNext = loadImage("RightArrow.png");
@@ -89,38 +110,38 @@ class ImageMenu {
    * Displays a page worth of images
    */
   void displayPage() {
-    //background(0,127);
-
-    int theMinX = (width/6);
-    int theX = theMinX;
-    int theY = 0;
-    int perRow = 2;
-    int growingDraw = -1;
-    int bigDraw = -1;
-    int growingX = 0;
-    int growingY = 0;
-    //Loop through the images and display them
-    for(int j = 0; j <  currPageCount; j++) {
-      if(pageImages[j].isGrowing == true) {
-        growingDraw = j;
-      } else if(pageImages[j].isBig == true) {
-        bigDraw = j;
-      }else {
-        image(pageImages[j].getPImage(),  theX, theY);
-        pageImages[j].setLocation(theX, theY);
-      }
-        theX = theX + (width/3);
-        if(((j+1)%perRow) == 0) {
-          theY = theY + (height/3);
-          theX = theMinX; 
-        }
+    image(menuBackground,0,0);
+    
+    if(picInFocus != 0) {
+      tint(127);
+    }
+    for(int i=0; i < currPageCount; i++) {
+      image(pageImages[i].getPImage(), pageImages[i].getImageX(), pageImages[i].getImageY());
+    }
+    if(picInFocus != 0) {
+      tint(255); 
     }
     
-    if(growingDraw != -1) {
-     pageImages[growingDraw].drawPreview();
-     pageImages[growingDraw].calculateChange();
-    } else if(bigDraw != -1) {
-      pageImages[bigDraw].drawPreview(); 
+    if(picInFocus != 0) {
+      ImagePreview tempPreview = pageImages[picInFocus-1];
+      /*
+      fill(255,255,0);
+      if(picInFocus == 1) {
+        rect(tempPreview.getImageX()-10, tempPreview.getImageY()-10, tempPreview.getPImage().width, tempPreview.getPImage().height);
+      } else if(picInFocus == 2) {
+        rect(tempPreview.getImageX()+10, tempPreview.getImageY()-10, tempPreview.getPImage().width, tempPreview.getPImage().height);
+      } else if(picInFocus == 3) {
+        rect(tempPreview.getImageX()-10, tempPreview.getImageY(), tempPreview.getPImage().width, tempPreview.getPImage().height);
+      } else if(picInFocus == 4) {
+        rect(tempPreview.getImageX()+10, tempPreview.getImageY(), tempPreview.getPImage().width, tempPreview.getPImage().height);
+      } else if(picInFocus == 5) {
+        rect(tempPreview.getImageX()-10, tempPreview.getImageY()+10, tempPreview.getPImage().width, tempPreview.getPImage().height);
+      } else if(picInFocus == 6) {
+        rect(tempPreview.getImageX()+10, tempPreview.getImageY()+10, tempPreview.getPImage().width, tempPreview.getPImage().height);
+      }
+      fill(0);
+      */
+      image(tempPreview.getPImage(), tempPreview.getImageX(), tempPreview.getImageY());
     }
     
     //Display the navigation buttons
@@ -131,7 +152,6 @@ class ImageMenu {
       prevArrow.drawIt();
     }
     
-    
   }// End displayPage()
   
   /**************************************************
@@ -139,18 +159,36 @@ class ImageMenu {
    * in the menu
    */ 
   void imageMenuInput(int touchX, int touchY) {
-      print("the x " + touchX + " the Y " + touchY + " \n");
     if((nextArrow.checkBounds() == 1)&&(disNextArrow == true)) {
-      print("I got a click at: " + touchX + " " + touchY + "\n");
+      //Check if the next arrow button was pressed
       nextPage();
     } else if((prevArrow.checkBounds() == 1)&&(disPrevArrow == true)) {
+      //Check if the prev arrow button was pressed
       prevPage();
+    } else if((touchX > 1114)&&(picInFocus != 0)) {
+      newBackground = true;
+      newBackgroundImage = loadImage(pageImages[picInFocus-1].getImageName());
+      newBackgroundImage.resize(width,height);
+      picInFocus = 0;
+      //Put "i" code in here so that the menu exits, the picture and bool are already set
+      //MENU_MODE = false;
     } else {
+      //Check if any of the pictures were touched
       for(int i = 0; i < currPageCount; i++) {
-        if(pageImages[i].isTouched(touchX, touchY)) {
-          pageImages[i].changeView();
-          break; 
-        }
+          if(pageImages[i].isTouched(touchX, touchY) == true) {
+            if(pageImages[i].getLocation() == picInFocus) {
+              //Defocus the pic becuse it was touched and in focus
+              pageImages[i].deFocus();
+              picInFocus = 0; 
+            } else {
+              //Defocus the pic in focus and put in focus the image touched
+              if(picInFocus != 0) {
+                pageImages[picInFocus-1].deFocus();
+              }
+              pageImages[i].inFocus();
+              picInFocus = pageImages[i].getLocation(); 
+            }
+          }
       } 
     }
   }// End imageMenuInput()
@@ -176,6 +214,7 @@ class ImageMenu {
        disNextArrow = false;
        tempPageCount = maxPageSize; 
     } else if(savedImages.length < (maxPageSize * pageNumber)) {
+      //If there are less images then can fit on the next page
        disNextArrow = false;
        tempPageCount = (maxPageSize - ((maxPageSize * pageNumber) - savedImages.length)); 
     }
@@ -210,107 +249,92 @@ class ImagePreview{
   
   private PImage thePreviewImage;
   private String imageName;
-  private int theImageX;
-  private int theImageY;
   private int menuLocation;
-  private boolean isBig;
-  private boolean isBehind;
-  private boolean isGrowing;
-  private int changedX;
-  private int baseWidth;
-  private int changeInterval = 16;
+  private int imageXLocation;
+  private int imageYLocation;
+  private int movementAmt = 25;
   
   public ImagePreview(String theImageName, int theLocation) {
     this.thePreviewImage = loadImage(theImageName);
     this.imageName = theImageName;
     this.menuLocation = theLocation;
-    this.baseWidth = this.thePreviewImage.width;
   }
   
-  private boolean isTouched(int checkX, int checkY) {
-    if((checkX >= theImageX)&&(checkX <= (theImageX + thePreviewImage.width))) {
-      if((checkY >= theImageY)&&(checkY <= (theImageY + thePreviewImage.height))) {
+  public boolean isTouched(int checkX, int checkY) {
+    if((checkX >= imageXLocation)&&(checkX <= (imageXLocation + thePreviewImage.width))) {
+      if((checkY >= imageYLocation)&&(checkY <= (imageYLocation + thePreviewImage.height))) {
         return true;  
       }
     }
     return false;
   }
-
-  private void changeView() {
-    this.isGrowing = true;
-    this.baseWidth = thePreviewImage.width;
-    this.changedX = this.baseWidth;
+  
+  public int getLocation() {
+    return menuLocation; 
   }
   
-  public void calculateChange() {
-    int changer = 1;
-    if(this.isBig == true) {
-      changer = changer * -1;  
-    }
-    this.changedX = (changeInterval*changer) + this.changedX;
-    
+  public void deFocus() {
     if(this.menuLocation == 1) {
-      if((thePreviewImage.width <= ((width/3)*2))&&(thePreviewImage.width >= (width/3))) {
-      } else {
-        this.isBig = !(this.isBig);
-        this.isGrowing = false;
-      }
-    }else if(this.menuLocation == 2) {
-      if((thePreviewImage.width <= ((width/3)*2))&&(thePreviewImage.width >= (width/3))) {
-        theImageX = theImageX - changeInterval;
-      } else {
-        this.isBig = !(this.isBig);
-        this.isGrowing = false; 
-      }
+      this.imageXLocation -= movementAmt;
+      this.imageYLocation -= movementAmt;
+    } else if(this.menuLocation == 2) {
+      this.imageXLocation += movementAmt;
+      this.imageYLocation -= movementAmt;    
     } else if(this.menuLocation == 3) {
-      if((thePreviewImage.width <= ((width/3)*2))&&(thePreviewImage.width >= (width/3))) {
-        theImageY = theImageY - (int)(changeInterval / 4);
-        print("the changed y " + theImageY + "\n");
-      } else {
-        this.isBig = !(this.isBig);
-        this.isGrowing = false; 
-      } 
+      this.imageXLocation -= movementAmt;      
     } else if(this.menuLocation == 4) {
-      if((thePreviewImage.width <= ((width/3)*2))&&(thePreviewImage.width >= (width/3))) {
-        theImageY = theImageY - (int)(changeInterval / 4);
-        theImageX = theImageX - changeInterval;
-      } else {
-        this.isBig = !(this.isBig);
-        this.isGrowing = false; 
-      }
+      this.imageXLocation += movementAmt;    
     } else if(this.menuLocation == 5) {
-       if((thePreviewImage.width <= ((width/3)*2))&&(thePreviewImage.width >= (width/3))) {
-         theImageY = theImageY - (int)(changeInterval / 2);
-       } else {
-         this.isBig = !(this.isBig);
-         this.isGrowing = false; 
-       } 
+      this.imageXLocation -= movementAmt;
+      this.imageYLocation += movementAmt;      
     } else if(this.menuLocation == 6) {
-      if((thePreviewImage.width <= ((width/3)*2))&&(thePreviewImage.width >= (width/3))) {
-        theImageY = theImageY - (int)(changeInterval / 2);
-        theImageX = theImageX - changeInterval;
-      } else {
-        this.isBig = !(this.isBig);
-        this.isGrowing = false;
-      }
+      this.imageXLocation += movementAmt;
+      this.imageYLocation += movementAmt;      
     }
   }
-  
-  public void setLocation(int locX, int locY) {
-    this.theImageX = locX;
-    this.theImageY = locY;
-  }
-  
-  public void drawPreview() {
-    PImage tempImage = loadImage(this.imageName);
-    tempImage.resize(this.changedX, 0);
-    
-    image(tempImage, theImageX, theImageY);
-    thePreviewImage = tempImage;
-  }
-    
+
+  public void inFocus() {
+    if(this.menuLocation == 1) {
+      this.imageXLocation += movementAmt;
+      this.imageYLocation += movementAmt;
+    } else if(this.menuLocation == 2) {
+      this.imageXLocation -= movementAmt;
+      this.imageYLocation += movementAmt;    
+    } else if(this.menuLocation == 3) {
+      this.imageXLocation += movementAmt;      
+    } else if(this.menuLocation == 4) {
+      this.imageXLocation -= movementAmt;    
+    } else if(this.menuLocation == 5) {
+      this.imageXLocation += movementAmt;
+      this.imageYLocation -= movementAmt;      
+    } else if(this.menuLocation == 6) {
+      this.imageXLocation -= movementAmt;
+      this.imageYLocation -= movementAmt;      
+    }
+  }  
+     
   public PImage getPImage() {
     return thePreviewImage; 
+  }
+  
+  public int getImageX() {
+    return imageXLocation;
+  }
+  
+  public int getImageY() {
+    return imageYLocation;
+  }
+  
+  public void setImageX(int theX) {
+    this.imageXLocation = theX; 
+  }
+  
+  public void setImageY(int theY) {
+    this.imageYLocation = theY; 
+  }
+  
+  public String getImageName() {
+    return this.imageName; 
   }
   
 }

@@ -13,9 +13,9 @@ color backgroundColor = color( 0 );
 color textColor = color(255);
 color lineColor = color(255);
 
-boolean connectToTacTile = true;
-boolean connectToiPad = true;
-boolean showWaiting = true;
+boolean connectToTacTile = false;
+boolean connectToiPad = false;
+boolean showWaiting = false;
 //debug text
 boolean DEBUG_MODE = false;
 boolean MENU_MODE = false;
@@ -28,7 +28,7 @@ int myHeight = screen.height;
 PFont font;
 Thread waitingThread;
 
-//ImageMenu myImageMenu;
+ImageMenu myImageMenu;
 
 /**************************************************
  * setup() - a nessecary function for processing called
@@ -37,14 +37,14 @@ Thread waitingThread;
 void setup() {
   startTouchConnection();
   readConfigFile("config.cfg");
-  //myImageMenu = new ImageMenu();
+  myImageMenu = new ImageMenu();
 
   if(connectToTacTile) {
     ortho(-width/2, width/2, -height/2, height/2, 100, 10000);
     hint(DISABLE_DEPTH_TEST);
   }
   clearScreen();
-  //prepareFile();
+  prepareFile();
 
   font = loadFont("ArialMT-36.vlw");
   if(connectToiPad) {
@@ -86,7 +86,7 @@ void draw() {
     }
   }
   if(MENU_MODE) {
-    //myImageMenu.displayPage();
+    myImageMenu.displayPage();
   }
   drawStuff();
 }
@@ -115,7 +115,7 @@ void keyPressed() {
   else if(key == 's' || key == 'S') {
     saveFrame("data/Images/screenshot-"+year()+"-"+month()+"-"+day()+"-"+hour()+"-"+minute()+"-"+second()+"-"+millis()+".tif");
   }
-  /*else if(key == 'i' || key == 'I') {
+  else if(key == 'i' || key == 'I') {
     if(MENU_MODE) {
       if(newBackground) {
         clearScreen();
@@ -134,7 +134,7 @@ void keyPressed() {
       //background(255);
       MENU_MODE = !MENU_MODE;       
     }
-  }*/
+  }
   else if(key == 'm' || key == 'M') {
     if(TOUCH_MODE.equals("SPHERE")) {
       TOUCH_MODE = "ELLIPSE";

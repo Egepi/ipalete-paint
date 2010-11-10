@@ -174,6 +174,7 @@ class ImageMenu {
       image(newBackgroundImage, 0, 0);
       newBackgroundImage = null;
       newBackground = false;
+      MENU_MODE = false;
     } else {
       //Check if any of the pictures were touched
       for(int i = 0; i < currPageCount; i++) {

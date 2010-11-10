@@ -16,6 +16,7 @@ class ImageMenu {
   private boolean disNextArrow;       //Determine if the next arrow should be drawn or not
   private PImage menuBackground;      //Image for the background of the image menu
   private int picInFocus;             //The number for the picture that is currently being selected
+  private int selected = 10;
   
   /**************************************************
    * Default Constructor
@@ -36,6 +37,8 @@ class ImageMenu {
      //Loads the data and sketch path, then runs the listFiles perl script
      String perlFile = sketchPath("listFiles.pl");
      String imageFolder = dataPath("Images");
+     String realFolder = dataPath("Images");
+     print("THE PATH " + imageFolder);
      String param[] = { "perl", perlFile, imageFolder };
      exec(param);
           
@@ -165,16 +168,22 @@ class ImageMenu {
     } else if((prevArrow.checkBounds() == 1)&&(disPrevArrow == true)) {
       //Check if the prev arrow button was pressed
       prevPage();
-    } else if((touchX > 1114)&&(picInFocus != 0)) {
-      newBackground = true;
-      newBackgroundImage = loadImage(pageImages[picInFocus-1].getImageName());
-      newBackgroundImage.resize(width,height);
-      picInFocus = 0;
-      clearScreen();
-      image(newBackgroundImage, 0, 0);
-      newBackgroundImage = null;
-      newBackground = false;
-      MENU_MODE = false;
+    } else if((picInFocus != 0)&& pageImages[picInFocus-1].isTouched(touchX, touchY)) {
+      selected--;
+      if(selected == 0) {
+        newBackground = true;
+        //newBackgroundImage = loadImage(pageImages[picInFocus-1].getImageName()
+        newBackgroundImage = loadImage(pageImages[picInFocus-1].getImageName());
+        newBackgroundImage.resize(width,height);
+        clearScreen();
+        image(newBackgroundImage, 0, 0);
+        newBackgroundImage = null;
+        newBackground = false;
+        MENU_MODE = false;
+        pageImages[picInFocus-1].deFocus();
+        selected = 10;
+        picInFocus = 0;
+      }
     } else {
       //Check if any of the pictures were touched
       for(int i = 0; i < currPageCount; i++) {
@@ -189,7 +198,8 @@ class ImageMenu {
                 pageImages[picInFocus-1].deFocus();
               }
               pageImages[i].inFocus();
-              picInFocus = pageImages[i].getLocation(); 
+              picInFocus = pageImages[i].getLocation();
+              selected = 10; 
             }
           }
       } 

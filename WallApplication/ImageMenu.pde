@@ -170,8 +170,10 @@ class ImageMenu {
       newBackgroundImage = loadImage(pageImages[picInFocus-1].getImageName());
       newBackgroundImage.resize(width,height);
       picInFocus = 0;
-      //Put "i" code in here so that the menu exits, the picture and bool are already set
-      //MENU_MODE = false;
+      clearScreen();
+      image(newBackgroundImage, 0, 0);
+      newBackgroundImage = null;
+      newBackground = false;
     } else {
       //Check if any of the pictures were touched
       for(int i = 0; i < currPageCount; i++) {

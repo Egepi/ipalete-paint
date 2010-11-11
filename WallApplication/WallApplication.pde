@@ -11,7 +11,6 @@ import tacTile.net.*;
  */
 color backgroundColor = color( 0 ); 
 color textColor = color(255);
-color lineColor = color(255);
 
 boolean connectToTacTile = false;
 boolean connectToiPad = false;
@@ -106,15 +105,7 @@ void draw() {
  */
 void keyPressed() {
   if(key == 'q' || key == 'Q') {
-    try { 
-      mySocket.close();
-    }
-    catch(Exception e) {
-    }
-    File f = new File(sketchPath("tempback.tif"));
-    f.delete();
-    finishFile();
-    exit();
+    quitApplication();
   }
   else if(key == 'c' || key == 'C') {
     clearScreen();
@@ -123,27 +114,16 @@ void keyPressed() {
     DEBUG_MODE = !DEBUG_MODE;
   }
   else if(key == 's' || key == 'S') {
-    saveFrame("data/Images/screenshot-"+year()+"-"+month()+"-"+day()+"-"+hour()+"-"+minute()+"-"+second()+"-"+millis()+".tif");
+    saveImage();
   }
   else if(key == 'i' || key == 'I') {
     if(MENU_MODE) {
-      if(newBackground) {
-        clearScreen();
-        image(newBackgroundImage, 0, 0);
-        newBackgroundImage = null;
-        newBackground = false;
-      }
-      else {
-        clearScreen();
-        image(loadImage("tempback.tif"), 0, 0);
-      }
-      MENU_MODE = !MENU_MODE;
+      closeMenu();
     }
     else {
-      saveFrame("tempback.tif");
-      //background(255);
-      MENU_MODE = !MENU_MODE;       
+      openMenu();
     }
+
   }
   else if(key == 'm' || key == 'M') {
     if(TOUCH_MODE.equals("SPHERE")) {

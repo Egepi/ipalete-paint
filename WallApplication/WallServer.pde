@@ -68,7 +68,6 @@ void connectClient() {
     mySocket = myServer.accept();
     System.out.println( " THE CLIENT"+" "+ mySocket.getInetAddress() +":"+mySocket.getPort()+" IS CONNECTED ");
     connectionEstablished = true;
-    //clearScreen();
   }
   catch(Exception e) {
     println("Server connection had an error!!!");

@@ -43,7 +43,7 @@ void setup() {
   //Threaded the load of the images for image menu
   Runnable imgMenuLoader = new Runnable() {
     public void run() {
-      myImageMenu.loadImagePage(myImageMenu.currPageCount, myImageMenu.pageNumber);
+      myImageMenu.loadAllImages(myImageMenu.currPageCount, myImageMenu.pageNumber);
     }
   };
   imgMenuLoadThread = new Thread( imgMenuLoader );

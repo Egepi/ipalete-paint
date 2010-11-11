@@ -25,9 +25,8 @@ class ImageMenu {
     maxPageSize = 6;
     disPrevArrow = false;
     background(0);
-    //menuBackground = loadImage("MenuBack.png");
-    //menuBackground.resize(width,height);
     pageNumber = 1;
+    picInFocus = 0;
     loadSavedImages();
   }// End ImageMenu()
     
@@ -38,8 +37,6 @@ class ImageMenu {
      //Loads the data and sketch path, then runs the listFiles perl script
      String perlFile = sketchPath("listFiles.pl");
      String imageFolder = dataPath("Images");
-     String realFolder = dataPath("Images");
-     print("THE PATH " + imageFolder);
      String param[] = { "perl", perlFile, imageFolder };
      exec(param);
           
@@ -50,49 +47,20 @@ class ImageMenu {
        print("No files to load were found\n");
        return;
      }
-     
-     //More then max per page, set to max if less then max
-     //then set to just the number of images.
-     if(savedImages.length <= maxPageSize) {
-       currPageCount = savedImages.length;
-       disNextArrow = false;
-     } else {
-       currPageCount = maxPageSize;
-       disNextArrow = true;
-     }
    
      return;
   }// End loadSavedImages()
 
   /**************************************************
-   * Loads one "full page" worth of images to the 
-   * screen to be displayed to the user
+   * Loads all the images in the directory
    */
-  private void loadImagePage(int pageSize, int pageCount) {
-    pageImages = new ImagePreview[pageSize];
-    int imageNumber = (pageCount - 1)*maxPageSize;
-    picInFocus = 0;
+  private void loadAllImages(int pageSize, int pageCount) {
+    pageImages = new ImagePreview[savedImages.length];  //Array to hold all the images
     
-    for(int i = 0; i < pageSize; i++) {
-      pageImages[i] = new ImagePreview("Images/" + savedImages[imageNumber + i], i+1); 
-      pageImages[i].getPImage().resize(width/3, (height/3));
-    }
-    
-    int theMinX = (width/6);
-    int theX = theMinX;
-    int theY = 0;
-    int perRow = 2;
-    
-    //Loop through the images and display them
-    for(int j = 0; j <  currPageCount; j++) {
-        //image(pageImages[j].getPImage(),  theX, theY);
-        pageImages[j].setImageX(theX);
-        pageImages[j].setImageY(theY);
-        theX = theX + (width/3);
-        if(((j+1)%perRow) == 0) {
-          theY = theY + (height/3);
-          theX = theMinX; 
-        }
+    //Loop through the list of images and load all of them into memory
+    for( int j = 0; j < savedImages.length; j++ ) {
+      pageImages[j] = new ImagePreview("Images/" + savedImages[j]);
+      pageImages[j].getPImage().resize(width/3, height/3); 
     }
     
     //Load arrow buttons and resize them depending on resolution of current screen compared to
@@ -106,43 +74,77 @@ class ImageMenu {
     float arrowX = width/6;
     nextArrow = new Button(tempNext, (arrowX*5.5)-tempNext.width, arrowY);
     prevArrow = new Button(tempPrev, arrowX*0.5, arrowY);
-  }// End loadImagePage()
+    
+    /*int imageNumber = (pageCount - 1)*maxPageSize;
+    
+    for(int i = 0; i < pageSize; i++) {
+      pageImages[i] = new ImagePreview("Images/" + savedImages[imageNumber + i], i+1); 
+      pageImages[i].getPImage().resize(width/3, (height/3));
+    }*/
+    
+    //Create the first page to be displayed
+    createPage(1);
+  }// End loadAllImages()
   
+  /**************************************************
+  */
+  private void createPage(int pageNumber) {
+     //More then max per page, set to max if less then max
+     //then set to just the number of images.
+     if( (maxPageSize * pageNumber) <= savedImages.length ) {
+       currPageCount = maxPageSize;
+       if( (maxPageSize * pageNumber) < savedImages.length ) {
+         disNextArrow = true;
+       } else {
+         disNextArrow = false; 
+       }
+     } else {
+       currPageCount = (maxPageSize * pageNumber) - savedImages.length;
+       disNextArrow = false;
+     }
+    
+    int theMinX = (width/6);
+    int theX = theMinX;
+    int theY = 0;
+    int perRow = 2;
+    
+    //Loop through the images and display them
+    for(int j = 0; j <  currPageCount; j++) {
+        int tempIndex = j + (maxPageSize * (pageNumber - 1));
+        pageImages[tempIndex].setImageX(theX);
+        pageImages[tempIndex].setImageY(theY);
+        theX = theX + (width/3);
+        if(((j+1)%perRow) == 0) {
+          theY = theY + (height/3);
+          theX = theMinX; 
+        }
+    }
+  }// End createPage()
+ 
   /**************************************************
    * Displays a page worth of images
    */
   void displayPage() {
     background(0);
     
+    //Set tint for all pictures
     if(picInFocus != 0) {
       tint(127);
     }
+    
+    //Display all pictures on the screen
     for(int i=0; i < currPageCount; i++) {
       image(pageImages[i].getPImage(), pageImages[i].getImageX(), pageImages[i].getImageY());
     }
+    
+    //Un-tint back to normal
     if(picInFocus != 0) {
       tint(255); 
     }
     
+    //Draw the picture in focus
     if(picInFocus != 0) {
       ImagePreview tempPreview = pageImages[picInFocus-1];
-      /*
-      fill(255,255,0);
-      if(picInFocus == 1) {
-        rect(tempPreview.getImageX()-10, tempPreview.getImageY()-10, tempPreview.getPImage().width, tempPreview.getPImage().height);
-      } else if(picInFocus == 2) {
-        rect(tempPreview.getImageX()+10, tempPreview.getImageY()-10, tempPreview.getPImage().width, tempPreview.getPImage().height);
-      } else if(picInFocus == 3) {
-        rect(tempPreview.getImageX()-10, tempPreview.getImageY(), tempPreview.getPImage().width, tempPreview.getPImage().height);
-      } else if(picInFocus == 4) {
-        rect(tempPreview.getImageX()+10, tempPreview.getImageY(), tempPreview.getPImage().width, tempPreview.getPImage().height);
-      } else if(picInFocus == 5) {
-        rect(tempPreview.getImageX()-10, tempPreview.getImageY()+10, tempPreview.getPImage().width, tempPreview.getPImage().height);
-      } else if(picInFocus == 6) {
-        rect(tempPreview.getImageX()+10, tempPreview.getImageY()+10, tempPreview.getPImage().width, tempPreview.getPImage().height);
-      }
-      fill(0);
-      */
       image(tempPreview.getPImage(), tempPreview.getImageX(), tempPreview.getImageY());
     }
     
@@ -232,7 +234,7 @@ class ImageMenu {
     }
     print("The page count: " + tempPageCount + " Page number: " + pageNumber + "\n");
     currPageCount = tempPageCount;
-    loadImagePage(tempPageCount, pageNumber);
+    //loadImagePage(tempPageCount, pageNumber);
   }// End nextPage()
   
   /**************************************************
@@ -247,7 +249,7 @@ class ImageMenu {
     }
     disNextArrow = true;
     currPageCount = maxPageSize;
-    loadImagePage(currPageCount, pageNumber);
+    //loadImagePage(currPageCount, pageNumber);
   }// End prePage()
   
   
@@ -270,6 +272,11 @@ class ImagePreview{
     this.thePreviewImage = loadImage(theImageName);
     this.imageName = theImageName;
     this.menuLocation = theLocation;
+  }
+  
+  public ImagePreview(String theImageName) {
+    this.thePreviewImage = loadImage(theImageName);
+    this.imageName = theImageName; 
   }
   
   public boolean isTouched(int checkX, int checkY) {

@@ -232,7 +232,7 @@ class ImageMenu {
        disNextArrow = false;
        tempPageCount = (maxPageSize - ((maxPageSize * pageNumber) - savedImages.length)); 
     }
-    print("The page count: " + tempPageCount + " Page number: " + pageNumber + "\n");
+    //print("The page count: " + tempPageCount + " Page number: " + pageNumber + "\n");
     currPageCount = tempPageCount;
     //loadImagePage(tempPageCount, pageNumber);
   }// End nextPage()

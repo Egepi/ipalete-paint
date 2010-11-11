@@ -6,7 +6,6 @@ import processing.net.*;
 import hypermedia.net.*;
 import tacTile.net.*;
 
-
 /**************************************************
  * Globals
  */

@@ -13,9 +13,9 @@ color backgroundColor = color( 0 );
 color textColor = color(255);
 color lineColor = color(255);
 
-boolean connectToTacTile = true;
-boolean connectToiPad = true;
-boolean showWaiting = true;
+boolean connectToTacTile = false;
+boolean connectToiPad = false;
+boolean showWaiting = false;
 //debug text
 boolean DEBUG_MODE = false;
 boolean MENU_MODE = false;
@@ -27,6 +27,7 @@ int myHeight = screen.height;
 
 PFont font;
 Thread waitingThread;
+Thread imgMenuLoadThread;
 
 ImageMenu myImageMenu;
 
@@ -38,6 +39,15 @@ void setup() {
   startTouchConnection();
   readConfigFile("config.cfg");
   myImageMenu = new ImageMenu();
+  
+  //Threaded the load of the images for image menu
+  Runnable imgMenuLoader = new Runnable() {
+    public void run() {
+      myImageMenu.loadImagePage(myImageMenu.currPageCount, myImageMenu.pageNumber);
+    }
+  };
+  imgMenuLoadThread = new Thread( imgMenuLoader );
+  imgMenuLoadThread.start();
 
   if(connectToTacTile) {
     ortho(-width/2, width/2, -height/2, height/2, 100, 10000);

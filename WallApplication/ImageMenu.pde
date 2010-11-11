@@ -24,8 +24,9 @@ class ImageMenu {
   public ImageMenu() {
     maxPageSize = 6;
     disPrevArrow = false;
-    menuBackground = loadImage("MenuBack.png");
-    menuBackground.resize(width,height);
+    background(0);
+    //menuBackground = loadImage("MenuBack.png");
+    //menuBackground.resize(width,height);
     pageNumber = 1;
     loadSavedImages();
   }// End ImageMenu()
@@ -60,8 +61,6 @@ class ImageMenu {
        disNextArrow = true;
      }
    
-     //Load the first page of the menu then return
-     loadImagePage(currPageCount, pageNumber);
      return;
   }// End loadSavedImages()
 
@@ -113,7 +112,7 @@ class ImageMenu {
    * Displays a page worth of images
    */
   void displayPage() {
-    image(menuBackground,0,0);
+    background(0);
     
     if(picInFocus != 0) {
       tint(127);

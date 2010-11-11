@@ -97,7 +97,6 @@ void drawTouches(int gesture, int id, int xCoordinate, int yCoordinate, int theX
     }
     else if(tool == 2) {
       newObject = new drawObject(tool, xCoordinate, yCoordinate, prevxCoordinate, prevyCoordinate);
-      //stroke(lineColor);
       stroke( paintColors[0], paintColors[1], paintColors[2], paintColors[3]);
       strokeWeight(5);
       if( gesture == 0 ){ // down
@@ -128,9 +127,6 @@ void drawTouches(int gesture, int id, int xCoordinate, int yCoordinate, int theX
   }
 }
 
-void clearScreen() {
-   background(backgroundColor);
-}
 
 color getColor(int finger){
   int colorNum = finger % 20;

@@ -74,14 +74,7 @@ class ImageMenu {
     float arrowX = width/6;
     nextArrow = new Button(tempNext, (arrowX*5.5)-tempNext.width, arrowY);
     prevArrow = new Button(tempPrev, arrowX*0.5, arrowY);
-    
-    /*int imageNumber = (pageCount - 1)*maxPageSize;
-    
-    for(int i = 0; i < pageSize; i++) {
-      pageImages[i] = new ImagePreview("Images/" + savedImages[imageNumber + i], i+1); 
-      pageImages[i].getPImage().resize(width/3, (height/3));
-    }*/
-    
+        
     //Create the first page to be displayed
     createPage(1);
   }// End loadAllImages()
@@ -128,25 +121,26 @@ class ImageMenu {
     background(0);
     
     //Set tint for all pictures
-    if(picInFocus != 0) {
+    /*if(picInFocus != 0) {
       tint(127);
-    }
+    }*/
     
     //Display all pictures on the screen
     for(int i=0; i < currPageCount; i++) {
-      image(pageImages[i].getPImage(), pageImages[i].getImageX(), pageImages[i].getImageY());
+      int tempIndex = i + (maxPageSize * (pageNumber - 1));
+      image(pageImages[tempIndex].getPImage(), pageImages[tempIndex].getImageX(), pageImages[tempIndex].getImageY());
     }
     
     //Un-tint back to normal
-    if(picInFocus != 0) {
+    /*if(picInFocus != 0) {
       tint(255); 
-    }
+    }*/
     
     //Draw the picture in focus
-    if(picInFocus != 0) {
+    /*if(picInFocus != 0) {
       ImagePreview tempPreview = pageImages[picInFocus-1];
       image(tempPreview.getPImage(), tempPreview.getImageX(), tempPreview.getImageY());
-    }
+    }*/
     
     //Display the navigation buttons
     if(disNextArrow == true) {
@@ -173,7 +167,6 @@ class ImageMenu {
       selected--;
       if(selected == 0) {
         newBackground = true;
-        //newBackgroundImage = loadImage(pageImages[picInFocus-1].getImageName()
         newBackgroundImage = loadImage(pageImages[picInFocus-1].getImageName());
         newBackgroundImage.resize(width,height);
         clearScreen();
@@ -234,7 +227,7 @@ class ImageMenu {
     }
     //print("The page count: " + tempPageCount + " Page number: " + pageNumber + "\n");
     currPageCount = tempPageCount;
-    //loadImagePage(tempPageCount, pageNumber);
+    createPage(pageNumber);
   }// End nextPage()
   
   /**************************************************
@@ -249,7 +242,7 @@ class ImageMenu {
     }
     disNextArrow = true;
     currPageCount = maxPageSize;
-    //loadImagePage(currPageCount, pageNumber);
+    createPage(pageNumber);
   }// End prePage()
   
   

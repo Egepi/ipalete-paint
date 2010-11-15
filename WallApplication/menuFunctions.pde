@@ -4,6 +4,11 @@ void quitApplication() {
   }
   catch(Exception e) {
   }
+  try { 
+    myServer.close();
+  }
+  catch(Exception e) {
+  }
   File f = new File(sketchPath("tempback.tif"));
   f.delete();
   finishFile();

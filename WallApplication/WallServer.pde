@@ -30,7 +30,19 @@ void readData()
             paintColors[3] = 0;
             tool = 0;
             connectionEstablished = false;
-            //exit();
+            showWaiting = false;
+            try { 
+              mySocket.close();
+            }
+            catch(Exception e) {
+            }
+            try { 
+              myServer.close();
+            }
+            catch(Exception e) {
+            }
+            myServer = null;
+            mySocket = null;
             return;
           }          
           StringTokenizer data = new StringTokenizer(dataFromClient); 
@@ -56,7 +68,6 @@ void readData()
     }
   }
   else {
-     println("Im Awesome");
      connectClient();
   }
 }
@@ -71,6 +82,6 @@ void connectClient() {
     connectionEstablished = true;
   }
   catch(Exception e) {
-    println("Server connection had an error!!!");
+    println("Server connection had an error!!!:" + e);
   }
 }

@@ -22,7 +22,7 @@ void readData()
         //Data read in from touch server
         dataFromClient = inFromClient.readLine();
         if(dataFromClient != null) {
-          println(dataFromClient);
+          //println(dataFromClient);
           if(dataFromClient.equals("999 999 999 999 999")) {
             paintColors[0] = 0;
             paintColors[1] = 0;
@@ -30,6 +30,7 @@ void readData()
             paintColors[3] = 0;
             tool = 0;
             connectionEstablished = false;
+            //exit();
             return;
           }          
           StringTokenizer data = new StringTokenizer(dataFromClient); 

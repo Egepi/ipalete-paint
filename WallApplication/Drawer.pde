@@ -65,7 +65,7 @@ void sendTouch(Touches curTouch)
  */
 void drawTouches(int gesture, int id, int xCoordinate, int yCoordinate, int theXWidth, int theYWidth)
 {
-  if( !connectionEstablished ){
+  if(!connectionEstablished && showWaiting ){
     color col = getColor( id );
     fill(col);
     stroke( col );

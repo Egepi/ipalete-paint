@@ -85,6 +85,7 @@ class ImageMenu {
       pageImages[j] = new ImagePreview("Images/" + savedImages[j]);
       pageImages[j].getPImage().resize(width/3, height/3); 
       print ("Loaded image " + j + "\n");
+      totalLoaded++;
       if(j == 5) { theFirstPageLoader.start(); println("starting first page"); }
     }
         
@@ -156,7 +157,7 @@ class ImageMenu {
     }*/
     
     //Display the navigation buttons
-    if(disNextArrow == true) {
+    if(( disNextArrow == true )&&( ((pageNumber+1)*maxPageSize) <= totalLoaded )) {
       nextArrow.drawIt();
     }
     if(disPrevArrow == true) {

@@ -46,7 +46,7 @@ void setup() {
     }
   };
   imgMenuLoadThread = new Thread( imgMenuLoader );
-  imgMenuLoadThread.start();
+  //imgMenuLoadThread.start();
 
   if(connectToTacTile) {
     ortho(-width/2, width/2, -height/2, height/2, 100, 10000);

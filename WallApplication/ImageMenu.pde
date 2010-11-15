@@ -16,7 +16,7 @@ class ImageMenu {
   private boolean disNextArrow;       //Determine if the next arrow should be drawn or not
   private PImage menuBackground;      //Image for the background of the image menu
   private int picInFocus;             //The number for the picture that is currently being selected
-  private int selected = 10;
+  private int selected = 100;
 
   /**************************************************
    * Default Constructor
@@ -72,13 +72,14 @@ class ImageMenu {
     
     //Loop through the list of images and load all of them into memory
     for( int j = 0; j < savedImages.length; j++ ) {
-      pageImages[j] = new ImagePreview("thumbs/" + savedImages[j]);
+      pageImages[j] = new ImagePreview("thumbs/" + savedImages[j], ((j%6)+1), savedImages[j] );
+      print("the name " + savedImages[j]);
       pageImages[j].getPImage().resize(width/3, height/3); 
-      print ("Loaded image " + j + "\n");
+      //print ("Loaded image " + j + "\n");
     }
         
     //Create the first page to be displayed
-    qqqcreatePage(1);
+    createPage(1);
   }// End loadAllImages()
   
   /**************************************************
@@ -123,9 +124,11 @@ class ImageMenu {
     background(0);
     
     //Set tint for all pictures
-    /*if(picInFocus != 0) {
-      tint(127);
-    }*/
+    if(picInFocus != 0) {
+      selected--;
+      println("the tint " + int(255*(selected/100.0)));
+      tint(255, int(255*(selected/100.0)));
+    }
     
     //Display all pictures on the screen
     for(int i=0; i < currPageCount; i++) {
@@ -134,15 +137,15 @@ class ImageMenu {
     }
     
     //Un-tint back to normal
-    /*if(picInFocus != 0) {
-      tint(255); 
-    }*/
+    if(picInFocus != 0) {
+      noTint(); 
+    }
     
     //Draw the picture in focus
-    /*if(picInFocus != 0) {
+    if(picInFocus != 0) {
       ImagePreview tempPreview = pageImages[picInFocus-1];
       image(tempPreview.getPImage(), tempPreview.getImageX(), tempPreview.getImageY());
-    }*/
+    }
     
     //Display the navigation buttons
     if( disNextArrow == true ) {
@@ -166,16 +169,19 @@ class ImageMenu {
       //Check if the prev arrow button was pressed
       prevPage();
     } else if((picInFocus != 0)&& pageImages[picInFocus-1].isTouched(touchX, touchY)) {
-      selected--;
-      if(selected == 0) {
-        newBackgroundImage = loadImage(pageImages[picInFocus-1].getImageName());
+      //selected--;
+      if(selected <= 0) {
+        StringTokenizer realImageToken = new StringTokenizer(pageImages[picInFocus-1].getNameOnly(), ".");
+        String realImageName = realImageToken.nextToken() + ".tif"; 
+        newBackgroundImage = loadImage("Images/" + realImageName);
+        print("Loading: Images/" + realImageName);
         newBackgroundImage.resize(width,height);
         clearScreen();
         image(newBackgroundImage, 0, 0);
         newBackgroundImage = null;
         MENU_MODE = false;
-        pageImages[picInFocus-1].deFocus();
-        selected = 10;
+        //pageImages[picInFocus-1].deFocus();
+        selected = 100;
         picInFocus = 0;
       }
     } else {
@@ -184,16 +190,16 @@ class ImageMenu {
           if(pageImages[i].isTouched(touchX, touchY) == true) {
             if(pageImages[i].getLocation() == picInFocus) {
               //Defocus the pic becuse it was touched and in focus
-              pageImages[i].deFocus();
+              //pageImages[i].deFocus();
               picInFocus = 0; 
             } else {
               //Defocus the pic in focus and put in focus the image touched
-              if(picInFocus != 0) {
-                pageImages[picInFocus-1].deFocus();
-              }
-              pageImages[i].inFocus();
+              //if(picInFocus != 0) {
+              //  pageImages[picInFocus-1].deFocus();
+              // }
+              //pageImages[i].inFocus();
               picInFocus = pageImages[i].getLocation();
-              selected = 10; 
+              selected = 100; 
             }
           }
       } 
@@ -260,17 +266,19 @@ class ImagePreview{
   private int imageXLocation;
   private int imageYLocation;
   private int movementAmt = 25;
+  private String fileOnlyName;
   
-  public ImagePreview(String theImageName, int theLocation) {
+  public ImagePreview(String theImageName, int theLocation, String fileOnly) {
     this.thePreviewImage = loadImage(theImageName);
+    this.fileOnlyName = fileOnly;
     this.imageName = theImageName;
     this.menuLocation = theLocation;
   }
   
-  public ImagePreview(String theImageName) {
+  /*public ImagePreview(String theImageName) {
     this.thePreviewImage = loadImage(theImageName);
     this.imageName = theImageName; 
-  }
+  }*/
   
   public boolean isTouched(int checkX, int checkY) {
     if((checkX >= imageXLocation)&&(checkX <= (imageXLocation + thePreviewImage.width))) {
@@ -347,6 +355,10 @@ class ImagePreview{
   
   public String getImageName() {
     return this.imageName; 
+  }
+  
+  public String getNameOnly() {
+    return this.fileOnlyName; 
   }
   
 }

@@ -17,9 +17,7 @@ class ImageMenu {
   private PImage menuBackground;      //Image for the background of the image menu
   private int picInFocus;             //The number for the picture that is currently being selected
   private int selected = 10;
-  
-  private int totalLoaded;
-  Thread theFirstPageLoader;
+
   /**************************************************
    * Default Constructor
    */
@@ -29,7 +27,6 @@ class ImageMenu {
     background(0);
     pageNumber = 1;
     picInFocus = 0;
-    totalLoaded = 0;
     loadSavedImages();
   }// End ImageMenu()
     
@@ -39,7 +36,7 @@ class ImageMenu {
   void loadSavedImages() {     
      //Loads the data and sketch path, then runs the listFiles perl script
      String perlFile = sketchPath("listFiles.pl");
-     String imageFolder = dataPath("Images");
+     String imageFolder = dataPath("thumbs");
      String param[] = { "perl", perlFile, imageFolder };
      exec(param);
           
@@ -59,15 +56,8 @@ class ImageMenu {
    */
   private void loadAllImages(int pageSize, int pageCount) {
     pageImages = new ImagePreview[savedImages.length];  //Array to hold all the images
-    
-    Runnable loadFirstPage = new Runnable() {
-      public void run() {
-        createPage(1);
-      }
-    };
-    theFirstPageLoader = new Thread( loadFirstPage );
-  
-     //Load arrow buttons and resize them depending on resolution of current screen compared to
+ 
+    //Load arrow buttons and resize them depending on resolution of current screen compared to
     //Sage's resolution.
     PImage tempNext = loadImage("RightArrow.png");
     PImage tempPrev = loadImage("LeftArrow.png");
@@ -82,15 +72,13 @@ class ImageMenu {
     
     //Loop through the list of images and load all of them into memory
     for( int j = 0; j < savedImages.length; j++ ) {
-      pageImages[j] = new ImagePreview("Images/" + savedImages[j]);
+      pageImages[j] = new ImagePreview("thumbs/" + savedImages[j]);
       pageImages[j].getPImage().resize(width/3, height/3); 
       print ("Loaded image " + j + "\n");
-      totalLoaded++;
-      if(j == 5) { theFirstPageLoader.start(); println("starting first page"); }
     }
         
     //Create the first page to be displayed
-    //createPage(1);
+    qqqcreatePage(1);
   }// End loadAllImages()
   
   /**************************************************
@@ -157,7 +145,7 @@ class ImageMenu {
     }*/
     
     //Display the navigation buttons
-    if(( disNextArrow == true )&&( ((pageNumber+1)*maxPageSize) <= totalLoaded )) {
+    if( disNextArrow == true ) {
       nextArrow.drawIt();
     }
     if(disPrevArrow == true) {
@@ -180,13 +168,11 @@ class ImageMenu {
     } else if((picInFocus != 0)&& pageImages[picInFocus-1].isTouched(touchX, touchY)) {
       selected--;
       if(selected == 0) {
-        newBackground = true;
         newBackgroundImage = loadImage(pageImages[picInFocus-1].getImageName());
         newBackgroundImage.resize(width,height);
         clearScreen();
         image(newBackgroundImage, 0, 0);
         newBackgroundImage = null;
-        newBackground = false;
         MENU_MODE = false;
         pageImages[picInFocus-1].deFocus();
         selected = 10;

@@ -12,6 +12,8 @@ class ImageMenu {
   private int pageNumber;             //How many pages (number of images / maxPageSize )
   private Button nextArrow;           //Button object that holds the next arrow on the screen
   private Button prevArrow;           //Button object that holds the prev arrow on the screen
+  private Button nextArrow2;
+  private Button prevArrow2;
   private boolean disPrevArrow;       //Determine if the previous arrow should be drawn or not
   private boolean disNextArrow;       //Determine if the next arrow should be drawn or not
   private PImage menuBackground;      //Image for the background of the image menu
@@ -64,10 +66,11 @@ class ImageMenu {
     tempNext.resize((tempNext.width)/((1360*6)/width), (tempNext.height)/((768*3)/height));
     tempPrev.resize((tempPrev.width)/((1360*6)/width), (tempPrev.height)/((768*3)/height));
     
-    float arrowY = height/2-(tempNext.height/2);
     float arrowX = width/6;
-    nextArrow = new Button(tempNext, (arrowX*5.5)-tempNext.width, arrowY);
-    prevArrow = new Button(tempPrev, arrowX*0.5, arrowY);
+    nextArrow = new Button(tempNext, (arrowX*5.5)-tempNext.width, height/2 - tempNext.height - 5);
+    prevArrow = new Button(tempPrev, arrowX*0.5, height/2 + 5);
+    nextArrow2 = new Button(tempNext, arrowX*0.5, height/2 - tempNext.height - 5);
+    prevArrow2 = new Button(tempPrev,  (arrowX*5.5)-tempNext.width, height/2 + 5);
     
     
     //Loop through the list of images and load all of them into memory
@@ -149,9 +152,11 @@ class ImageMenu {
     //Display the navigation buttons
     if( disNextArrow == true ) {
       nextArrow.drawIt();
+      nextArrow2.drawIt();
     }
     if(disPrevArrow == true) {
       prevArrow.drawIt();
+      prevArrow2.drawIt();
     }
     
   }// End displayPage()
@@ -161,12 +166,16 @@ class ImageMenu {
    * in the menu
    */ 
   void imageMenuInput(int touchX, int touchY) {
-    if((nextArrow.checkBounds() == 1)&&(disNextArrow == true)) {
-      //Check if the next arrow button was pressed
-      nextPage();
-    } else if((prevArrow.checkBounds() == 1)&&(disPrevArrow == true)) {
-      //Check if the prev arrow button was pressed
-      prevPage();
+    if(disNextArrow == true) {
+      if((nextArrow.checkBounds() == 1)||(nextArrow2.checkBounds() == 1)) {
+        //Check if the next arrow buttons was pressed
+        nextPage();
+      }
+    } else if(disPrevArrow == true) {
+      if((prevArrow.checkBounds() == 1)||(prevArrow2.checkBounds() == 1)) {
+        //Check if the prev arrow button was pressed
+        prevPage();
+      }
     } else if((picInFocus != 0)&& pageImages[picInFocus-1].isTouched(touchX, touchY)) {
       selected--;
       if(selected <= 0) {

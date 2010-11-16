@@ -73,7 +73,7 @@ class ImageMenu {
     //Loop through the list of images and load all of them into memory
     for( int j = 0; j < savedImages.length; j++ ) {
       pageImages[j] = new ImagePreview("thumbs/" + savedImages[j], ((j%6)+1), savedImages[j] );
-      print("the name " + savedImages[j]);
+      //print("the name " + savedImages[j]);
       pageImages[j].getPImage().resize(width/3, height/3); 
       //print ("Loaded image " + j + "\n");
     }
@@ -125,8 +125,7 @@ class ImageMenu {
     
     //Set tint for all pictures
     if(picInFocus != 0) {
-      selected--;
-      println("the tint " + int(255*(selected/100.0)));
+      //println("the tint " + int(255*(selected/100.0)));
       tint(255, int(255*(selected/100.0)));
     }
     
@@ -169,18 +168,17 @@ class ImageMenu {
       //Check if the prev arrow button was pressed
       prevPage();
     } else if((picInFocus != 0)&& pageImages[picInFocus-1].isTouched(touchX, touchY)) {
-      //selected--;
+      selected--;
       if(selected <= 0) {
         StringTokenizer realImageToken = new StringTokenizer(pageImages[picInFocus-1].getNameOnly(), ".");
         String realImageName = realImageToken.nextToken() + ".tif"; 
         newBackgroundImage = loadImage("Images/" + realImageName);
-        print("Loading: Images/" + realImageName);
+        //print("Loading: Images/" + realImageName);
         newBackgroundImage.resize(width,height);
         clearScreen();
         image(newBackgroundImage, 0, 0);
         newBackgroundImage = null;
         MENU_MODE = false;
-        //pageImages[picInFocus-1].deFocus();
         selected = 100;
         picInFocus = 0;
       }
@@ -190,15 +188,11 @@ class ImageMenu {
           if(pageImages[i].isTouched(touchX, touchY) == true) {
             if(pageImages[i].getLocation() == picInFocus) {
               //Defocus the pic becuse it was touched and in focus
-              //pageImages[i].deFocus();
-              picInFocus = 0; 
+              //picInFocus = 0; 
             } else {
               //Defocus the pic in focus and put in focus the image touched
-              //if(picInFocus != 0) {
-              //  pageImages[picInFocus-1].deFocus();
-              // }
-              //pageImages[i].inFocus();
-              picInFocus = pageImages[i].getLocation();
+              //picInFocus = pageImages[i].getLocation();
+              picInFocus = ((pageNumber-1)*maxPageSize) + 1 + i;
               selected = 100; 
             }
           }
@@ -233,6 +227,7 @@ class ImageMenu {
     }
     //print("The page count: " + tempPageCount + " Page number: " + pageNumber + "\n");
     currPageCount = tempPageCount;
+    picInFocus = 0;
     createPage(pageNumber);
   }// End nextPage()
   
@@ -248,6 +243,7 @@ class ImageMenu {
     }
     disNextArrow = true;
     currPageCount = maxPageSize;
+    picInFocus = 0;
     createPage(pageNumber);
   }// End prePage()
   
@@ -292,46 +288,6 @@ class ImagePreview{
   public int getLocation() {
     return menuLocation; 
   }
-  
-  public void deFocus() {
-    if(this.menuLocation == 1) {
-      this.imageXLocation -= movementAmt;
-      this.imageYLocation -= movementAmt;
-    } else if(this.menuLocation == 2) {
-      this.imageXLocation += movementAmt;
-      this.imageYLocation -= movementAmt;    
-    } else if(this.menuLocation == 3) {
-      this.imageXLocation -= movementAmt;      
-    } else if(this.menuLocation == 4) {
-      this.imageXLocation += movementAmt;    
-    } else if(this.menuLocation == 5) {
-      this.imageXLocation -= movementAmt;
-      this.imageYLocation += movementAmt;      
-    } else if(this.menuLocation == 6) {
-      this.imageXLocation += movementAmt;
-      this.imageYLocation += movementAmt;      
-    }
-  }
-
-  public void inFocus() {
-    if(this.menuLocation == 1) {
-      this.imageXLocation += movementAmt;
-      this.imageYLocation += movementAmt;
-    } else if(this.menuLocation == 2) {
-      this.imageXLocation -= movementAmt;
-      this.imageYLocation += movementAmt;    
-    } else if(this.menuLocation == 3) {
-      this.imageXLocation += movementAmt;      
-    } else if(this.menuLocation == 4) {
-      this.imageXLocation -= movementAmt;    
-    } else if(this.menuLocation == 5) {
-      this.imageXLocation += movementAmt;
-      this.imageYLocation -= movementAmt;      
-    } else if(this.menuLocation == 6) {
-      this.imageXLocation -= movementAmt;
-      this.imageYLocation -= movementAmt;      
-    }
-  }  
      
   public PImage getPImage() {
     return thePreviewImage; 

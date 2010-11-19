@@ -75,16 +75,23 @@ void drawTouches(int gesture, int id, int xCoordinate, int yCoordinate, int theX
     if(tool == 1) {
       newObject = new drawObject(tool, xCoordinate, yCoordinate, theXWidth, theYWidth, paintColors[0], paintColors[1], paintColors[2], paintColors[3], TOUCH_MODE);
       if(TOUCH_MODE.equals("ELLIPSE")) {
-        for (int a = 1; a <= 40; a++) {
-          fill( paintColors[0], paintColors[1], paintColors[2], paintColors[3]*(1-(0.025*a)));
-          stroke( paintColors[0], paintColors[1], paintColors[2], 0);
-          ellipse( xCoordinate, yCoordinate, theXWidth+(a*1), theYWidth+(a*1));
-        }
-        
-        //Actual touch
-        fill( paintColors[0], paintColors[1], paintColors[2], paintColors[3]);
+      //for (int a = 1; a <= 40; a++) {
+      //  fill( paintColors[0], paintColors[1], paintColors[2], paintColors[3]*(1-(0.025*a)));
+      //  stroke( paintColors[0], paintColors[1], paintColors[2], 0);
+      //  ellipse( xCoordinate, yCoordinate, theXWidth+(a*1), theYWidth+(a*1));
+      //}
+      theXWidth += 5;
+      theYWidth += 5;
+      for (int a = 40; a >= 1; a--) {
+        fill( paintColors[0], paintColors[1], paintColors[2], paintColors[3]*(0.025*a));
         stroke( paintColors[0], paintColors[1], paintColors[2], 0);
-        ellipse( xCoordinate, yCoordinate, theXWidth, theYWidth);
+        ellipse( xCoordinate, yCoordinate, theXWidth*(1-(a/40.0)), theYWidth*(1-(a/40.0)));
+      }
+      
+      //Actual touch
+      //fill( paintColors[0], paintColors[1], paintColors[2], paintColors[3]);
+      //stroke( paintColors[0], paintColors[1], paintColors[2], 0);
+      //ellipse( xCoordinate, yCoordinate, theXWidth, theYWidth);
       }
       else if(TOUCH_MODE.equals("SPHERE"))
       {

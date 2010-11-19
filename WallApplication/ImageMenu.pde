@@ -19,6 +19,7 @@ class ImageMenu {
   private PImage menuBackground;      //Image for the background of the image menu
   private int picInFocus;             //The number for the picture that is currently being selected
   private int selected = 100;
+  private int arrowOff;
 
   /**************************************************
    * Default Constructor
@@ -29,6 +30,7 @@ class ImageMenu {
     background(0);
     pageNumber = 1;
     picInFocus = 0;
+    arrowOff = 0;
     loadSavedImages();
   }// End ImageMenu()
     
@@ -125,6 +127,9 @@ class ImageMenu {
    */
   void displayPage() {
     background(0);
+    if(arrowOff > 0) {
+      arrowOff--; 
+    }
     
     //Set tint for all pictures
     if(picInFocus != 0) {
@@ -154,7 +159,7 @@ class ImageMenu {
       nextArrow.drawIt();
       nextArrow2.drawIt();
     }
-    if(disPrevArrow == true) {
+    if( disPrevArrow == true) {
       prevArrow.drawIt();
       prevArrow2.drawIt();
     }
@@ -166,17 +171,21 @@ class ImageMenu {
    * in the menu
    */ 
   void imageMenuInput(int touchX, int touchY) {
-    if(disNextArrow == true) {
+    if(disNextArrow == true &&( arrowOff == 0)) {
       if((nextArrow.checkBounds() == 1)||(nextArrow2.checkBounds() == 1)) {
         //Check if the next arrow buttons was pressed
         nextPage();
+        return;
       }
-    } else if(disPrevArrow == true) {
+    } 
+    if((disPrevArrow == true) &&( arrowOff == 0)) {
       if((prevArrow.checkBounds() == 1)||(prevArrow2.checkBounds() == 1)) {
         //Check if the prev arrow button was pressed
         prevPage();
+        return;
       }
-    } else if((picInFocus != 0)&& pageImages[picInFocus-1].isTouched(touchX, touchY)) {
+    } 
+    if((picInFocus != 0)&& pageImages[picInFocus-1].isTouched(touchX, touchY)) {
       selected--;
       if(selected <= 0) {
         StringTokenizer realImageToken = new StringTokenizer(pageImages[picInFocus-1].getNameOnly(), ".");
@@ -237,6 +246,7 @@ class ImageMenu {
     //print("The page count: " + tempPageCount + " Page number: " + pageNumber + "\n");
     currPageCount = tempPageCount;
     picInFocus = 0;
+    arrowOff = 50;
     createPage(pageNumber);
   }// End nextPage()
   
@@ -253,6 +263,7 @@ class ImageMenu {
     disNextArrow = true;
     currPageCount = maxPageSize;
     picInFocus = 0;
+    arrowOff = 50;
     createPage(pageNumber);
   }// End prePage()
   

@@ -38,6 +38,5 @@ void readConfigFile(String config_file){
       }
 
     }// for
-    println("Connecting to Tracker: '"+trackerMachine+"' Data port: "+dataPort+" Message port: "+msgPort+".");
   }
 }// readConfigFile

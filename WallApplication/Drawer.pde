@@ -14,7 +14,6 @@ Hashtable prevTouches = new Hashtable();
  */
 void drawStuff()
 {
-  
   if(connectToTacTile)
   {
     ArrayList newUp = touchMachine.getTouchesUp();         
@@ -40,14 +39,14 @@ void drawStuff()
     }// if up
   }
   else{
-   if(mousePressed) {    
-     if(MENU_MODE) {
-       myImageMenu.imageMenuInput(mouseX, mouseY);
-     }  
-     else {
-       drawTouches(0, 0, mouseX, mouseY,  10, 10);
-     }
-   }
+    if(mousePressed) {    
+      if(MENU_MODE) {
+        myImageMenu.imageMenuInput(mouseX, mouseY);
+      }  
+      else {
+        drawTouches(0, 0, mouseX, mouseY,  10, 10);
+      }
+    }
   }
 }
 
@@ -65,33 +64,28 @@ void sendTouch(Touches curTouch)
  */
 void drawTouches(int gesture, int id, int xCoordinate, int yCoordinate, int theXWidth, int theYWidth)
 {
+  // Used to draw touches while waiting for ipad to connect
   if(!connectionEstablished && showWaiting ){
     color col = getColor( id );
-    fill(col);
-    stroke( col );
-    ellipse( xCoordinate, yCoordinate, theXWidth, theYWidth);
+    theXWidth += 5;
+    theYWidth += 5;
+    for (int a = 40; a >= 1; a--) {
+      fill( col, 255*(0.025*a));
+      stroke( col, 0);
+      ellipse( xCoordinate, yCoordinate, theXWidth*(1-(a/40.0)), theYWidth*(1-(a/40.0)));
+    }
   } 
   else{
     if(tool == 1) {
       newObject = new drawObject(tool, xCoordinate, yCoordinate, theXWidth, theYWidth, paintColors[0], paintColors[1], paintColors[2], paintColors[3], TOUCH_MODE);
       if(TOUCH_MODE.equals("ELLIPSE")) {
-      //for (int a = 1; a <= 40; a++) {
-      //  fill( paintColors[0], paintColors[1], paintColors[2], paintColors[3]*(1-(0.025*a)));
-      //  stroke( paintColors[0], paintColors[1], paintColors[2], 0);
-      //  ellipse( xCoordinate, yCoordinate, theXWidth+(a*1), theYWidth+(a*1));
-      //}
-      theXWidth += 5;
-      theYWidth += 5;
-      for (int a = 40; a >= 1; a--) {
-        fill( paintColors[0], paintColors[1], paintColors[2], paintColors[3]*(0.025*a));
-        stroke( paintColors[0], paintColors[1], paintColors[2], 0);
-        ellipse( xCoordinate, yCoordinate, theXWidth*(1-(a/40.0)), theYWidth*(1-(a/40.0)));
-      }
-      
-      //Actual touch
-      //fill( paintColors[0], paintColors[1], paintColors[2], paintColors[3]);
-      //stroke( paintColors[0], paintColors[1], paintColors[2], 0);
-      //ellipse( xCoordinate, yCoordinate, theXWidth, theYWidth);
+        theXWidth += 5;
+        theYWidth += 5;
+        for (int a = 40; a >= 1; a--) {
+          fill( paintColors[0], paintColors[1], paintColors[2], paintColors[3]*(0.025*a));
+          stroke( paintColors[0], paintColors[1], paintColors[2], 0);
+          ellipse( xCoordinate, yCoordinate, theXWidth*(1-(a/40.0)), theYWidth*(1-(a/40.0)));
+        }
       }
       else if(TOUCH_MODE.equals("SPHERE"))
       {
@@ -107,11 +101,12 @@ void drawTouches(int gesture, int id, int xCoordinate, int yCoordinate, int theX
       stroke( paintColors[0], paintColors[1], paintColors[2], paintColors[3]);
       strokeWeight(5);
       if( gesture == 0 ){ // down
-      //if( sqrt( sq(abs( xCoordinate - prevxCoordinate )) + sq(abs( yCoordinate - prevyCoordinate )) ) < 100 )
+        //if( sqrt( sq(abs( xCoordinate - prevxCoordinate )) + sq(abs( yCoordinate - prevyCoordinate )) ) < 100 )
         //line(xCoordinate, yCoordinate, prevxCoordinate, prevyCoordinate);
-        int[] prev = { xCoordinate, yCoordinate };
+        int[] prev = {xCoordinate, yCoordinate};
         prevTouches.put( id, prev );
-      } else if( gesture == 1 ){ // move
+      } 
+      else if( gesture == 1 ){ // move
         if( prevTouches.containsKey( id ) ){
           int[] prev = (int[])prevTouches.get(id);
           prevxCoordinate = prev[0];
@@ -121,7 +116,8 @@ void drawTouches(int gesture, int id, int xCoordinate, int yCoordinate, int theX
           prev[1] = yCoordinate;
           prevTouches.put( id, prev );
         }
-      } else if( gesture == 2 ) { // up
+      }
+      else if( gesture == 2 ) { // up
         prevTouches.remove( id );
       }
     }

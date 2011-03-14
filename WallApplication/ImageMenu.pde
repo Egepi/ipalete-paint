@@ -20,7 +20,8 @@ class ImageMenu {
   private int picInFocus;             //The number for the picture that is currently being selected
   private int selected = 100;
   private int arrowOff;
-
+  private boolean isLoadingImage;
+  
   /**************************************************
    * Default Constructor
    */
@@ -127,6 +128,11 @@ class ImageMenu {
    */
   void displayPage() {
     background(0);
+    //if(isLoadingImage == true) {
+    //  displayLoadingImage();
+    //  return;  
+    //}
+    
     if(arrowOff > 0) {
       arrowOff--; 
     }
@@ -166,6 +172,12 @@ class ImageMenu {
     
   }// End displayPage()
   
+  void displayLoadingImage () {
+    background(0);
+    image(pageImages[picInFocus-1].getPImage(), width/2 - pageImages[picInFocus-1].getPImage().width/2, height/2 - pageImages[picInFocus-1].getPImage().height/2);
+    return;    
+  }
+  
   /**************************************************
    * Checks if any touches/clicks were on any object
    * in the menu
@@ -187,18 +199,28 @@ class ImageMenu {
     } 
     if((picInFocus != 0)&& pageImages[picInFocus-1].isTouched(touchX, touchY)) {
       selected--;
-      if(selected <= 0) {
-        StringTokenizer realImageToken = new StringTokenizer(pageImages[picInFocus-1].getNameOnly(), ".");
-        String realImageName = realImageToken.nextToken() + ".tif"; 
-        newBackgroundImage = loadImage("Images/" + realImageName);
-        //print("Loading: Images/" + realImageName);
-        newBackgroundImage.resize(width,height);
-        clearScreen();
-        image(newBackgroundImage, 0, 0);
-        newBackgroundImage = null;
-        MENU_MODE = false;
-        selected = 100;
-        picInFocus = 0;
+      if((selected <= 0)&&(isLoadingImage == false)) {
+          Runnable loadThatImageRunnable = new Runnable() {
+          public void run() {
+            StringTokenizer realImageToken = new StringTokenizer(pageImages[picInFocus-1].getNameOnly(), ".");
+            String realImageName = realImageToken.nextToken() + ".tif";
+            displayLoadingImage();
+            newBackgroundImage = loadImage("Images/" + realImageName);
+            //print("Loading: Images/" + realImageName);
+            newBackgroundImage.resize(width,height);
+            clearScreen();
+            image(newBackgroundImage, 0, 0);
+            //isLoadingImage = false;
+            newBackgroundImage = null;
+            MENU_MODE = false;
+            selected = 100;
+            picInFocus = 0;
+          }
+        };
+        isLoadingImage = true;
+        loadThatImage = new Thread( loadThatImageRunnable );
+        loadThatImage.start(); 
+        return;
       }
     } else {
       //Check if any of the pictures were touched

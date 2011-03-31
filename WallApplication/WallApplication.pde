@@ -12,9 +12,10 @@ import tacTile.net.*;
 color backgroundColor = color( 0 ); 
 color textColor = color(255);
 
-boolean connectToTacTile = false;
-boolean connectToiPad = false;
-boolean showWaiting = false;
+boolean connectToTacTile = true;
+boolean connectToiPad = true;
+boolean showWaiting = true;
+boolean useImageMenu = false;
 //debug text
 boolean DEBUG_MODE = false;
 boolean MENU_MODE = false;
@@ -37,17 +38,18 @@ ImageMenu myImageMenu;
 void setup() {
   startTouchConnection();
   readConfigFile("config.cfg");
-  myImageMenu = new ImageMenu();
+  if(useImageMenu) {
+    myImageMenu = new ImageMenu();
   
-  //Threaded the load of the images for image menu
-  Runnable imgMenuLoader = new Runnable() {
-    public void run() {
-      myImageMenu.loadAllImages(myImageMenu.currPageCount, myImageMenu.pageNumber);
-    }
-  };
-  imgMenuLoadThread = new Thread( imgMenuLoader );
-  imgMenuLoadThread.start();
-
+    //Threaded the load of the images for image menu
+    Runnable imgMenuLoader = new Runnable() {
+      public void run() {
+        myImageMenu.loadAllImages(myImageMenu.currPageCount, myImageMenu.pageNumber);
+      }
+    };
+    imgMenuLoadThread = new Thread( imgMenuLoader );
+    imgMenuLoadThread.start();
+  }
   if(connectToTacTile) {
     ortho(-width/2, width/2, -height/2, height/2, 100, 10000);
     hint(DISABLE_DEPTH_TEST);
@@ -94,7 +96,7 @@ void draw() {
       readData();
     }
   }
-  if(MENU_MODE) {
+  if(MENU_MODE && useImageMenu) {
     myImageMenu.displayPage();
   }
   drawStuff();

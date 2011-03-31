@@ -12,9 +12,9 @@ import tacTile.net.*;
 color backgroundColor = color( 0 ); 
 color textColor = color(255);
 
-boolean connectToTacTile = true;
-boolean connectToiPad = true;
-boolean showWaiting = true;
+boolean connectToTacTile = false;
+boolean connectToiPad = false;
+boolean showWaiting = false;
 //debug text
 boolean DEBUG_MODE = false;
 boolean MENU_MODE = false;
@@ -37,16 +37,16 @@ ImageMenu myImageMenu;
 void setup() {
   startTouchConnection();
   readConfigFile("config.cfg");
-  //myImageMenu = new ImageMenu();
+  myImageMenu = new ImageMenu();
   
   //Threaded the load of the images for image menu
-  //Runnable imgMenuLoader = new Runnable() {
-  //  public void run() {
-  //    myImageMenu.loadAllImages(myImageMenu.currPageCount, myImageMenu.pageNumber);
-  //  }
-  //};
-  //imgMenuLoadThread = new Thread( imgMenuLoader );
-  //imgMenuLoadThread.start();
+  Runnable imgMenuLoader = new Runnable() {
+    public void run() {
+      myImageMenu.loadAllImages(myImageMenu.currPageCount, myImageMenu.pageNumber);
+    }
+  };
+  imgMenuLoadThread = new Thread( imgMenuLoader );
+  imgMenuLoadThread.start();
 
   if(connectToTacTile) {
     ortho(-width/2, width/2, -height/2, height/2, 100, 10000);
@@ -95,7 +95,7 @@ void draw() {
     }
   }
   if(MENU_MODE) {
-    //myImageMenu.displayPage();
+    myImageMenu.displayPage();
   }
   drawStuff();
 }

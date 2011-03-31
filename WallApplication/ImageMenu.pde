@@ -218,8 +218,8 @@ class ImageMenu {
           }
         };
         isLoadingImage = true;
-        loadThatImage = new Thread( loadThatImageRunnable );
-        loadThatImage.start(); 
+        //loadThatImage = new Thread( loadThatImageRunnable );
+        //loadThatImage.start(); 
         return;
       }
     } else {

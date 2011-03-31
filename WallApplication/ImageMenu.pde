@@ -109,9 +109,44 @@ class ImageMenu {
     int theX = theMinX;
     int theY = 0;
     int perRow = 2;
-    
+    //print(currPageCount + " THIS Is current page count\n");
     //Loop through the images and display them
     for(int j = 0; j <  currPageCount; j++) {
+        int tempIndex = j + (maxPageSize * (pageNumber - 1));
+        pageImages[tempIndex].setImageX(theX);
+        pageImages[tempIndex].setImageY(theY);
+        theX = theX + (width/3);
+        if(((j+1)%perRow) == 0) {
+          theY = theY + (height/3);
+          theX = theMinX; 
+        }
+    }
+  }// End createPage()
+  
+    /**************************************************
+  */
+  private void createPage(int pageNumber, int currPage) {
+     //More then max per page, set to max if less then max
+     //then set to just the number of images.
+     if( (maxPageSize * pageNumber) <= savedImages.length ) {
+       //currPageCount = maxPageSize;
+       if( (maxPageSize * pageNumber) < savedImages.length ) {
+         disNextArrow = true;
+       } else {
+         disNextArrow = false; 
+       }
+     } else {
+       //currPageCount = (maxPageSize * pageNumber) - savedImages.length;
+       disNextArrow = false;
+     }
+    
+    int theMinX = (width/6);
+    int theX = theMinX;
+    int theY = 0;
+    int perRow = 2;
+    //print(currPageCount + " THIS Is current page count\n");
+    //Loop through the images and display them
+    for(int j = 0; j <  currPage; j++) {
         int tempIndex = j + (maxPageSize * (pageNumber - 1));
         pageImages[tempIndex].setImageX(theX);
         pageImages[tempIndex].setImageY(theY);
@@ -218,8 +253,8 @@ class ImageMenu {
           }
         };
         isLoadingImage = true;
-        //loadThatImage = new Thread( loadThatImageRunnable );
-        //loadThatImage.start(); 
+        Thread loadThatImage = new Thread( loadThatImageRunnable );
+        loadThatImage.start(); 
         return;
       }
     } else {
@@ -269,7 +304,7 @@ class ImageMenu {
     currPageCount = tempPageCount;
     picInFocus = 0;
     arrowOff = 50;
-    createPage(pageNumber);
+    createPage(pageNumber, currPageCount);
   }// End nextPage()
   
   /**************************************************
@@ -286,7 +321,7 @@ class ImageMenu {
     currPageCount = maxPageSize;
     picInFocus = 0;
     arrowOff = 50;
-    createPage(pageNumber);
+    createPage(pageNumber, currPageCount);
   }// End prePage()
   
   

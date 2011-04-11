@@ -15,7 +15,8 @@ color textColor = color(255);
 boolean connectToTacTile = true;
 boolean connectToiPad = true;
 boolean showWaiting = true;
-boolean useImageMenu = false;
+boolean useImageMenu = true;
+
 //debug text
 boolean DEBUG_MODE = false;
 boolean MENU_MODE = false;
@@ -120,10 +121,19 @@ void keyPressed() {
   }
   else if(key == 'i' || key == 'I') {
     if(MENU_MODE) {
-      closeMenu();
+      //closeMenu();
     }
     else {
       openMenu();
+    }
+
+  }
+  else if(key == 'o' || key == 'O') {
+    if(MENU_MODE) {
+      closeMenu();
+    }
+    else {
+      //openMenu();
     }
 
   }

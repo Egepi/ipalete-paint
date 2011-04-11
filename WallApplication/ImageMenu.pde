@@ -21,6 +21,8 @@ class ImageMenu {
   private int selected = 100;
   private int arrowOff;
   private boolean isLoadingImage;
+  private PImage newBackgroundImage;
+  private boolean newImageFlag;
   
   /**************************************************
    * Default Constructor
@@ -32,6 +34,7 @@ class ImageMenu {
     pageNumber = 1;
     picInFocus = 0;
     arrowOff = 0;
+    newImageFlag = false;
     loadSavedImages();
   }// End ImageMenu()
     
@@ -163,6 +166,18 @@ class ImageMenu {
    */
   void displayPage() {
     background(0);
+    if(newImageFlag == true)
+    {
+      print("did i even get here");
+      newBackgroundImage.resize(width,height);
+      image(newBackgroundImage, 0, 0);
+      newImageFlag = false;
+      newBackgroundImage = null;
+      MENU_MODE = false;
+      selected = 100;
+      picInFocus = 0;
+      return;
+    }
     //if(isLoadingImage == true) {
     //  displayLoadingImage();
     //  return;  
@@ -208,8 +223,11 @@ class ImageMenu {
   }// End displayPage()
   
   void displayLoadingImage () {
+    println("I got inside the function here");
     background(0);
+    print ("HI");
     image(pageImages[picInFocus-1].getPImage(), width/2 - pageImages[picInFocus-1].getPImage().width/2, height/2 - pageImages[picInFocus-1].getPImage().height/2);
+    println("got past the image line thing");
     return;    
   }
   
@@ -239,17 +257,14 @@ class ImageMenu {
           public void run() {
             StringTokenizer realImageToken = new StringTokenizer(pageImages[picInFocus-1].getNameOnly(), ".");
             String realImageName = realImageToken.nextToken() + ".tif";
-            displayLoadingImage();
+            //displayLoadingImage();
             newBackgroundImage = loadImage("Images/" + realImageName);
             //print("Loading: Images/" + realImageName);
-            newBackgroundImage.resize(width,height);
-            clearScreen();
-            image(newBackgroundImage, 0, 0);
+            //newBackgroundImage.resize(width,height);
+            //clearScreen();
+            //image(newBackgroundImage, 0, 0);
             //isLoadingImage = false;
-            newBackgroundImage = null;
-            MENU_MODE = false;
-            selected = 100;
-            picInFocus = 0;
+            newImageFlag = true;
           }
         };
         isLoadingImage = true;

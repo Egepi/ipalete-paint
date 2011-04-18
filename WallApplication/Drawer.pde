@@ -12,33 +12,31 @@ Hashtable prevTouches = new Hashtable();
 /**************************************************
  * Description needed
  */
-void drawStuff()
-{
-  if(connectToTacTile)
-  {
+void drawStuff() {
+  if(connectToTacTile) {
     ArrayList newUp = touchMachine.getTouchesUp();         
     ArrayList newDown = touchMachine.getTouchesDown();
     ArrayList newMove = touchMachine.getMovedTouches();
-    if( !newDown.isEmpty()){
-      for(int i = 0; i < newDown.size(); i++){
+    if( !newDown.isEmpty()) {
+      for(int i = 0; i < newDown.size(); i++) {
         Touches curTouch = ((Touches) newDown.get(i));          
         sendTouch(curTouch);
       }
     }// if down
-    if( !newMove.isEmpty()){
-      for(int i = 0; i < newMove.size(); i++){
+    if( !newMove.isEmpty()) {
+      for(int i = 0; i < newMove.size(); i++) {
         Touches curTouch = ((Touches) newMove.get(i));  
         sendTouch(curTouch);
       }
     }// if move
-    if( !newUp.isEmpty()){
-      for(int i = 0; i < newUp.size(); i++){
+    if( !newUp.isEmpty()) {
+      for(int i = 0; i < newUp.size(); i++) {
         Touches curTouch = ((Touches) newUp.get(i));
         sendTouch(curTouch);
       }
     }// if up
   }
-  else{
+  else {
     if(mousePressed) {    
       if(MENU_MODE) {
         myImageMenu.imageMenuInput(mouseX, mouseY);

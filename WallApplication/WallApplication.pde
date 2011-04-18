@@ -9,7 +9,7 @@ import tacTile.net.*;
 /**************************************************
  * Globals
  */
-color backgroundColor = color( 0 ); 
+color backgroundColor = color(0); 
 color textColor = color(255);
 
 boolean connectToTacTile = true;

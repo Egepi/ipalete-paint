@@ -119,7 +119,7 @@ void keyPressed() {
   else if(key == 's' || key == 'S') {
     saveImage();
   }
-  else if(key == 'i' || key == 'I') {
+  else if((key == 'i' || key == 'I') && useImageMenu) {
     if(MENU_MODE) {
       //closeMenu();
     }
@@ -128,7 +128,7 @@ void keyPressed() {
     }
 
   }
-  else if(key == 'o' || key == 'O') {
+  else if((key == 'o' || key == 'O') && useImageMenu) {
     if(MENU_MODE) {
       closeMenu();
     }

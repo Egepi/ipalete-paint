@@ -1,5 +1,4 @@
-class Button
-{
+class Button {
   PImage myImage;
   PImage myImage2 = null;
   float myXcoord;
@@ -16,8 +15,7 @@ class Button
   int myPathMinY;
   int myPathMaxY;  
   
-  public Button(PImage theImage, float theX, float theY)
-  {
+  public Button(PImage theImage, float theX, float theY) {
     myImage = theImage;
     myXcoord = theX;
     myYcoord = theY;
@@ -26,8 +24,7 @@ class Button
     secondPic = false;
   }
   
-  public Button(PImage theImage, float theX, float theY, int theWidth, int theHeight)
-  {
+  public Button(PImage theImage, float theX, float theY, int theWidth, int theHeight) {
     myImage = theImage;
     myXcoord = theX;
     myYcoord = theY;
@@ -36,55 +33,38 @@ class Button
     secondPic = false;
   }
   
-  void drawIt()
-  {
-    //if(secondPic == true)
-    //  image(myImage2, myXcoord, myYcoord, myWidth, myHeight);
-    //else
-      image(myImage, myXcoord, myYcoord, myWidth, myHeight);
+  void drawIt() {
+    image(myImage, myXcoord, myYcoord, myWidth, myHeight);
   }
   
-  public void move()
-  {
-
-    if(myXcoord < myPathMaxX && myYcoord == myPathMinY)
-    {
+  public void move() {
+    if(myXcoord < myPathMaxX && myYcoord == myPathMinY) {
       myXcoord = myXcoord + 5;
     }
-    else if(myXcoord > myPathMinX && myYcoord == myPathMaxY)
-    {
+    else if(myXcoord > myPathMinX && myYcoord == myPathMaxY) {
       myXcoord = myXcoord - 5;   
     }
-    else if(myYcoord < myPathMaxY && myXcoord == myPathMaxX)
-    {
+    else if(myYcoord < myPathMaxY && myXcoord == myPathMaxX) {
       myYcoord = myYcoord + 5;   
     }
-    else if(myYcoord > myPathMinY && myXcoord == myPathMinX)
-    {
+    else if(myYcoord > myPathMinY && myXcoord == myPathMinX) {
       myYcoord = myYcoord - 5;    
     }
   }
-  public void setPath(int leftX, int rightX, int topY, int bottomY)
-  {
+  public void setPath(int leftX, int rightX, int topY, int bottomY) {
     myPathMinX = leftX;
     myPathMaxX = rightX;
     myPathMinY = topY;
     myPathMaxY = bottomY;
   }
   
-  int checkBounds()
-  {
-    
-    if(!connectToTacTile)
-    {
-      if(mousePressed)
-      {
+  int checkBounds() {
+    if(!connectToTacTile) {
+      if(mousePressed) {
         int xCoord = mouseX;
         int yCoord = mouseY;
-        if((xCoord >= myXcoord)&&(xCoord <= (myXcoord + myWidth)))
-        {
-            if((yCoord >= myYcoord)&&(yCoord <= (myYcoord + myHeight)))
-            {
+        if((xCoord >= myXcoord)&&(xCoord <= (myXcoord + myWidth))) {
+            if((yCoord >= myYcoord)&&(yCoord <= (myYcoord + myHeight))) {
               return 1;
             }
         }
@@ -116,8 +96,7 @@ class Button
     
   }
   
-  void decrementSwitch()
-  {
+  void decrementSwitch() {
     if(switchCount > 0) switchCount--;
   }
 }

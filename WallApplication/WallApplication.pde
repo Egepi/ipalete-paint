@@ -2,9 +2,7 @@
  * Imports
  */
 import processing.opengl.*;
-import processing.net.*; 
-//import hypermedia.net.*;
-//import tacTile.net.*;
+import processing.net.*;
 
 /**************************************************
  * Globals

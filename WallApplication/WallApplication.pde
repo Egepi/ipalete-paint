@@ -14,6 +14,7 @@ boolean connectToTacTile = true;
 boolean connectToiPad = true;
 boolean showWaiting = true;
 boolean useImageMenu = false;
+boolean saveTouches = false;
 
 //debug text
 boolean DEBUG_MODE = false;
@@ -36,7 +37,7 @@ ImageMenu myImageMenu;
  */
 void setup() {
   startTouchConnection();
-  readConfigFile("config.cfg");
+  //readConfigFile("config.cfg");
   if(useImageMenu) {
     myImageMenu = new ImageMenu();
   
@@ -49,12 +50,14 @@ void setup() {
     imgMenuLoadThread = new Thread( imgMenuLoader );
     imgMenuLoadThread.start();
   }
-  if(connectToTacTile) {
+  if(connectToTacTile && TOUCH_MODE.equals("SPHERE")) {
     ortho(-width/2, width/2, -height/2, height/2, 100, 10000);
     hint(DISABLE_DEPTH_TEST);
   }
   clearScreen();
-  prepareFile();
+  if (saveTouches) {
+    prepareFile();
+  }
 
   font = loadFont("ArialMT-36.vlw");
   if(connectToiPad) {

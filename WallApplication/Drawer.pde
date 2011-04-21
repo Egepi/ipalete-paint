@@ -123,7 +123,9 @@ void drawTouches(int gesture, int id, int xCoordinate, int yCoordinate, int theX
     prevyCoordinate = yCoordinate;
     prevtheXWidth = theXWidth;
     prevtheYWidth = theYWidth;
-    //writeToFile(newObject.toString());
+    if (saveTouches) {
+      writeToFile(newObject.toString());
+    }
     strokeWeight(1);
   }
 }

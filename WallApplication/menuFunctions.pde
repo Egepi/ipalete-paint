@@ -11,7 +11,9 @@ void quitApplication() {
   }
   File f = new File(sketchPath("tempback.tif"));
   f.delete();
-  finishFile();
+  if (saveTouches) {
+    finishFile();
+  }
   exit();
 }
 

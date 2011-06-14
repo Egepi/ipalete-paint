@@ -1,4 +1,4 @@
-           /**************************************************
+/**************************************************
  * This is used to control the background picking
  * functionality as well as saving screen shots. 
  */
@@ -97,7 +97,7 @@ class ImageMenu {
     }
         
     //Create the first page to be displayed
-    createPage(1);p
+    createPage(1);
   }// End loadAllImages()
   
   /**************************************************
@@ -185,7 +185,7 @@ class ImageMenu {
       MENU_MODE = false;
       selected = 100;
       picInFocus = 0;
-      pageNumber = 0;
+      pageNumber = 1;
       return;
     }
     //if(isLoadingImage == true) {

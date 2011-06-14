@@ -90,6 +90,7 @@ void draw() {
       text("Waiting for iPad to connect...", width/2, height/2);
     } 
     else if( connectionEstablished && showWaiting ) {
+      println("Ipad connected");
       frameRate(60);
       background(backgroundColor);
       showWaiting = false;

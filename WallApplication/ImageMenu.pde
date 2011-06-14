@@ -1,4 +1,4 @@
-/**************************************************
+           /**************************************************
  * This is used to control the background picking
  * functionality as well as saving screen shots. 
  */
@@ -23,6 +23,15 @@ class ImageMenu {
   private boolean isLoadingImage;
   private PImage newBackgroundImage;
   private boolean newImageFlag;
+  
+  Runnable loadThatImageRunnable = new Runnable() {
+     public void run() {
+        StringTokenizer realImageToken = new StringTokenizer(pageImages[picInFocus-1].getNameOnly(), ".");
+        String realImageName = realImageToken.nextToken() + ".tif";
+        newBackgroundImage = loadImage("Images/" + realImageName);
+        newImageFlag = true;
+     }
+  };
   
   /**************************************************
    * Default Constructor
@@ -88,7 +97,7 @@ class ImageMenu {
     }
         
     //Create the first page to be displayed
-    createPage(1);
+    createPage(1);p
   }// End loadAllImages()
   
   /**************************************************
@@ -166,7 +175,7 @@ class ImageMenu {
    */
   void displayPage() {
     background(0);
-    if(newImageFlag == true)
+    if(newImageFlag == true)// Display the new background picked
     {
       print("did i even get here");
       newBackgroundImage.resize(width,height);
@@ -176,6 +185,7 @@ class ImageMenu {
       MENU_MODE = false;
       selected = 100;
       picInFocus = 0;
+      pageNumber = 0;
       return;
     }
     //if(isLoadingImage == true) {
@@ -253,20 +263,6 @@ class ImageMenu {
     if((picInFocus != 0)&& pageImages[picInFocus-1].isTouched(touchX, touchY)) {
       selected--;
       if((selected <= 0)&&(isLoadingImage == false)) {
-          Runnable loadThatImageRunnable = new Runnable() {
-          public void run() {
-            StringTokenizer realImageToken = new StringTokenizer(pageImages[picInFocus-1].getNameOnly(), ".");
-            String realImageName = realImageToken.nextToken() + ".tif";
-            //displayLoadingImage();
-            newBackgroundImage = loadImage("Images/" + realImageName);
-            //print("Loading: Images/" + realImageName);
-            //newBackgroundImage.resize(width,height);
-            //clearScreen();
-            //image(newBackgroundImage, 0, 0);
-            //isLoadingImage = false;
-            newImageFlag = true;
-          }
-        };
         isLoadingImage = true;
         Thread loadThatImage = new Thread( loadThatImageRunnable );
         loadThatImage.start(); 

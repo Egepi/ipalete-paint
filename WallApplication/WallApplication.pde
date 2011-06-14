@@ -13,7 +13,7 @@ color textColor = color(255);
 boolean connectToTacTile = true;
 boolean connectToiPad = true;
 boolean showWaiting = true;
-boolean useImageMenu = false;
+boolean useImageMenu = true;
 boolean saveTouches = false;
 
 //debug text

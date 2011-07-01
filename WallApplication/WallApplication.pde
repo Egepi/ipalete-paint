@@ -22,8 +22,8 @@ boolean MENU_MODE = false;
 String TOUCH_MODE = "ELLIPSE";
 //String TOUCH_MODE = "SPHERE";
 
-int myWidth = screen.width;
-int myHeight = screen.height;
+int myWidth = 1360 * 6;
+int myHeight = 768 * 3;
 
 PFont font;
 Thread waitingThread;
@@ -36,8 +36,9 @@ ImageMenu myImageMenu;
  * on startup
  */
 void setup() {
+  readConfigFile("config.cfg");
   startTouchConnection();
-  //readConfigFile("config.cfg");
+
   if(useImageMenu) {
     myImageMenu = new ImageMenu();
   

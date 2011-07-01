@@ -50,11 +50,42 @@ void drawStuff() {
 
 void sendTouch(Touches curTouch)
 {
+  boolean cluster = true;
+  int nNodes = 2;
+  int thisNodeID = 2;
+  
+  int xPos;
+  int yPos;
+  int xWidth;
+  int yWidth;
+  
+  float nodeXPos = curTouch.getXPos();
+  float nodeXWidth = curTouch.getXWidth();
+  
+  if( !cluster ){
+    xPos = (int)(curTouch.getXPos() * myWidth);
+    yPos = (int)(myHeight - curTouch.getYPos() * myHeight);
+    xWidth = (int)(curTouch.getXWidth() * myWidth);
+    yWidth = (int)(curTouch.getYWidth() * myHeight);
+  } else {
+    if( thisNodeID == 1 ){
+      nodeXPos = nodeXPos * nNodes;
+    } else if( thisNodeID == nNodes ){
+      nodeXPos = (nodeXPos * nNodes) - ( (float)thisNodeID / (float)nNodes );
+    }
+    nodeXWidth = nodeXWidth * nNodes;
+    
+    xPos = (int)( nodeXPos * myWidth);
+    yPos = (int)(myHeight - curTouch.getYPos() * myHeight);
+    xWidth = (int)(nodeXWidth * myWidth);
+    yWidth = (int)(curTouch.getYWidth() * myHeight);
+  }
+  
   if(MENU_MODE) {
-    myImageMenu.imageMenuInput((int)(curTouch.getXPos() * width), (int)(height - curTouch.getYPos() * height));
+    myImageMenu.imageMenuInput( xPos, yPos );
   }
   else {
-    drawTouches((int)curTouch.getGesture(), (int)curTouch.getFinger(), (int)(curTouch.getXPos() * width), (int)(height - curTouch.getYPos() * height), (int)(curTouch.getXWidth() * width), (int)(curTouch.getYWidth() * height));
+    drawTouches((int)curTouch.getGesture(), (int)curTouch.getFinger(), xPos, yPos, xWidth, yWidth);
   }
 }
 /**************************************************

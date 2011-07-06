@@ -11,11 +11,19 @@ color backgroundColor = color(0);
 color textColor = color(255);
 
 boolean connectToTacTile = true;
-boolean connectToiPad = true;
+boolean connectToiPad = false;
 boolean showWaiting = true;
 boolean useImageMenu = true;
 boolean saveTouches = false;
 
+// Clustering
+boolean cluster = false; // If false, this application will act as the iPad server.
+                        // If true, this application will attempt to connect to the master node.
+int nNodes = 1;
+int thisNodeID = 1;
+String masterNodeIP = "127.0.0.1";
+int masterNodePort = 7171;
+  
 //debug text
 boolean DEBUG_MODE = false;
 boolean MENU_MODE = false;

@@ -11,7 +11,7 @@ ServerSocket myServer;
 Socket mySocket;
 BufferedReader inFromClient;
 String dataFromClient;
-int port = 13337;
+int iPadPort = 13337;
 
 void readData()
 {
@@ -68,20 +68,69 @@ void readData()
     }
   }
   else {
-     connectClient();
+    if( cluster ){
+      connectToMasterNode();
+    } else {
+      connectClient();
+    }
   }
 }
 
 void connectClient() {
   //try-catch block for starting the server on WALL.
   try {
-    println("Waiting for client");
-    myServer = new ServerSocket(port);
+    println("Waiting for iPad client");
+    myServer = new ServerSocket(iPadPort);
     mySocket = myServer.accept();
-    System.out.println( " THE CLIENT"+" "+ mySocket.getInetAddress() +":"+mySocket.getPort()+" IS CONNECTED ");
+    System.out.println( " IPAD CLIENT"+" "+ mySocket.getInetAddress() +":"+mySocket.getPort()+" IS CONNECTED ");
     connectionEstablished = true;
   }
   catch(Exception e) {
     println("Server connection had an error!!!:" + e);
+  }
+}
+
+void connectToMasterNode(){
+  Socket clientSocket;
+  
+  BufferedReader incomingReader;
+  PrintWriter outStream;
+  String incomingMessage;
+   
+  try {
+    // Establish connection with master
+    println("Connecting to Master Node '"+masterNodeIP+"' port '"+masterNodePort+"'");
+    clientSocket = new Socket(masterNodeIP, masterNodePort);
+    
+    // Create an incoming message reader
+    incomingReader = new BufferedReader(new InputStreamReader(
+                                        clientSocket.getInputStream()));
+                                        
+    // Create ouput message writer
+    outStream = new PrintWriter( clientSocket.getOutputStream(), true);
+  
+    while ((incomingMessage = incomingReader.readLine()) != null) {
+      //println("Receiving: '" +incomingMessage+"'");
+      
+      // Check message
+      if( incomingMessage.contains("REQ_NODE_ID") ){
+        println("Server has requested node ID");
+        outStream.println(thisNodeID);
+        break;
+      }
+    }
+    println("Connected to Master Node");
+    println("This is node " + thisNodeID + " of " + nNodes);
+    mySocket = clientSocket;
+  } 
+  catch (UnknownHostException e) {
+    System.err.println("Unknown host: "+ masterNodeIP);
+    exit();
+  } 
+  catch (IOException e) {
+    System.err.println("Couldn't get I/O for "
+      + masterNodeIP + " on port " + masterNodePort);
+    System.err.println(e);
+    exit();
   }
 }

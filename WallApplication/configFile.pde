@@ -36,7 +36,33 @@ void readConfigFile(String config_file){
         msgPort = Integer.valueOf( tempStr.trim() );
         continue;
       }
-
+      if( rawConfig[i].contains("MASTER_NODE_IP") ){
+        masterNodeIP = rawConfig[i].substring( rawConfig[i].indexOf("\"")+1, rawConfig[i].lastIndexOf("\"") );
+        cluster = true;
+        println("Clustering enabled");
+        continue;
+      }
+      if( rawConfig[i].contains("MASTER_NODE_PORT") ){
+        tempStr = rawConfig[i].substring( rawConfig[i].indexOf("=")+1, rawConfig[i].lastIndexOf(";") );
+        masterNodePort = Integer.valueOf( tempStr.trim() );
+        continue;
+      }
+      if( rawConfig[i].contains("NODE_ID") ){
+        tempStr = rawConfig[i].substring( rawConfig[i].indexOf("=")+1, rawConfig[i].lastIndexOf(";") );
+        thisNodeID = Integer.valueOf( tempStr.trim() );
+        continue;
+      }
+      if( rawConfig[i].contains("N_NODES") ){
+        tempStr = rawConfig[i].substring( rawConfig[i].indexOf("=")+1, rawConfig[i].lastIndexOf(";") );
+        nNodes = Integer.valueOf( tempStr.trim() );
+        continue;
+      }
+      if( rawConfig[i].contains("IPAD_PORT") ){
+        tempStr = rawConfig[i].substring( rawConfig[i].indexOf("=")+1, rawConfig[i].lastIndexOf(";") );
+        iPadPort = Integer.valueOf( tempStr.trim() );
+        connectToiPad = true;
+        continue;
+      }
     }// for
   }
 }// readConfigFile

@@ -50,10 +50,6 @@ void drawStuff() {
 
 void sendTouch(Touches curTouch)
 {
-  boolean cluster = true;
-  int nNodes = 2;
-  int thisNodeID = 2;
-  
   int xPos;
   int yPos;
   int xWidth;

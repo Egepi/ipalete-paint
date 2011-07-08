@@ -53,7 +53,7 @@ ImageMenu myImageMenu;
 void setup(){
   readConfigFile("config.cfg");
   startTouchConnection();
-
+  noCursor();
   if(useImageMenu) {
     myImageMenu = new ImageMenu();
   

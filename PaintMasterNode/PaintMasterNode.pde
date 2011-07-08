@@ -8,6 +8,8 @@ NodeServer nodeServer;
 Thread clientListenerThread;
 Thread iPadThread;
 
+HashMap nodeIDLookup;
+
 void controlEvent(ControlEvent theEvent) {
   switch( theEvent.controller().id() ){
     case(1):
@@ -27,6 +29,8 @@ void controlEvent(ControlEvent theEvent) {
 
 void setup(){
   size(100,130);
+  nodeIDLookup = new HashMap();
+  readConfigFile("config.cfg");
   controlP5 = new ControlP5(this);
   controlP5.addButton("Align Frame",0,10,10,80,20).setId(1);
   controlP5.addButton("Clear Screen",0,10,40,80,20).setId(2);
@@ -34,6 +38,7 @@ void setup(){
   controlP5.addButton("Disable iPad",0,10,100,80,20).setId(4);
   
   nodeServer = new NodeServer();
+  
   
   Runnable iPad = new Runnable() {
     public void run() {
@@ -55,9 +60,7 @@ void setup(){
 }// setup
 
 void draw(){
-  //nodeServer.listenForNodes();
-  //nodeServer.sendToClients("Guff");
-  //readIPadData();
+
 }// draw
 
 void mousePressed() {

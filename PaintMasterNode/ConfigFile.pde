@@ -21,17 +21,20 @@ void readConfigFile(String config_file){
       if( rawConfig[i].contains("//") ) // Removes comments
           rawConfig[i] = rawConfig[i].substring( 0 , rawConfig[i].indexOf("//") );
 
-      //if( rawConfig[i].contains("TRACKER_MACHINE") ){
-      //  trackerMachine = rawConfig[i].substring( rawConfig[i].indexOf("\"")+1, rawConfig[i].lastIndexOf("\"") );
-      //  connectToTacTile = true;
-      //  continue;
-      //}
-      //if( rawConfig[i].contains("DATA_PORT") ){
-      //  tempStr = rawConfig[i].substring( rawConfig[i].indexOf("=")+1, rawConfig[i].lastIndexOf(";") );
-      //  dataPort = Integer.valueOf( tempStr.trim() );
-      //  continue;
-      //}
-
+      if( rawConfig[i].contains("NODE") ){
+        // Parse string
+        String nodeIDStr = rawConfig[i].substring( rawConfig[i].indexOf(" ")+1, rawConfig[i].lastIndexOf("=") );
+        String nodeIPStr = rawConfig[i].substring( rawConfig[i].indexOf("\"")+1, rawConfig[i].lastIndexOf("\"") );
+        
+        // Remove leading/trailing whitespace
+        nodeIDStr = nodeIDStr.trim();
+        nodeIPStr = nodeIPStr.trim();
+        
+        // Add to node lookup table
+        nodeIDLookup.put( nodeIPStr, nodeIDStr );
+        println("Added node ID '"+nodeIDStr+"' IP '"+nodeIPStr+"'");
+        continue;
+      }
     }// for
   }
 }// readConfigFile

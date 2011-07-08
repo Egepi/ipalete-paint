@@ -20,12 +20,11 @@ class PaintNode{
     } catch( IOException e ) {
       println("PaintNode: Failed to create outgoing message stream");
     }
-    
-    // Hardcoded IPs fix in config file
-    if( nodeAddress.contains("137.110.116.21") ){
-      setNodeID(1);
-    } else {
-      setNodeID(2);
+        
+    // Use lookup table to assign IP to node IDs
+    // Table loaded from config
+    if( nodeIDLookup.containsKey(nodeAddress) ){
+      setNodeID( Integer.valueOf((String)nodeIDLookup.get(nodeAddress)) );
     }
   }// CTOR
   

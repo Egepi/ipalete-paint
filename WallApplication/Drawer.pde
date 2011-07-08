@@ -50,6 +50,7 @@ void drawStuff() {
 
 void sendTouch(Touches curTouch)
 {
+  setJavaFrame();
   int xPos;
   int yPos;
   int xWidth;

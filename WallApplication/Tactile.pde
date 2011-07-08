@@ -14,6 +14,7 @@ void startTouchConnection() {
    if(connectToTacTile) {
      size(myWidth, myHeight, OPENGL);
      //Create connection to Touch Server
+     println("Connecting to '"+trackerMachine+"' messagePort: "+msgPort+" dataPort: "+dataPort);
      touchMachine = new TouchAPI(this, dataPort, msgPort, trackerMachine);
    }
    else {

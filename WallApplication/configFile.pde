@@ -24,6 +24,7 @@ void readConfigFile(String config_file){
 
       if( rawConfig[i].contains("TRACKER_MACHINE") ){
         trackerMachine = rawConfig[i].substring( rawConfig[i].indexOf("\"")+1, rawConfig[i].lastIndexOf("\"") );
+        connectToTacTile = true;
         continue;
       }
       if( rawConfig[i].contains("DATA_PORT") ){
@@ -61,6 +62,26 @@ void readConfigFile(String config_file){
         tempStr = rawConfig[i].substring( rawConfig[i].indexOf("=")+1, rawConfig[i].lastIndexOf(";") );
         iPadPort = Integer.valueOf( tempStr.trim() );
         connectToiPad = true;
+        continue;
+      }
+      if( rawConfig[i].contains("WIDTH") ){
+        tempStr = rawConfig[i].substring( rawConfig[i].indexOf("=")+1, rawConfig[i].lastIndexOf(";") );
+        myWidth = Integer.valueOf( tempStr.trim() );
+        continue;
+      }
+      if( rawConfig[i].contains("HEIGHT") ){
+        tempStr = rawConfig[i].substring( rawConfig[i].indexOf("=")+1, rawConfig[i].lastIndexOf(";") );
+        myHeight = Integer.valueOf( tempStr.trim() );
+        continue;
+      }
+      if( rawConfig[i].contains("X_OFFSET") ){
+        tempStr = rawConfig[i].substring( rawConfig[i].indexOf("=")+1, rawConfig[i].lastIndexOf(";") );
+        xOffset = Integer.valueOf( tempStr.trim() );
+        continue;
+      }
+      if( rawConfig[i].contains("Y_OFFSET") ){
+        tempStr = rawConfig[i].substring( rawConfig[i].indexOf("=")+1, rawConfig[i].lastIndexOf(";") );
+        yOffset = Integer.valueOf( tempStr.trim() );
         continue;
       }
     }// for

@@ -121,18 +121,59 @@ void connectToMasterNode(){
           mySocket = socketToMaster;
           outStream.println(thisNodeID);
         }
-        if( incomingMessage.contains("RESET_FRAME") ){
+        else if( incomingMessage.contains("RESET_FRAME") ){
           println("MCN is resting the frame");
           setInitialScreenPos = false;
           setJavaFrame();
         }
-        if( incomingMessage.contains("CLEAR") ){
+        else if( incomingMessage.contains("CLEAR_SCREEN") ){
           println("MCN is clearing the screen");
-          clearScreen();
+          setClearScreen = true;
         }
-        if( incomingMessage.contains("SAVE") ){
+        else if( incomingMessage.contains("SAVE_SCREEN") ){
           println("MCN is saving the current image");
-          saveImage();
+          setSaveImage = true;
+        }
+        else if( incomingMessage.contains("IPAD_OFF") ){
+          connectionEstablished = false;
+        }
+        else if( incomingMessage.contains("IPAD:") ){
+          connectionEstablished = true;
+          incomingMessage = incomingMessage.substring( incomingMessage.indexOf(":")+1, incomingMessage.lastIndexOf(" ") );
+          println("iPad message '"+incomingMessage+"'");
+          if(incomingMessage.equals("999 999 999 999 999")) {
+            paintColors[0] = 0;
+            paintColors[1] = 0;
+            paintColors[2] = 0;
+            paintColors[3] = 0;
+            tool = 0;
+            connectionEstablished = false;
+            showWaiting = true;
+            continue;
+          }          
+          StringTokenizer data = new StringTokenizer(incomingMessage); 
+          int arrayLoc = -1;
+          while(data.hasMoreTokens()) {
+            String temp = data.nextToken();
+            int tempInt = parseInt(temp);
+            if(arrayLoc == -1) {
+              tool = tempInt - 100;
+              arrayLoc++;
+            }
+            else {
+              paintColors[arrayLoc] = tempInt - 100;
+              arrayLoc++;
+            }
+          }  
+        }
+        else{
+          println("MCN sent unknown command '"+incomingMessage+"'");
+          println("Currently supported commands are:");
+          println("SET_NODE_ID");
+          println("RESET_FRAME");
+          println("CLEAR_SCREEN");
+          println("SAVE_SCREEN");
+          println();
         }
     }
     

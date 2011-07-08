@@ -16,6 +16,7 @@ void startTouchConnection() {
      //Create connection to Touch Server
      println("Connecting to '"+trackerMachine+"' messagePort: "+msgPort+" dataPort: "+dataPort);
      touchMachine = new TouchAPI(this, dataPort, msgPort, trackerMachine);
+     println("Connected to touch tracker");
    }
    else {
      size(myWidth, myHeight);

@@ -10,7 +10,7 @@ class NodeServer{
     nodes = new Hashtable();
     try{
       listenerSocket = new ServerSocket(nodeListenPort);
-      println("NodeServer: Server started");
+      println("NodeServer: Server started at " + InetAddress.getLocalHost().getHostAddress() + " port: "+ nodeListenPort);
     } catch( IOException e ) {
       println("NodeServer: Failed to start server");
     }

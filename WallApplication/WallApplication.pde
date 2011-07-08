@@ -16,6 +16,10 @@ boolean showWaiting = true;
 boolean useImageMenu = false;
 boolean saveTouches = false;
 
+// Thread safe flags for toggling Processing functions
+boolean setClearScreen = false;
+boolean setSaveImage = false;
+
 // Clustering
 boolean cluster = false; // If false, this application will act as the iPad server.
                         // If true, this application will attempt to connect to the master node.
@@ -72,7 +76,7 @@ void setup(){
   }
 
   font = loadFont("ArialMT-36.vlw");
-  if(connectToiPad) {
+  if(connectToiPad && !cluster) {
     Runnable loader = new Runnable() {
       public void run() {
         readData();
@@ -82,6 +86,7 @@ void setup(){
     waitingThread.start();
   }
   if( cluster ){
+    connectToiPad = false;
     Runnable loader = new Runnable() {
       public void run() {
         connectToMasterNode();
@@ -127,7 +132,15 @@ void draw() {
     myImageMenu.displayPage();
   }
   drawStuff();
-  //setJavaFrame();
+  
+  if( setClearScreen ){
+    clearScreen();
+    setClearScreen = false;
+  }
+  if( setSaveImage ){
+    saveImage();
+    setSaveImage = false;
+  }
 }
 
 void setJavaFrame(){

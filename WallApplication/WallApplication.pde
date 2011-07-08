@@ -10,10 +10,10 @@ import processing.net.*;
 color backgroundColor = color(0); 
 color textColor = color(255);
 
-boolean connectToTacTile = true;
+boolean connectToTacTile = false;
 boolean connectToiPad = false;
 boolean showWaiting = true;
-boolean useImageMenu = true;
+boolean useImageMenu = false;
 boolean saveTouches = false;
 
 // Clustering
@@ -32,10 +32,13 @@ String TOUCH_MODE = "ELLIPSE";
 
 int myWidth = 1360 * 6;
 int myHeight = 768 * 3;
+int xOffset = 0;
+int yOffset = 0;
 
 PFont font;
 Thread waitingThread;
 Thread imgMenuLoadThread;
+Thread masterNodeThread;
 
 ImageMenu myImageMenu;
 
@@ -43,7 +46,7 @@ ImageMenu myImageMenu;
  * setup() - a nessecary function for processing called
  * on startup
  */
-void setup() {
+void setup(){
   readConfigFile("config.cfg");
   startTouchConnection();
 
@@ -78,14 +81,26 @@ void setup() {
     waitingThread = new Thread( loader );
     waitingThread.start();
   }
+  if( cluster ){
+    Runnable loader = new Runnable() {
+      public void run() {
+        connectToMasterNode();
+      }
+    };
+    masterNodeThread = new Thread( loader );
+    masterNodeThread.start();
+  }
+  
+  
+
 } 
 
 /**************************************************
  * Called automatically, and controlls all drawing
  * to screen.
  */
+boolean setInitialScreenPos = false;
 void draw() { 
-
   if(DEBUG_MODE) { 
     debugCode();
   }
@@ -112,12 +127,64 @@ void draw() {
     myImageMenu.displayPage();
   }
   drawStuff();
+  //setJavaFrame();
+}
+
+void setJavaFrame(){
+   // Sets the frame position and removes the title bar
+  // This is in draw like this since accessing the Java frame
+  // before draw may freeze the application
+  if( !setInitialScreenPos && frame != null ){
+    // Remove title bar
+    //println("About to access frame - may cause app to hang " + frame);
+    frame.removeNotify();
+    frame.setUndecorated(true);
+    frame.addNotify();
+  
+    int frameX = frame.getX();
+    int frameY = frame.getY();
+    //println("Frame is "+ frame.getX() + "," + frame.getY());
+    //println("Frame should "+ xOffset + "," + yOffset);
+    if( frameX != xOffset || frameY != yOffset ){
+      frame.setLocation(xOffset,yOffset);
+      setInitialScreenPos = true;
+    }
+  }
 }
 
 /**************************************************
  * Is called when any key is pressed automagically 
  */
 void keyPressed() {
+  int frameX = frame.getX();
+  int frameY = frame.getY();
+  
+  if( keyCode == UP ){
+    frameY--;
+    println("Frame at " + frameX + "," + frameY);
+    frame.setLocation( frameX, frameY);
+  }
+  if( keyCode == DOWN ){
+    frameY++;
+    println("Frame at " + frameX + "," + frameY);
+    frame.setLocation( frameX, frameY);
+  }
+  if( keyCode == LEFT ){
+    frameX--;
+    println("Frame at " + frameX + "," + frameY);
+    frame.setLocation( frameX, frameY);
+  }
+  if( keyCode == RIGHT ){
+    frameX++;
+    println("Frame at " + frameX + "," + frameY);
+    frame.setLocation( frameX, frameY);
+  }
+  
+  if(key == 'f' || key == 'F') {
+    setInitialScreenPos = false;
+    setJavaFrame();
+  }
+  
   if(key == 'q' || key == 'Q') {
     quitApplication();
   }

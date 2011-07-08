@@ -12,9 +12,12 @@ Socket mySocket;
 BufferedReader inFromClient;
 String dataFromClient;
 int iPadPort = 13337;
-Socket socketToMaster;
 
-void readData()
+int paintColor = 255;
+int paintColors[] = new int[4];
+int tool;
+
+void readIPadData()
 {
   if(connectionEstablished) {
     try {
@@ -22,6 +25,7 @@ void readData()
       if(inFromClient.ready() == true) {
         //Data read in from touch server
         dataFromClient = inFromClient.readLine();
+        nodeServer.sendMessage(dataFromClient);
         if(dataFromClient != null) {
           //println(dataFromClient);
           if(dataFromClient.equals("999 999 999 999 999")) {
@@ -31,7 +35,7 @@ void readData()
             paintColors[3] = 0;
             tool = 0;
             connectionEstablished = false;
-            showWaiting = false;
+            //showWaiting = false;
             try { 
               mySocket.close();
             }
@@ -69,15 +73,11 @@ void readData()
     }
   }
   else {
-    if( cluster ){
-      //connectToMasterNode();
-    } else {
-      connectClient();
-    }
+     connectIPadClient();
   }
 }
 
-void connectClient() {
+void connectIPadClient() {
   //try-catch block for starting the server on WALL.
   try {
     println("Waiting for iPad client");
@@ -88,63 +88,5 @@ void connectClient() {
   }
   catch(Exception e) {
     println("Server connection had an error!!!:" + e);
-  }
-}
-
-void connectToMasterNode(){
-  BufferedReader incomingReader;
-  PrintWriter outStream;
-  String incomingMessage;
-   
-  try {
-    // Establish connection with master
-    println("Connecting to Master Control Node '"+masterNodeIP+"' port '"+masterNodePort+"'");
-    println("Waiting for response...");
-    socketToMaster = new Socket(masterNodeIP, masterNodePort);
-            
-    // Create an incoming message reader
-    incomingReader = new BufferedReader(new InputStreamReader(
-                                        socketToMaster.getInputStream()));
-                                        
-    // Create ouput message writer
-    outStream = new PrintWriter( socketToMaster.getOutputStream(), true);
-  
-    // Keep checking for messages
-    while ((incomingMessage = incomingReader.readLine()) != null) {
-      println("Receiving: '" +incomingMessage+"'");
-      
-        // Check message
-        if( incomingMessage.contains("SET_NODE_ID") ){
-          println("Connected to MCN ");
-          thisNodeID = Integer.valueOf( incomingMessage.substring( incomingMessage.indexOf("=")+2, incomingMessage.lastIndexOf(" ") ) );
-          println("MCN is setting node ID to " + thisNodeID);
-          mySocket = socketToMaster;
-          outStream.println(thisNodeID);
-        }
-        if( incomingMessage.contains("RESET_FRAME") ){
-          println("MCN is resting the frame");
-          setInitialScreenPos = false;
-          setJavaFrame();
-        }
-        if( incomingMessage.contains("CLEAR") ){
-          println("MCN is clearing the screen");
-          clearScreen();
-        }
-        if( incomingMessage.contains("SAVE") ){
-          println("MCN is saving the current image");
-          saveImage();
-        }
-    }
-    
-  } 
-  catch (UnknownHostException e) {
-    System.err.println("Unknown host: "+ masterNodeIP);
-    exit();
-  } 
-  catch (IOException e) {
-    System.err.println("Couldn't get I/O for "
-      + masterNodeIP + " on port " + masterNodePort);
-    System.err.println(e);
-    exit();
   }
 }

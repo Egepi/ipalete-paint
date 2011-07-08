@@ -25,7 +25,7 @@ void readIPadData()
       if(inFromClient.ready() == true) {
         //Data read in from touch server
         dataFromClient = inFromClient.readLine();
-        nodeServer.sendMessage(dataFromClient);
+        nodeServer.sendMessage("IPAD:"+dataFromClient);
         if(dataFromClient != null) {
           //println(dataFromClient);
           if(dataFromClient.equals("999 999 999 999 999")) {
@@ -80,7 +80,7 @@ void readIPadData()
 void connectIPadClient() {
   //try-catch block for starting the server on WALL.
   try {
-    println("Waiting for iPad client");
+    println("Waiting for iPad client on port " + iPadPort);
     myServer = new ServerSocket(iPadPort);
     mySocket = myServer.accept();
     System.out.println( " IPAD CLIENT"+" "+ mySocket.getInetAddress() +":"+mySocket.getPort()+" IS CONNECTED ");

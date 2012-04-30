@@ -1,0 +1,1073 @@
+TPaint
+v7
+r0
+t331145573.706015
+cCheck dependencies
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk
+c000000004C5A53C10000000000000110
+t1280988097
+s272
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/Entitlements.plist
+c000000004C06E99F00000000000001A7
+t1275521439
+s423
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/ResourceRules.plist
+c000000004C06E99F00000000000001E5
+t1275521439
+s485
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+c000000004C005A1200000000001EC0D0
+t1275091474
+s2015440
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/System/Library/Frameworks/CFNetwork.framework/Headers/CFNetwork.h
+c000000004C0059C200000000000004CF
+t1275091394
+s1231
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CoreFoundation.h
+c000000004C0058940000000000000A99
+t1275091092
+s2713
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004C005A1C00000000003B4B70
+t1275091484
+s3885936
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004C005A45000000000036A640
+t1275091525
+s3581504
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004C005A310000000000001355
+t1275091505
+s4949
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004C00642C000000000000098F
+t1275094060
+s2447
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004C0064A60000000002703220
+t1275094182
+s40907296
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/usr/include/arpa/inet.h
+c000000004B9F13220000000000001533
+t1268716322
+s5427
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/usr/include/errno.h
+c000000004B9F135D00000000000003EB
+t1268716381
+s1003
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/usr/include/netdb.h
+c000000004B9F134C000000000000307F
+t1268716364
+s12415
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/usr/include/netinet/in.h
+c000000004C5A1A13000000000000539D
+t1280973331
+s21405
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/usr/include/stdio.h
+c000000004B9F135D0000000000004174
+t1268716381
+s16756
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/usr/include/stdlib.h
+c000000004B9F135D0000000000002DF5
+t1268716381
+s11765
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/usr/include/string.h
+c000000004B9F135D0000000000001731
+t1268716381
+s5937
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/usr/include/sys/socket.h
+c000000004C5A1A1300000000000059BC
+t1280973331
+s22972
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/usr/include/sys/types.h
+c000000004C5A1A140000000000002905
+t1280973332
+s10501
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/usr/include/unistd.h
+c000000004B9F135D000000000000563E
+t1268716381
+s22078
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk
+c000000004D8370F80000000000000110
+t1300459768
+s272
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/Entitlements.plist
+c000000004D4F6A4700000000000001A7
+t1297050183
+s423
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/ResourceRules.plist
+c000000004D4F6A4700000000000001E5
+t1297050183
+s485
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+c000000004D54D1B500000000002CAD60
+t1297404341
+s2927968
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/CFNetwork.framework/Headers/CFNetwork.h
+c000000004D54D12700000000000004CF
+t1297404199
+s1231
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CoreFoundation.h
+c000000004D54CFAF0000000000000AB3
+t1297403823
+s2739
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004D54D18C00000000003532A0
+t1297404300
+s3486368
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004D54D1F500000000003E22F0
+t1297404405
+s4072176
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004D54D1DD0000000000001466
+t1297404381
+s5222
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004D5A28AB0000000000000AA1
+t1297754283
+s2721
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004D5A292A0000000000CA2AE0
+t1297754410
+s13249248
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/arpa/inet.h
+c000000004D54C5330000000000001533
+t1297401139
+s5427
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/errno.h
+c000000004D4F6E9000000000000003EB
+t1297051280
+s1003
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/netdb.h
+c000000004D54C533000000000000307F
+t1297401139
+s12415
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/netinet/in.h
+c000000004D54CB250000000000006BAC
+t1297402661
+s27564
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/stdio.h
+c000000004D4F6E910000000000004763
+t1297051281
+s18275
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/stdlib.h
+c000000004D4F6E9100000000000030A7
+t1297051281
+s12455
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/string.h
+c000000004D4F6E910000000000001A3A
+t1297051281
+s6714
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/sys/socket.h
+c000000004D54CB290000000000005ACF
+t1297402665
+s23247
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/sys/types.h
+c000000004D54CB2A0000000000002905
+t1297402666
+s10501
+
+N/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/usr/include/unistd.h
+c000000004D4F6E910000000000006662
+t1297051281
+s26210
+
+N/Users/egepi/Documents/Paint/Classes/../PaintViewController.h
+c000000004E2593620000000000001321
+t1311085410
+s4897
+i<UIKit/UIKit.h>
+i<CFNetwork/CFNetwork.h>
+i<sys/socket.h>
+i<sys/types.h>
+i<netinet/in.h>
+i<netdb.h>
+i<stdio.h>
+i<stdlib.h>
+i<string.h>
+i<unistd.h>
+i<errno.h>
+i<arpa/inet.h>
+
+N/Users/egepi/Documents/Paint/Classes/../PaintViewController.m
+c000000004E0CB7BD0000000000005D35
+t1309456317
+s23861
+i"PaintViewController.h"
+i<Foundation/Foundation.h>
+i<CoreFoundation/CoreFoundation.h>
+i<CFNetwork/CFNetwork.h>
+i<sys/socket.h>
+i<sys/types.h>
+i<netinet/in.h>
+i<netdb.h>
+i<stdio.h>
+i<stdlib.h>
+i<string.h>
+i<unistd.h>
+i<errno.h>
+
+N/Users/egepi/Documents/Paint/Classes/PaintAppDelegate.h
+c000000004CE6CF8A0000000000000233
+t1290194826
+s563
+i<UIKit/UIKit.h>
+
+N/Users/egepi/Documents/Paint/Classes/PaintAppDelegate.m
+c000000004D9CEECC0000000000000843
+t1302130380
+s2115
+i"PaintViewController.h"
+i"PaintAppDelegate.h"
+
+N/Users/egepi/Documents/Paint/MainWindow.xib
+c000000004C355E5500000000000048B4
+t1278565973
+s18612
+
+N/Users/egepi/Documents/Paint/Old images/GoodColor.png
+c000000004DF7CF67000000000000474C
+t1308086119
+s18252
+
+N/Users/egepi/Documents/Paint/PaintViewController.h
+c000000004E2593620000000000001321
+t1311085410
+s4897
+i<UIKit/UIKit.h>
+i<CFNetwork/CFNetwork.h>
+i<sys/socket.h>
+i<sys/types.h>
+i<netinet/in.h>
+i<netdb.h>
+i<stdio.h>
+i<stdlib.h>
+i<string.h>
+i<unistd.h>
+i<errno.h>
+i<arpa/inet.h>
+
+N/Users/egepi/Documents/Paint/PaintViewController.xib
+c000000004E0352AC000000000000D859
+t1308840620
+s55385
+
+N/Users/egepi/Documents/Paint/Paint_Prefix.pch
+c000000004C0E8DC200000000000000B3
+t1276022210
+s179
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/egepi/Documents/Paint/Settings.bundle
+c000000004E0CA4920000000000000088
+t1309451410
+s136
+
+N/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app
+t1309452667
+s1224
+
+N/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app.dSYM
+t1309452666
+s102
+
+N/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Burnt Sienna.png
+t1300471348
+s78519
+
+N/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Cadmium Orange.png
+t1300471350
+s79696
+
+N/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Cadmium Red Scarlet.png
+t1300471353
+s80431
+
+N/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Cobalt Green.png
+t1300471357
+s76434
+
+N/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/GoodColor.png
+t1308090948
+s21714
+
+N/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Info.plist
+t1302125606
+s1071
+
+N/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/MainWindow.nib
+t1300471344
+s1530
+
+N/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Old Holland Cold Gray.png
+t1300471359
+s74544
+
+N/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Paint
+t1309452666
+s70320
+
+N/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/PaintViewController.nib
+t1308946041
+s8405
+
+N/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/PkgInfo
+t1302125607
+s8
+
+N/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/ResourceRules.plist
+t1300471342
+s485
+
+N/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Settings.bundle
+t1309452664
+s136
+
+N/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Viridian Green Deep.png
+t1300471362
+s71812
+
+N/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Yellow Ochre.png
+t1300471364
+s80007
+
+N/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/alizarin crimson.png
+t1300471347
+s72771
+
+N/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/burnt umber.png
+t1300471349
+s73458
+
+N/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/cadmium red deep.png
+t1300471352
+s78457
+
+N/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/cadmium yellow pale.png
+t1300471355
+s81521
+
+N/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/cerulean blue.png
+t1300471356
+s79593
+
+N/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/embedded.mobileprovision
+t1308090951
+s7166
+
+N/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/flatbrush2_wshad.png
+t1300471364
+s36475
+
+N/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/flatbrush_wshad.png
+t1279918827
+s37031
+
+N/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/icon.png
+t1300471344
+s38954
+
+N/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/lamp black.png
+t1300471358
+s41112
+
+N/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/pallete.png
+t1300471364
+s634663
+
+N/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/pallete_mix.png
+t1300471346
+s110337
+
+N/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/pencil2_wshad.png
+t1300471365
+s35062
+
+N/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/pencil_wshad.png
+t1279918827
+s26171
+
+N/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/red ochre.png
+t1300471360
+s79036
+
+N/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/titanium white.png
+t1300471360
+s47695
+
+N/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/ultramarine blue.png
+t1300471361
+s73190
+
+N/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Objects-normal/armv7/Paint.LinkFileList
+c000000004C4A02E9000000000000014D
+t1279918825
+s333
+
+N/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Objects-normal/armv7/PaintAppDelegate.o
+t1309452664
+s55132
+
+N/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Objects-normal/armv7/PaintViewController.o
+t1309452665
+s117108
+
+N/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Objects-normal/armv7/main.o
+t1300471367
+s6412
+
+N/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Paint.xcent
+t1308090951
+s408
+
+N/Users/egepi/Documents/Paint/flatbrush2_wshad.png
+c000000004C4F8A340000000000009A22
+t1280281140
+s39458
+
+N/Users/egepi/Documents/Paint/flatbrush_wshad.png
+c000000004C40B34C0000000000009DE2
+t1279308620
+s40418
+
+N/Users/egepi/Documents/Paint/icon.png
+c000000004C47390F000000000000CF23
+t1279736079
+s53027
+
+N/Users/egepi/Documents/Paint/main.m
+c000000004C0E8DC2000000000000015F
+t1276022210
+s351
+i<UIKit/UIKit.h>
+
+N/Users/egepi/Documents/Paint/paint blobs cropped/Burnt Sienna.png
+c000000004C463CB80000000000012390
+t1279671480
+s74640
+
+N/Users/egepi/Documents/Paint/paint blobs cropped/Cadmium Orange.png
+c000000004C463CB80000000000012936
+t1279671480
+s76086
+
+N/Users/egepi/Documents/Paint/paint blobs cropped/Cadmium Red Scarlet.png
+c000000004C463CB80000000000012C40
+t1279671480
+s76864
+
+N/Users/egepi/Documents/Paint/paint blobs cropped/Cobalt Green.png
+c000000004C463CB80000000000011A3B
+t1279671480
+s72251
+
+N/Users/egepi/Documents/Paint/paint blobs cropped/Old Holland Cold Gray.png
+c000000004C463CB80000000000012073
+t1279671480
+s73843
+
+N/Users/egepi/Documents/Paint/paint blobs cropped/Viridian Green Deep.png
+c000000004C463CB80000000000010FD7
+t1279671480
+s69591
+
+N/Users/egepi/Documents/Paint/paint blobs cropped/Yellow Ochre.png
+c000000004C463CB80000000000012A2F
+t1279671480
+s76335
+
+N/Users/egepi/Documents/Paint/paint blobs cropped/alizarin crimson.png
+c000000004C463CB80000000000011356
+t1279671480
+s70486
+
+N/Users/egepi/Documents/Paint/paint blobs cropped/burnt umber.png
+c000000004C463CB800000000000116B7
+t1279671480
+s71351
+
+N/Users/egepi/Documents/Paint/paint blobs cropped/cadmium red deep.png
+c000000004C463CB80000000000012207
+t1279671480
+s74247
+
+N/Users/egepi/Documents/Paint/paint blobs cropped/cadmium yellow pale.png
+c000000004C463CB800000000000132A2
+t1279671480
+s78498
+
+N/Users/egepi/Documents/Paint/paint blobs cropped/cerulean blue.png
+c000000004C463CB80000000000012B81
+t1279671480
+s76673
+
+N/Users/egepi/Documents/Paint/paint blobs cropped/lamp black.png
+c000000004C463CB80000000000009602
+t1279671480
+s38402
+
+N/Users/egepi/Documents/Paint/paint blobs cropped/red ochre.png
+c000000004C463CB800000000000125B2
+t1279671480
+s75186
+
+N/Users/egepi/Documents/Paint/paint blobs cropped/titanium white.png
+c000000004C463CB8000000000000AE62
+t1279671480
+s44642
+
+N/Users/egepi/Documents/Paint/paint blobs cropped/ultramarine blue.png
+c000000004C463CB8000000000001135F
+t1279671480
+s70495
+
+N/Users/egepi/Documents/Paint/pallete.png
+c000000004C2A791B00000000000BB1F9
+t1277851931
+s766457
+
+N/Users/egepi/Documents/Paint/pallete_mix.png
+c000000004C40B8D0000000000001A3B1
+t1279310032
+s107441
+
+N/Users/egepi/Documents/Paint/pencil2_wshad.png
+c000000004C4F89F80000000000008FAA
+t1280281080
+s36778
+
+N/Users/egepi/Documents/Paint/pencil_wshad.png
+c000000004C40B3630000000000006C18
+t1279308643
+s27672
+
+N/Users/egepi/Library/MobileDevice/Provisioning Profiles/10783DE2-FBDF-4CAC-AF05-05A774A181BA.mobileprovision
+c000000004CBDF9C90000000000001C07
+t1287518665
+s7175
+
+N/Users/egepi/Library/MobileDevice/Provisioning Profiles/53A941CE-1BC9-4E95-8FD5-8B1DF0A6DD90.mobileprovision
+c000000004C3F54AD0000000000001C07
+t1279218861
+s7175
+
+N/Users/egepi/Library/MobileDevice/Provisioning Profiles/642D31AA-C40B-4057-89F0-F2F2CA1AD65A.mobileprovision
+c000000004DD28D920000000000001BFE
+t1305644434
+s7166
+
+N/Users/egepi/Library/MobileDevice/Provisioning Profiles/8D020287-4CA9-4698-A6CE-5DCA4A65C352.mobileprovision
+c000000004D5952E2000000000000517E
+t1297699554
+s20862
+
+N/var/folders/g7/g7tN9i5sHJSBAgVINaVOrU+++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Paint_Prefix-aaeumfijnayfirfldwbttxeuxrjk/Paint_Prefix.pch.gch
+t1300471366
+s10647452
+
+N/var/folders/g7/g7tN9i5sHJSBAgVINaVOrU+++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Paint_Prefix-aklotbveplkccyeeideyywpkafsk/Paint_Prefix.pch.gch
+t1285339411
+s9421460
+
+N/var/folders/g7/g7tN9i5sHJSBAgVINaVOrU+++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Paint_Prefix-bfhqsapfueomlobxsivmiugbfedq/Paint_Prefix.pch.gch
+t1279222056
+s9421460
+
+NPaint-Info.plist
+c000000004D9CB54A0000000000000544
+t1302115658
+s1348
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies340670234#340670234#0(164"[BEROR]Code Sign error: The identity 'iPhone Developer: Karan Chakrapani (GNF83XV87T)' doesn't match any valid certificate/private key pair in the default keychain1(4@156"Code Sign error: The identity 'iPhone Developer: Karan Chakrapani (GNF83XV87T)' doesn't match any valid certificate/private key pair in the default keychain340670234#4294967295#0#0(1@0"0(0#1#0"2428052000#0"0#
+
+CCodeSign /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app
+s331145466.992393
+e331145467.434649
+r1
+xCodeSign
+x/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app
+lSLF07#2@39"CodeSign build/Debug-iphoneos/Paint.app331145466#331145467#0(0"0(0#0#59"/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app2456072848#602"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    setenv _CODESIGN_ALLOCATE_ /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/codesign_allocate    /usr/bin/codesign -f -s "iPhone Developer: Karan Chakrapani (GNF83XV87T)" --resource-rules=/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/ResourceRules.plist --entitlements /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Paint.xcent /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app0#
+
+CCompileC build/Paint.build/Debug-iphoneos/Paint.build/Objects-normal/armv7/PaintAppDelegate.o /Users/egepi/Documents/Paint/Classes/PaintAppDelegate.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s331145464.018585
+e331145464.294593
+r1
+xCompileC
+xbuild/Paint.build/Debug-iphoneos/Paint.build/Objects-normal/armv7/PaintAppDelegate.o
+x/Users/egepi/Documents/Paint/Classes/PaintAppDelegate.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/egepi/Documents/Paint/Classes/PaintAppDelegate.m331145464#331145464#0(0"0(0#0#55"/Users/egepi/Documents/Paint/Classes/PaintAppDelegate.m2456072848#1606"    cd /Users/egepi/Documents/Paint    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Paint-generated-files.hmap -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Paint-own-target-headers.hmap -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Paint-all-target-headers.hmap -iquote /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Paint-project-headers.hmap -F/Users/egepi/Documents/Paint/build/Debug-iphoneos -I/Users/egepi/Documents/Paint/build/Debug-iphoneos/include -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/DerivedSources/armv7 -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/DerivedSources -include /var/folders/g7/g7tN9i5sHJSBAgVINaVOrU+++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Paint_Prefix-aaeumfijnayfirfldwbttxeuxrjk/Paint_Prefix.pch -c /Users/egepi/Documents/Paint/Classes/PaintAppDelegate.m -o /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Objects-normal/armv7/PaintAppDelegate.o0#
+
+CCompileC build/Paint.build/Debug-iphoneos/Paint.build/Objects-normal/armv7/PaintViewController.o /Users/egepi/Documents/Paint/Classes/../PaintViewController.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s331145464.020532
+e331145465.206115
+r1
+xCompileC
+xbuild/Paint.build/Debug-iphoneos/Paint.build/Objects-normal/armv7/PaintViewController.o
+x/Users/egepi/Documents/Paint/Classes/../PaintViewController.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController sendData]':
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:183: warning: 'return' with a value, in function returning void
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController makeColorUserWell1]':
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:556: warning: assignment discards qualifiers from pointer target type
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController makeColorUserWell2]':
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:572: warning: assignment discards qualifiers from pointer target type
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController makeColorUserWell3]':
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:588: warning: assignment discards qualifiers from pointer target type
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController createUserWell1]':
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:609: warning: assignment discards qualifiers from pointer target type
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController createUserWell2]':
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:632: warning: assignment discards qualifiers from pointer target type
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController createUserWell3]':
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:653: warning: assignment discards qualifiers from pointer target type
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController Brush:]':
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:695: warning: assignment discards qualifiers from pointer target type
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController newMix]':
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:713: warning: assignment discards qualifiers from pointer target type
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:797: warning: assignment discards qualifiers from pointer target type
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController newClear]':
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:808: warning: assignment discards qualifiers from pointer target type
+lSLF07#2@69"Compile /Users/egepi/Documents/Paint/Classes/../PaintViewController.m331145464#331145465#0(2593"/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController sendData]':/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:183: warning: 'return' with a value, in function returning void/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController makeColorUserWell1]':/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:556: warning: assignment discards qualifiers from pointer target type/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController makeColorUserWell2]':/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:572: warning: assignment discards qualifiers from pointer target type/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController makeColorUserWell3]':/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:588: warning: assignment discards qualifiers from pointer target type/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController createUserWell1]':/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:609: warning: assignment discards qualifiers from pointer target type/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController createUserWell2]':/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:632: warning: assignment discards qualifiers from pointer target type/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController createUserWell3]':/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:653: warning: assignment discards qualifiers from pointer target type/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController Brush:]':/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:695: warning: assignment discards qualifiers from pointer target type/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController newMix]':/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:713: warning: assignment discards qualifiers from pointer target type/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:797: warning: assignment discards qualifiers from pointer target type/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController newClear]':/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:808: warning: assignment discards qualifiers from pointer target type11(22@49"'return' with a value, in function returning void331145464#110#126#0(6@61"/Users/egepi/Documents/Paint/Classes/../PaintViewController.m331145207#183#0#183#0#0"0(22@55"Assignment discards qualifiers from pointer target type331145464#356#132#0(6@61"/Users/egepi/Documents/Paint/Classes/../PaintViewController.m331145207#556#0#556#0#55"assignment discards qualifiers from pointer target type0(22@55"Assignment discards qualifiers from pointer target type331145464#608#132#0(6@61"/Users/egepi/Documents/Paint/Classes/../PaintViewController.m331145207#572#0#572#0#55"assignment discards qualifiers from pointer target type0(22@55"Assignment discards qualifiers from pointer target type331145464#860#132#0(6@61"/Users/egepi/Documents/Paint/Classes/../PaintViewController.m331145207#588#0#588#0#55"assignment discards qualifiers from pointer target type0(22@55"Assignment discards qualifiers from pointer target type331145464#1109#132#0(6@61"/Users/egepi/Documents/Paint/Classes/../PaintViewController.m331145207#609#0#609#0#55"assignment discards qualifiers from pointer target type0(22@55"Assignment discards qualifiers from pointer target type331145464#1358#132#0(6@61"/Users/egepi/Documents/Paint/Classes/../PaintViewController.m331145207#632#0#632#0#55"assignment discards qualifiers from pointer target type0(22@55"Assignment discards qualifiers from pointer target type331145464#1607#132#0(6@61"/Users/egepi/Documents/Paint/Classes/../PaintViewController.m331145207#653#0#653#0#55"assignment discards qualifiers from pointer target type0(22@55"Assignment discards qualifiers from pointer target type331145464#1847#132#0(6@61"/Users/egepi/Documents/Paint/Classes/../PaintViewController.m331145207#695#0#695#0#55"assignment discards qualifiers from pointer target type0(22@55"Assignment discards qualifiers from pointer target type331145464#2087#132#0(6@61"/Users/egepi/Documents/Paint/Classes/../PaintViewController.m331145207#713#0#713#0#55"assignment discards qualifiers from pointer target type0(22@55"Assignment discards qualifiers from pointer target type331145464#2219#132#0(6@61"/Users/egepi/Documents/Paint/Classes/../PaintViewController.m331145207#797#0#797#0#55"assignment discards qualifiers from pointer target type0(22@55"Assignment discards qualifiers from pointer target type331145464#2461#132#0(6@61"/Users/egepi/Documents/Paint/Classes/../PaintViewController.m331145207#808#0#808#0#55"assignment discards qualifiers from pointer target type0(0#0#61"/Users/egepi/Documents/Paint/Classes/../PaintViewController.m2456072848#1615"    cd /Users/egepi/Documents/Paint    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Paint-generated-files.hmap -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Paint-own-target-headers.hmap -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Paint-all-target-headers.hmap -iquote /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Paint-project-headers.hmap -F/Users/egepi/Documents/Paint/build/Debug-iphoneos -I/Users/egepi/Documents/Paint/build/Debug-iphoneos/include -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/DerivedSources/armv7 -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/DerivedSources -include /var/folders/g7/g7tN9i5sHJSBAgVINaVOrU+++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Paint_Prefix-aaeumfijnayfirfldwbttxeuxrjk/Paint_Prefix.pch -c /Users/egepi/Documents/Paint/Classes/../PaintViewController.m -o /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Objects-normal/armv7/PaintViewController.o0#
+
+CCompileC build/Paint.build/Debug-iphoneos/Paint.build/Objects-normal/armv7/main.o /Users/egepi/Documents/Paint/main.m normal armv7 objective-c com.apple.compilers.gcc.4_2
+s322164167.006627
+e322164167.221717
+r1
+xCompileC
+xbuild/Paint.build/Debug-iphoneos/Paint.build/Objects-normal/armv7/main.o
+x/Users/egepi/Documents/Paint/main.m
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@43"Compile /Users/egepi/Documents/Paint/main.m322164167#322164167#0(0"0(0#0#35"/Users/egepi/Documents/Paint/main.m2420662928#1574"    cd /Users/egepi/Documents/Paint    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Paint-generated-files.hmap -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Paint-own-target-headers.hmap -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Paint-all-target-headers.hmap -iquote /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Paint-project-headers.hmap -F/Users/egepi/Documents/Paint/build/Debug-iphoneos -I/Users/egepi/Documents/Paint/build/Debug-iphoneos/include -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/DerivedSources/armv7 -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/DerivedSources -include /var/folders/g7/g7tN9i5sHJSBAgVINaVOrU+++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Paint_Prefix-aaeumfijnayfirfldwbttxeuxrjk/Paint_Prefix.pch -c /Users/egepi/Documents/Paint/main.m -o /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Objects-normal/armv7/main.o0#
+
+CCompileXIB /Users/egepi/Documents/Paint/MainWindow.xib
+s322164142.748179
+e322164144.370704
+r1
+xCompileXIB
+x/Users/egepi/Documents/Paint/MainWindow.xib
+lSLF07#2@25"CompileXIB MainWindow.xib322164142#322164144#0(0"0(0#0#43"/Users/egepi/Documents/Paint/MainWindow.xib2420662928#510"    cd /Users/egepi/Documents/Paint    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/MainWindow.nib /Users/egepi/Documents/Paint/MainWindow.xib --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk0#
+
+CCompileXIB /Users/egepi/Documents/Paint/PaintViewController.xib
+s330638840.786171
+e330638841.876551
+r1
+xCompileXIB
+x/Users/egepi/Documents/Paint/PaintViewController.xib
+lSLF07#2@34"CompileXIB PaintViewController.xib330638840#330638841#0(0"0(0#0#52"/Users/egepi/Documents/Paint/PaintViewController.xib4261848#528"    cd /Users/egepi/Documents/Paint    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/PaintViewController.nib /Users/egepi/Documents/Paint/PaintViewController.xib --sdk /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk0#
+
+CCopyPNGFile "/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Burnt Sienna.png" "paint blobs cropped/Burnt Sienna.png"
+s322164147.390670
+e322164148.627626
+r1
+xCopyPNGFile
+x/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Burnt Sienna.png
+xpaint blobs cropped/Burnt Sienna.png
+lSLF07#2@100"CopyPNGFile "build/Debug-iphoneos/Paint.app/Burnt Sienna.png" "paint blobs cropped/Burnt Sienna.png"322164147#322164148#0(0"0(0#0#65"/Users/egepi/Documents/Paint/paint blobs cropped/Burnt Sienna.png2420662928#464"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/egepi/Documents/Paint/paint blobs cropped/Burnt Sienna.png" "/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Burnt Sienna.png"0#
+
+CCopyPNGFile "/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Cadmium Orange.png" "paint blobs cropped/Cadmium Orange.png"
+s322164149.705604
+e322164150.769628
+r1
+xCopyPNGFile
+x/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Cadmium Orange.png
+xpaint blobs cropped/Cadmium Orange.png
+lSLF07#2@104"CopyPNGFile "build/Debug-iphoneos/Paint.app/Cadmium Orange.png" "paint blobs cropped/Cadmium Orange.png"322164149#322164150#0(0"0(0#0#67"/Users/egepi/Documents/Paint/paint blobs cropped/Cadmium Orange.png2420662928#468"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/egepi/Documents/Paint/paint blobs cropped/Cadmium Orange.png" "/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Cadmium Orange.png"0#
+
+CCopyPNGFile "/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Cadmium Red Scarlet.png" "paint blobs cropped/Cadmium Red Scarlet.png"
+s322164152.706982
+e322164153.875868
+r1
+xCopyPNGFile
+x/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Cadmium Red Scarlet.png
+xpaint blobs cropped/Cadmium Red Scarlet.png
+lSLF07#2@114"CopyPNGFile "build/Debug-iphoneos/Paint.app/Cadmium Red Scarlet.png" "paint blobs cropped/Cadmium Red Scarlet.png"322164152#322164153#0(0"0(0#0#72"/Users/egepi/Documents/Paint/paint blobs cropped/Cadmium Red Scarlet.png2420662928#478"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/egepi/Documents/Paint/paint blobs cropped/Cadmium Red Scarlet.png" "/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Cadmium Red Scarlet.png"0#
+
+CCopyPNGFile "/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Cobalt Green.png" "paint blobs cropped/Cobalt Green.png"
+s322164156.049536
+e322164157.499066
+r1
+xCopyPNGFile
+x/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Cobalt Green.png
+xpaint blobs cropped/Cobalt Green.png
+lSLF07#2@100"CopyPNGFile "build/Debug-iphoneos/Paint.app/Cobalt Green.png" "paint blobs cropped/Cobalt Green.png"322164156#322164157#0(0"0(0#0#65"/Users/egepi/Documents/Paint/paint blobs cropped/Cobalt Green.png2420662928#464"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/egepi/Documents/Paint/paint blobs cropped/Cobalt Green.png" "/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Cobalt Green.png"0#
+
+CCopyPNGFile "/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Old Holland Cold Gray.png" "paint blobs cropped/Old Holland Cold Gray.png"
+s322164158.096785
+e322164159.111452
+r1
+xCopyPNGFile
+x/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Old Holland Cold Gray.png
+xpaint blobs cropped/Old Holland Cold Gray.png
+lSLF07#2@118"CopyPNGFile "build/Debug-iphoneos/Paint.app/Old Holland Cold Gray.png" "paint blobs cropped/Old Holland Cold Gray.png"322164158#322164159#0(0"0(0#0#74"/Users/egepi/Documents/Paint/paint blobs cropped/Old Holland Cold Gray.png2420662928#482"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/egepi/Documents/Paint/paint blobs cropped/Old Holland Cold Gray.png" "/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Old Holland Cold Gray.png"0#
+
+CCopyPNGFile "/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Viridian Green Deep.png" "paint blobs cropped/Viridian Green Deep.png"
+s322164161.834161
+e322164162.945671
+r1
+xCopyPNGFile
+x/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Viridian Green Deep.png
+xpaint blobs cropped/Viridian Green Deep.png
+lSLF07#2@114"CopyPNGFile "build/Debug-iphoneos/Paint.app/Viridian Green Deep.png" "paint blobs cropped/Viridian Green Deep.png"322164161#322164162#0(0"0(0#0#72"/Users/egepi/Documents/Paint/paint blobs cropped/Viridian Green Deep.png2420662928#478"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/egepi/Documents/Paint/paint blobs cropped/Viridian Green Deep.png" "/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Viridian Green Deep.png"0#
+
+CCopyPNGFile "/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Yellow Ochre.png" "paint blobs cropped/Yellow Ochre.png"
+s322164162.945931
+e322164164.177162
+r1
+xCopyPNGFile
+x/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Yellow Ochre.png
+xpaint blobs cropped/Yellow Ochre.png
+lSLF07#2@100"CopyPNGFile "build/Debug-iphoneos/Paint.app/Yellow Ochre.png" "paint blobs cropped/Yellow Ochre.png"322164162#322164164#0(0"0(0#0#65"/Users/egepi/Documents/Paint/paint blobs cropped/Yellow Ochre.png2420662928#464"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/egepi/Documents/Paint/paint blobs cropped/Yellow Ochre.png" "/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Yellow Ochre.png"0#
+
+CCopyPNGFile "/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/alizarin crimson.png" "paint blobs cropped/alizarin crimson.png"
+s322164146.355917
+e322164147.390523
+r1
+xCopyPNGFile
+x/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/alizarin crimson.png
+xpaint blobs cropped/alizarin crimson.png
+lSLF07#2@108"CopyPNGFile "build/Debug-iphoneos/Paint.app/alizarin crimson.png" "paint blobs cropped/alizarin crimson.png"322164146#322164147#0(0"0(0#0#69"/Users/egepi/Documents/Paint/paint blobs cropped/alizarin crimson.png2420662928#472"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/egepi/Documents/Paint/paint blobs cropped/alizarin crimson.png" "/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/alizarin crimson.png"0#
+
+CCopyPNGFile "/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/burnt umber.png" "paint blobs cropped/burnt umber.png"
+s322164148.627888
+e322164149.705461
+r1
+xCopyPNGFile
+x/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/burnt umber.png
+xpaint blobs cropped/burnt umber.png
+lSLF07#2@98"CopyPNGFile "build/Debug-iphoneos/Paint.app/burnt umber.png" "paint blobs cropped/burnt umber.png"322164148#322164149#0(0"0(0#0#64"/Users/egepi/Documents/Paint/paint blobs cropped/burnt umber.png2420662928#462"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/egepi/Documents/Paint/paint blobs cropped/burnt umber.png" "/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/burnt umber.png"0#
+
+CCopyPNGFile "/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/cadmium red deep.png" "paint blobs cropped/cadmium red deep.png"
+s322164150.769878
+e322164152.706679
+r1
+xCopyPNGFile
+x/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/cadmium red deep.png
+xpaint blobs cropped/cadmium red deep.png
+lSLF07#2@108"CopyPNGFile "build/Debug-iphoneos/Paint.app/cadmium red deep.png" "paint blobs cropped/cadmium red deep.png"322164150#322164152#0(0"0(0#0#69"/Users/egepi/Documents/Paint/paint blobs cropped/cadmium red deep.png2420662928#472"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/egepi/Documents/Paint/paint blobs cropped/cadmium red deep.png" "/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/cadmium red deep.png"0#
+
+CCopyPNGFile "/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/cadmium yellow pale.png" "paint blobs cropped/cadmium yellow pale.png"
+s322164153.876029
+e322164155.049789
+r1
+xCopyPNGFile
+x/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/cadmium yellow pale.png
+xpaint blobs cropped/cadmium yellow pale.png
+lSLF07#2@114"CopyPNGFile "build/Debug-iphoneos/Paint.app/cadmium yellow pale.png" "paint blobs cropped/cadmium yellow pale.png"322164153#322164155#0(0"0(0#0#72"/Users/egepi/Documents/Paint/paint blobs cropped/cadmium yellow pale.png2420662928#478"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/egepi/Documents/Paint/paint blobs cropped/cadmium yellow pale.png" "/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/cadmium yellow pale.png"0#
+
+CCopyPNGFile "/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/cerulean blue.png" "paint blobs cropped/cerulean blue.png"
+s322164155.050059
+e322164156.049358
+r1
+xCopyPNGFile
+x/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/cerulean blue.png
+xpaint blobs cropped/cerulean blue.png
+lSLF07#2@102"CopyPNGFile "build/Debug-iphoneos/Paint.app/cerulean blue.png" "paint blobs cropped/cerulean blue.png"322164155#322164156#0(0"0(0#0#66"/Users/egepi/Documents/Paint/paint blobs cropped/cerulean blue.png2420662928#466"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/egepi/Documents/Paint/paint blobs cropped/cerulean blue.png" "/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/cerulean blue.png"0#
+
+CCopyPNGFile "/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/lamp black.png" "paint blobs cropped/lamp black.png"
+s322164157.499388
+e322164158.096635
+r1
+xCopyPNGFile
+x/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/lamp black.png
+xpaint blobs cropped/lamp black.png
+lSLF07#2@96"CopyPNGFile "build/Debug-iphoneos/Paint.app/lamp black.png" "paint blobs cropped/lamp black.png"322164157#322164158#0(0"0(0#0#63"/Users/egepi/Documents/Paint/paint blobs cropped/lamp black.png2420662928#460"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/egepi/Documents/Paint/paint blobs cropped/lamp black.png" "/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/lamp black.png"0#
+
+CCopyPNGFile "/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/red ochre.png" "paint blobs cropped/red ochre.png"
+s322164159.111659
+e322164160.161738
+r1
+xCopyPNGFile
+x/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/red ochre.png
+xpaint blobs cropped/red ochre.png
+lSLF07#2@94"CopyPNGFile "build/Debug-iphoneos/Paint.app/red ochre.png" "paint blobs cropped/red ochre.png"322164159#322164160#0(0"0(0#0#62"/Users/egepi/Documents/Paint/paint blobs cropped/red ochre.png2420662928#458"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/egepi/Documents/Paint/paint blobs cropped/red ochre.png" "/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/red ochre.png"0#
+
+CCopyPNGFile "/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/titanium white.png" "paint blobs cropped/titanium white.png"
+s322164160.161883
+e322164160.686053
+r1
+xCopyPNGFile
+x/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/titanium white.png
+xpaint blobs cropped/titanium white.png
+lSLF07#2@104"CopyPNGFile "build/Debug-iphoneos/Paint.app/titanium white.png" "paint blobs cropped/titanium white.png"322164160#322164160#0(0"0(0#0#67"/Users/egepi/Documents/Paint/paint blobs cropped/titanium white.png2420662928#468"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/egepi/Documents/Paint/paint blobs cropped/titanium white.png" "/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/titanium white.png"0#
+
+CCopyPNGFile "/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/ultramarine blue.png" "paint blobs cropped/ultramarine blue.png"
+s322164160.686353
+e322164161.834009
+r1
+xCopyPNGFile
+x/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/ultramarine blue.png
+xpaint blobs cropped/ultramarine blue.png
+lSLF07#2@108"CopyPNGFile "build/Debug-iphoneos/Paint.app/ultramarine blue.png" "paint blobs cropped/ultramarine blue.png"322164160#322164161#0(0"0(0#0#69"/Users/egepi/Documents/Paint/paint blobs cropped/ultramarine blue.png2420662928#472"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/egepi/Documents/Paint/paint blobs cropped/ultramarine blue.png" "/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/ultramarine blue.png"0#
+
+CCopyPNGFile /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/GoodColor.png "Old images/GoodColor.png"
+s329783748.165676
+e329783748.536645
+r1
+xCopyPNGFile
+x/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/GoodColor.png
+xOld images/GoodColor.png
+lSLF07#2@83"CopyPNGFile build/Debug-iphoneos/Paint.app/GoodColor.png "Old images/GoodColor.png"329783748#329783748#0(0"0(0#0#53"/Users/egepi/Documents/Paint/Old images/GoodColor.png4750400#447"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" "/Users/egepi/Documents/Paint/Old images/GoodColor.png" /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/GoodColor.png0#
+
+CCopyPNGFile /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/flatbrush2_wshad.png flatbrush2_wshad.png
+s322164164.177364
+e322164164.891149
+r1
+xCopyPNGFile
+x/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/flatbrush2_wshad.png
+xflatbrush2_wshad.png
+lSLF07#2@84"CopyPNGFile build/Debug-iphoneos/Paint.app/flatbrush2_wshad.png flatbrush2_wshad.png322164164#322164164#0(0"0(0#0#49"/Users/egepi/Documents/Paint/flatbrush2_wshad.png2420662928#448"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/egepi/Documents/Paint/flatbrush2_wshad.png /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/flatbrush2_wshad.png0#
+
+CCopyPNGFile /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/flatbrush_wshad.png flatbrush_wshad.png
+s301611626.728547
+e301611627.370018
+r1
+xCopyPNGFile
+x/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/flatbrush_wshad.png
+xflatbrush_wshad.png
+lSLF07#2@82"CopyPNGFile build/Debug-iphoneos/Paint.app/flatbrush_wshad.png flatbrush_wshad.png301611626#301611627#0(0"0(0#0#48"/Users/egepi/Documents/Paint/flatbrush_wshad.png2504835008#546"    cd /Users/egepi/Documents/Paint    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/egepi/Documents/Paint/flatbrush_wshad.png /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/flatbrush_wshad.png0#
+
+CCopyPNGFile /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/icon.png icon.png
+s322164144.491954
+e322164145.086207
+r1
+xCopyPNGFile
+x/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/icon.png
+xicon.png
+lSLF07#2@60"CopyPNGFile build/Debug-iphoneos/Paint.app/icon.png icon.png322164144#322164145#0(0"0(0#0#37"/Users/egepi/Documents/Paint/icon.png2420662928#424"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/egepi/Documents/Paint/icon.png /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/icon.png0#
+
+CCopyPNGFile /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/pallete.png pallete.png
+s322164144.371044
+e322164164.895958
+r1
+xCopyPNGFile
+x/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/pallete.png
+xpallete.png
+lSLF07#2@66"CopyPNGFile build/Debug-iphoneos/Paint.app/pallete.png pallete.png322164144#322164164#0(0"0(0#0#40"/Users/egepi/Documents/Paint/pallete.png2420662928#430"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/egepi/Documents/Paint/pallete.png /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/pallete.png0#
+
+CCopyPNGFile /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/pallete_mix.png pallete_mix.png
+s322164145.086342
+e322164146.355705
+r1
+xCopyPNGFile
+x/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/pallete_mix.png
+xpallete_mix.png
+lSLF07#2@74"CopyPNGFile build/Debug-iphoneos/Paint.app/pallete_mix.png pallete_mix.png322164145#322164146#0(0"0(0#0#44"/Users/egepi/Documents/Paint/pallete_mix.png2420662928#438"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/egepi/Documents/Paint/pallete_mix.png /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/pallete_mix.png0#
+
+CCopyPNGFile /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/pencil2_wshad.png pencil2_wshad.png
+s322164164.891461
+e322164165.425469
+r1
+xCopyPNGFile
+x/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/pencil2_wshad.png
+xpencil2_wshad.png
+lSLF07#2@78"CopyPNGFile build/Debug-iphoneos/Paint.app/pencil2_wshad.png pencil2_wshad.png322164164#322164165#0(0"0(0#0#46"/Users/egepi/Documents/Paint/pencil2_wshad.png2420662928#442"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/egepi/Documents/Paint/pencil2_wshad.png /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/pencil2_wshad.png0#
+
+CCopyPNGFile /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/pencil_wshad.png pencil_wshad.png
+s301611627.370174
+e301611627.795102
+r1
+xCopyPNGFile
+x/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/pencil_wshad.png
+xpencil_wshad.png
+lSLF07#2@76"CopyPNGFile build/Debug-iphoneos/Paint.app/pencil_wshad.png pencil_wshad.png301611627#301611627#0(0"0(0#0#45"/Users/egepi/Documents/Paint/pencil_wshad.png2504835008#540"    cd /Users/egepi/Documents/Paint    setenv COPY_COMMAND /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    "/Developer/Platforms/iPhoneOS.platform/Developer/Library/Xcode/Plug-ins/iPhoneOS Build System Support.xcplugin/Contents/Resources/copypng" -compress "" /Users/egepi/Documents/Paint/pencil_wshad.png /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/pencil_wshad.png0#
+
+CCpResource build/Debug-iphoneos/Paint.app/ResourceRules.plist /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/ResourceRules.plist
+s301611625.109947
+e301611625.157136
+r1
+xCpResource
+xbuild/Debug-iphoneos/Paint.app/ResourceRules.plist
+x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/ResourceRules.plist
+lSLF07#2@94"Copy /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/ResourceRules.plist301611625#301611625#0(0"0(0#0#89"/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/ResourceRules.plist2504835008#458"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/ResourceRules.plist /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app0#
+
+CCpResource build/Debug-iphoneos/Paint.app/ResourceRules.plist /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/ResourceRules.plist
+s322164142.678168
+e322164142.748047
+r1
+xCpResource
+xbuild/Debug-iphoneos/Paint.app/ResourceRules.plist
+x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/ResourceRules.plist
+lSLF07#2@94"Copy /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/ResourceRules.plist322164142#322164142#0(0"0(0#0#89"/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/ResourceRules.plist2420662928#472"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/ResourceRules.plist /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app0#
+
+CCpResource build/Debug-iphoneos/Paint.app/Settings.bundle Settings.bundle
+s331145464.006355
+e331145464.018024
+r1
+xCpResource
+xbuild/Debug-iphoneos/Paint.app/Settings.bundle
+xSettings.bundle
+lSLF07#2@20"Copy Settings.bundle331145464#331145464#0(0"0(0#0#44"/Users/egepi/Documents/Paint/Settings.bundle4750400#427"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/egepi/Documents/Paint/Settings.bundle /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app0#
+
+CGenerateDSYMFile /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app.dSYM /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Paint
+s331145466.928745
+e331145466.987170
+r1
+xGenerateDSYMFile
+x/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app.dSYM
+x/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Paint
+lSLF07#2@89"GenerateDSYMFile build/Debug-iphoneos/Paint.app.dSYM build/Debug-iphoneos/Paint.app/Paint331145466#331145466#0(0"0(0#0#65"/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Paint2456072848#326"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Paint -o /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app.dSYM0#
+
+CLd /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Paint normal armv7
+s331145465.206252
+e331145466.928499
+r1
+xLd
+x/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Paint
+xnormal
+xarmv7
+lSLF07#2@70"Link /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Paint331145465#331145466#0(0"0(0#0#0"2456072848#783"    cd /Users/egepi/Documents/Paint    setenv IPHONEOS_DEPLOYMENT_TARGET 4.3    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -arch armv7 -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -L/Users/egepi/Documents/Paint/build/Debug-iphoneos -F/Users/egepi/Documents/Paint/build/Debug-iphoneos -filelist /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Objects-normal/armv7/Paint.LinkFileList -dead_strip -miphoneos-version-min=4.3 -framework Foundation -framework UIKit -framework CoreGraphics -framework CFNetwork -o /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Paint0#
+
+CProcessInfoPlistFile /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Info.plist Paint-Info.plist
+s323818406.989882
+e323818407.013988
+r1
+xProcessInfoPlistFile
+x/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Info.plist
+xPaint-Info.plist
+lSLF07#2@24"Process Paint-Info.plist323818406#323818407#0(0"0(0#0#45"/Users/egepi/Documents/Paint/Paint-Info.plist4750400#514"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility Paint-Info.plist -genpkginfo /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/PkgInfo -expandbuildsettings -format binary -platform iphoneos -resourcerulesfile /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/ResourceRules.plist -o /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/Info.plist0#
+
+CProcessPCH /var/folders/g7/g7tN9i5sHJSBAgVINaVOrU+++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Paint_Prefix-aaeumfijnayfirfldwbttxeuxrjk/Paint_Prefix.pch.gch Paint_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
+s322164165.425654
+e322164167.006343
+r1
+xProcessPCH
+x/var/folders/g7/g7tN9i5sHJSBAgVINaVOrU+++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Paint_Prefix-aaeumfijnayfirfldwbttxeuxrjk/Paint_Prefix.pch.gch
+xPaint_Prefix.pch
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@27"Precompile Paint_Prefix.pch322164165#322164167#0(0"0(0#0#45"/Users/egepi/Documents/Paint/Paint_Prefix.pch2420662928#1484"    cd /Users/egepi/Documents/Paint    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=4.3 -iquote /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Paint-generated-files.hmap -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Paint-own-target-headers.hmap -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Paint-all-target-headers.hmap -iquote /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Paint-project-headers.hmap -F/Users/egepi/Documents/Paint/build/Debug-iphoneos -I/Users/egepi/Documents/Paint/build/Debug-iphoneos/include -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/DerivedSources/armv7 -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/DerivedSources -c /Users/egepi/Documents/Paint/Paint_Prefix.pch -o /var/folders/g7/g7tN9i5sHJSBAgVINaVOrU+++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Paint_Prefix-aaeumfijnayfirfldwbttxeuxrjk/Paint_Prefix.pch.gch0#
+
+CProcessPCH /var/folders/g7/g7tN9i5sHJSBAgVINaVOrU+++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Paint_Prefix-aklotbveplkccyeeideyywpkafsk/Paint_Prefix.pch.gch Paint_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
+s307032209.833316
+e307032211.141752
+r1
+xProcessPCH
+x/var/folders/g7/g7tN9i5sHJSBAgVINaVOrU+++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Paint_Prefix-aklotbveplkccyeeideyywpkafsk/Paint_Prefix.pch.gch
+xPaint_Prefix.pch
+xnormal
+xarmv7
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@27"Precompile Paint_Prefix.pch307032209#307032211#0(0"0(0#0#45"/Users/egepi/Documents/Paint/Paint_Prefix.pch4717520#1484"    cd /Users/egepi/Documents/Paint    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneOS.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch armv7 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk -fvisibility=hidden -gdwarf-2 -mthumb -miphoneos-version-min=3.2 -iquote /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Paint-generated-files.hmap -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Paint-own-target-headers.hmap -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Paint-all-target-headers.hmap -iquote /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Paint-project-headers.hmap -F/Users/egepi/Documents/Paint/build/Debug-iphoneos -I/Users/egepi/Documents/Paint/build/Debug-iphoneos/include -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/DerivedSources/armv7 -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/DerivedSources -c /Users/egepi/Documents/Paint/Paint_Prefix.pch -o /var/folders/g7/g7tN9i5sHJSBAgVINaVOrU+++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Paint_Prefix-aklotbveplkccyeeideyywpkafsk/Paint_Prefix.pch.gch0#
+
+CProcessPCH /var/folders/g7/g7tN9i5sHJSBAgVINaVOrU+++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Paint_Prefix-bfhqsapfueomlobxsivmiugbfedq/Paint_Prefix.pch.gch Paint_Prefix.pch normal armv7 objective-c com.apple.compilers.gcc.4_2
+r0
+
+CProcessProductPackaging "/Users/egepi/Library/MobileDevice/Provisioning Profiles/10783DE2-FBDF-4CAC-AF05-05A774A181BA.mobileprovision" /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/embedded.mobileprovision
+s309215627.784879
+e309215627.839384
+r1
+xProcessProductPackaging
+x/Users/egepi/Library/MobileDevice/Provisioning Profiles/10783DE2-FBDF-4CAC-AF05-05A774A181BA.mobileprovision
+x/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/embedded.mobileprovision
+lSLF07#2@190"ProcessProductPackaging "/Users/egepi/Library/MobileDevice/Provisioning Profiles/10783DE2-FBDF-4CAC-AF05-05A774A181BA.mobileprovision" build/Debug-iphoneos/Paint.app/embedded.mobileprovision309215627#309215627#0(0"0(0#0#84"/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/embedded.mobileprovision4717520#401"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> "/Users/egepi/Library/MobileDevice/Provisioning Profiles/10783DE2-FBDF-4CAC-AF05-05A774A181BA.mobileprovision" -o /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/embedded.mobileprovision0#
+
+CProcessProductPackaging "/Users/egepi/Library/MobileDevice/Provisioning Profiles/53A941CE-1BC9-4E95-8FD5-8B1DF0A6DD90.mobileprovision" /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/embedded.mobileprovision
+s301611644.379247
+e301611644.381248
+r1
+xProcessProductPackaging
+x/Users/egepi/Library/MobileDevice/Provisioning Profiles/53A941CE-1BC9-4E95-8FD5-8B1DF0A6DD90.mobileprovision
+x/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/embedded.mobileprovision
+lSLF07#2@190"ProcessProductPackaging "/Users/egepi/Library/MobileDevice/Provisioning Profiles/53A941CE-1BC9-4E95-8FD5-8B1DF0A6DD90.mobileprovision" build/Debug-iphoneos/Paint.app/embedded.mobileprovision301611644#301611644#0(0"0(0#0#84"/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/embedded.mobileprovision2504835008#401"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> "/Users/egepi/Library/MobileDevice/Provisioning Profiles/53A941CE-1BC9-4E95-8FD5-8B1DF0A6DD90.mobileprovision" -o /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/embedded.mobileprovision0#
+
+CProcessProductPackaging "/Users/egepi/Library/MobileDevice/Provisioning Profiles/642D31AA-C40B-4057-89F0-F2F2CA1AD65A.mobileprovision" /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/embedded.mobileprovision
+s329783751.221786
+e329783751.269836
+r1
+xProcessProductPackaging
+x/Users/egepi/Library/MobileDevice/Provisioning Profiles/642D31AA-C40B-4057-89F0-F2F2CA1AD65A.mobileprovision
+x/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/embedded.mobileprovision
+lSLF07#2@190"ProcessProductPackaging "/Users/egepi/Library/MobileDevice/Provisioning Profiles/642D31AA-C40B-4057-89F0-F2F2CA1AD65A.mobileprovision" build/Debug-iphoneos/Paint.app/embedded.mobileprovision329783751#329783751#0(0"0(0#0#84"/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/embedded.mobileprovision2456072848#401"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> "/Users/egepi/Library/MobileDevice/Provisioning Profiles/642D31AA-C40B-4057-89F0-F2F2CA1AD65A.mobileprovision" -o /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/embedded.mobileprovision0#
+
+CProcessProductPackaging "/Users/egepi/Library/MobileDevice/Provisioning Profiles/8D020287-4CA9-4698-A6CE-5DCA4A65C352.mobileprovision" /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/embedded.mobileprovision
+s322164170.710067
+e322164170.770031
+r1
+xProcessProductPackaging
+x/Users/egepi/Library/MobileDevice/Provisioning Profiles/8D020287-4CA9-4698-A6CE-5DCA4A65C352.mobileprovision
+x/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/embedded.mobileprovision
+lSLF07#2@190"ProcessProductPackaging "/Users/egepi/Library/MobileDevice/Provisioning Profiles/8D020287-4CA9-4698-A6CE-5DCA4A65C352.mobileprovision" build/Debug-iphoneos/Paint.app/embedded.mobileprovision322164170#322164170#0(0"0(0#0#84"/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/embedded.mobileprovision2420662928#401"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> "/Users/egepi/Library/MobileDevice/Provisioning Profiles/8D020287-4CA9-4698-A6CE-5DCA4A65C352.mobileprovision" -o /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app/embedded.mobileprovision0#
+
+CProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/Entitlements.plist /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Paint.xcent
+s307032212.477567
+e307032212.508328
+r1
+xProcessProductPackaging
+x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/Entitlements.plist
+x/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Paint.xcent
+lSLF07#2@169"ProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/Entitlements.plist build/Paint.build/Debug-iphoneos/Paint.build/Paint.xcent307032212#307032212#0(0"0(0#0#85"/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Paint.xcent2571988928#406"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS3.2.sdk/Entitlements.plist -entitlements -format xml -o /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Paint.xcent0#
+
+CProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/Entitlements.plist /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Paint.xcent
+s329783751.274824
+e329783751.289986
+r1
+xProcessProductPackaging
+x/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/Entitlements.plist
+x/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Paint.xcent
+lSLF07#2@169"ProcessProductPackaging /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/Entitlements.plist build/Paint.build/Debug-iphoneos/Paint.build/Paint.xcent329783751#329783751#0(0"0(0#0#85"/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Paint.xcent2456072848#406"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    <com.apple.tools.product-pkg-utility> /Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS4.3.sdk/Entitlements.plist -entitlements -format xml -o /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphoneos/Paint.build/Paint.xcent0#
+
+CTouch /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app
+s331145466.987469
+e331145466.992118
+r1
+xTouch
+x/Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app
+lSLF07#2@65"Touch /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app331145466#331145466#0(0"0(0#0#0"2456072848#242"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/egepi/Documents/Paint/build/Debug-iphoneos/Paint.app0#
+

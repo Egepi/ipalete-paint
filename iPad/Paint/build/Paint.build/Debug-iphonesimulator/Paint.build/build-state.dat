@@ -1,0 +1,1004 @@
+TPaint
+v7
+r0
+t340669840.863856
+cCheck dependencies
+cProcessInfoPlistFile /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/Info.plist Paint-Info.plist
+cCompileXIB /Users/egepi/Documents/Paint/MainWindow.xib
+cCompileXIB /Users/egepi/Documents/Paint/PaintViewController.xib
+cCpResource build/Debug-iphonesimulator/Paint.app/pallete.png pallete.png
+cCpResource build/Debug-iphonesimulator/Paint.app/icon.png icon.png
+cCpResource build/Debug-iphonesimulator/Paint.app/pallete_mix.png pallete_mix.png
+cCpResource "build/Debug-iphonesimulator/Paint.app/alizarin crimson.png" "paint blobs cropped/alizarin crimson.png"
+cCpResource "build/Debug-iphonesimulator/Paint.app/Burnt Sienna.png" "paint blobs cropped/Burnt Sienna.png"
+cCpResource "build/Debug-iphonesimulator/Paint.app/burnt umber.png" "paint blobs cropped/burnt umber.png"
+cCpResource "build/Debug-iphonesimulator/Paint.app/Cadmium Orange.png" "paint blobs cropped/Cadmium Orange.png"
+cCpResource "build/Debug-iphonesimulator/Paint.app/cadmium red deep.png" "paint blobs cropped/cadmium red deep.png"
+cCpResource "build/Debug-iphonesimulator/Paint.app/Cadmium Red Scarlet.png" "paint blobs cropped/Cadmium Red Scarlet.png"
+cCpResource "build/Debug-iphonesimulator/Paint.app/cadmium yellow pale.png" "paint blobs cropped/cadmium yellow pale.png"
+cCpResource "build/Debug-iphonesimulator/Paint.app/cerulean blue.png" "paint blobs cropped/cerulean blue.png"
+cCpResource "build/Debug-iphonesimulator/Paint.app/Cobalt Green.png" "paint blobs cropped/Cobalt Green.png"
+cCpResource "build/Debug-iphonesimulator/Paint.app/lamp black.png" "paint blobs cropped/lamp black.png"
+cCpResource "build/Debug-iphonesimulator/Paint.app/Old Holland Cold Gray.png" "paint blobs cropped/Old Holland Cold Gray.png"
+cCpResource "build/Debug-iphonesimulator/Paint.app/red ochre.png" "paint blobs cropped/red ochre.png"
+cCpResource "build/Debug-iphonesimulator/Paint.app/titanium white.png" "paint blobs cropped/titanium white.png"
+cCpResource "build/Debug-iphonesimulator/Paint.app/ultramarine blue.png" "paint blobs cropped/ultramarine blue.png"
+cCpResource "build/Debug-iphonesimulator/Paint.app/Viridian Green Deep.png" "paint blobs cropped/Viridian Green Deep.png"
+cCpResource "build/Debug-iphonesimulator/Paint.app/Yellow Ochre.png" "paint blobs cropped/Yellow Ochre.png"
+cCpResource build/Debug-iphonesimulator/Paint.app/flatbrush2_wshad.png flatbrush2_wshad.png
+cCpResource build/Debug-iphonesimulator/Paint.app/pencil2_wshad.png pencil2_wshad.png
+cCpResource build/Debug-iphonesimulator/Paint.app/GoodColor.png "Old images/GoodColor.png"
+cCpResource build/Debug-iphonesimulator/Paint.app/Settings.bundle Settings.bundle
+cProcessPCH /var/folders/g7/g7tN9i5sHJSBAgVINaVOrU+++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Paint_Prefix-avjrnksjewmylceovsurvszcyitn/Paint_Prefix.pch.gch Paint_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/i386/main.o /Users/egepi/Documents/Paint/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/i386/PaintAppDelegate.o /Users/egepi/Documents/Paint/Classes/PaintAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cCompileC build/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/i386/PaintViewController.o /Users/egepi/Documents/Paint/Classes/../PaintViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+cLd /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/Paint normal i386
+cGenerateDSYMFile /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app.dSYM /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/Paint
+cTouch /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk
+c000000004D83710D0000000000000110
+t1300459789
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+c000000004BD1CD580000000000125540
+t1272040792
+s1201472
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/CFNetwork.framework/Headers/CFNetwork.h
+c000000004BD1CD3500000000000004CF
+t1272040757
+s1231
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CoreFoundation.h
+c000000004BD1FECD0000000000000A99
+t1272053453
+s2713
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004BD1CD90000000000026F020
+t1272040848
+s2551840
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004BD1FFC200000000002A96A0
+t1272053698
+s2791072
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004BD1FF9E0000000000001355
+t1272053662
+s4949
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004BD20412000000000000098F
+t1272054802
+s2447
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004BD20471000000000222E640
+t1272054897
+s35841600
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/usr/include/arpa/inet.h
+c00000000464386D70000000000001533
+t1178830551
+s5427
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/usr/include/errno.h
+c000000004748A13100000000000003EB
+t1195942193
+s1003
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/usr/include/netdb.h
+c00000000464386E20000000000002F2B
+t1178830562
+s12075
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/usr/include/netinet/in.h
+c00000000476344B700000000000052AA
+t1197687991
+s21162
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/usr/include/stdio.h
+c000000004748A1330000000000003D1D
+t1195942195
+s15645
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/usr/include/stdlib.h
+c000000004748A1330000000000002A79
+t1195942195
+s10873
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/usr/include/string.h
+c000000004748A1330000000000001731
+t1195942195
+s5937
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/usr/include/sys/socket.h
+c00000000476344C000000000000055F1
+t1197688000
+s22001
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/usr/include/sys/types.h
+c00000000476344C1000000000000290F
+t1197688001
+s10511
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk/usr/include/unistd.h
+c000000004748A13300000000000053FF
+t1195942195
+s21503
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk
+c000000004D8371810000000000000110
+t1300459905
+s272
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CFNetwork.framework/CFNetwork
+c000000004D54CF7C00000000001C41F0
+t1297403772
+s1851888
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CFNetwork.framework/Headers/CFNetwork.h
+c000000004D54CF5900000000000004CF
+t1297403737
+s1231
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CoreFoundation.framework/Headers/CoreFoundation.h
+c000000004D54CEB40000000000000AB3
+t1297403572
+s2739
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/CoreGraphics.framework/CoreGraphics
+c000000004D54CFFA00000000002999B0
+t1297403898
+s2726320
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Foundation
+c000000004D54CFE5000000000029DA70
+t1297403877
+s2742896
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/Foundation.framework/Headers/Foundation.h
+c000000004D54CFB80000000000001466
+t1297403832
+s5222
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/Headers/UIKit.h
+c000000004D5615B40000000000000AA1
+t1297487284
+s2721
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/System/Library/Frameworks/UIKit.framework/UIKit
+c000000004D5616030000000000766870
+t1297487363
+s7759984
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/arpa/inet.h
+c000000004D54C5040000000000001533
+t1297401092
+s5427
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/errno.h
+c000000004D4F6E9900000000000003EB
+t1297051289
+s1003
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/netdb.h
+c000000004D54C504000000000000307F
+t1297401092
+s12415
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/netinet/in.h
+c000000004D54D0E60000000000006BAC
+t1297404134
+s27564
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/stdio.h
+c000000004D4F6E9A0000000000004763
+t1297051290
+s18275
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/stdlib.h
+c000000004D4F6E9A00000000000030A7
+t1297051290
+s12455
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/string.h
+c000000004D4F6E9A0000000000001A3A
+t1297051290
+s6714
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/sys/socket.h
+c000000004D54D0EB0000000000005ACF
+t1297404139
+s23247
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/sys/types.h
+c000000004D54D0EC0000000000002905
+t1297404140
+s10501
+
+N/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk/usr/include/unistd.h
+c000000004D4F6E9A0000000000006662
+t1297051290
+s26210
+
+N/Users/egepi/Documents/Paint/Classes/../PaintViewController.h
+c000000004E2593620000000000001321
+t1311085410
+s4897
+i<UIKit/UIKit.h>
+i<CFNetwork/CFNetwork.h>
+i<sys/socket.h>
+i<sys/types.h>
+i<netinet/in.h>
+i<netdb.h>
+i<stdio.h>
+i<stdlib.h>
+i<string.h>
+i<unistd.h>
+i<errno.h>
+i<arpa/inet.h>
+
+N/Users/egepi/Documents/Paint/Classes/../PaintViewController.m
+c000000004E0CB7BD0000000000005D35
+t1309456317
+s23861
+i"PaintViewController.h"
+i<Foundation/Foundation.h>
+i<CoreFoundation/CoreFoundation.h>
+i<CFNetwork/CFNetwork.h>
+i<sys/socket.h>
+i<sys/types.h>
+i<netinet/in.h>
+i<netdb.h>
+i<stdio.h>
+i<stdlib.h>
+i<string.h>
+i<unistd.h>
+i<errno.h>
+
+N/Users/egepi/Documents/Paint/Classes/PaintAppDelegate.h
+c000000004CE6CF8A0000000000000233
+t1290194826
+s563
+i<UIKit/UIKit.h>
+
+N/Users/egepi/Documents/Paint/Classes/PaintAppDelegate.m
+c000000004D9CEECC0000000000000843
+t1302130380
+s2115
+i"PaintViewController.h"
+i"PaintAppDelegate.h"
+
+N/Users/egepi/Documents/Paint/MainWindow.xib
+c000000004C355E5500000000000048B4
+t1278565973
+s18612
+
+N/Users/egepi/Documents/Paint/Old images/GoodColor.png
+c000000004DF7CF67000000000000474C
+t1308086119
+s18252
+
+N/Users/egepi/Documents/Paint/PaintViewController.h
+c000000004E2593620000000000001321
+t1311085410
+s4897
+i<UIKit/UIKit.h>
+i<CFNetwork/CFNetwork.h>
+i<sys/socket.h>
+i<sys/types.h>
+i<netinet/in.h>
+i<netdb.h>
+i<stdio.h>
+i<stdlib.h>
+i<string.h>
+i<unistd.h>
+i<errno.h>
+i<arpa/inet.h>
+
+N/Users/egepi/Documents/Paint/PaintViewController.xib
+c000000004E0352AC000000000000D859
+t1308840620
+s55385
+
+N/Users/egepi/Documents/Paint/Paint_Prefix.pch
+c000000004C0E8DC200000000000000B3
+t1276022210
+s179
+i<Foundation/Foundation.h>
+i<UIKit/UIKit.h>
+
+N/Users/egepi/Documents/Paint/Settings.bundle
+c000000004E0CA4920000000000000088
+t1309451410
+s136
+
+N/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app
+t1318977040
+s1020
+
+N/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app.dSYM
+t1311085477
+s102
+
+N/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/Burnt Sienna.png
+t1311085473
+s74640
+
+N/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/Cadmium Orange.png
+t1311085473
+s76086
+
+N/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/Cadmium Red Scarlet.png
+t1311085473
+s76864
+
+N/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/Cobalt Green.png
+t1311085473
+s72251
+
+N/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/GoodColor.png
+t1311085473
+s18252
+
+N/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/Info.plist
+t1318977040
+s824
+
+N/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/MainWindow.nib
+t1311085472
+s1530
+
+N/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/Old Holland Cold Gray.png
+t1311085473
+s73843
+
+N/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/Paint
+t1311085477
+s68032
+
+N/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/PaintViewController.nib
+t1311085473
+s8405
+
+N/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/PkgInfo
+t1318977040
+s8
+
+N/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/Settings.bundle
+t1311085473
+s136
+
+N/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/Viridian Green Deep.png
+t1311085473
+s69591
+
+N/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/Yellow Ochre.png
+t1311085473
+s76335
+
+N/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/alizarin crimson.png
+t1311085473
+s70486
+
+N/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/burnt umber.png
+t1311085473
+s71351
+
+N/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/cadmium red deep.png
+t1311085473
+s74247
+
+N/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/cadmium yellow pale.png
+t1311085473
+s78498
+
+N/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/cerulean blue.png
+t1311085473
+s76673
+
+N/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/flatbrush2_wshad.png
+t1311085473
+s39458
+
+N/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/flatbrush_wshad.png
+t1279918740
+s40418
+
+N/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/icon.png
+t1311085473
+s53027
+
+N/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/lamp black.png
+t1311085473
+s38402
+
+N/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/pallete.png
+t1311085473
+s766457
+
+N/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/pallete_mix.png
+t1311085473
+s107441
+
+N/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/pencil2_wshad.png
+t1311085473
+s36778
+
+N/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/pencil_wshad.png
+t1279918739
+s27672
+
+N/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/red ochre.png
+t1311085473
+s75186
+
+N/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/titanium white.png
+t1311085473
+s44642
+
+N/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/ultramarine blue.png
+t1311085473
+s70495
+
+N/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/i386/Paint.LinkFileList
+c000000004E25939E000000000000015F
+t1311085470
+s351
+
+N/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/i386/PaintAppDelegate.o
+t1311085476
+s55808
+
+N/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/i386/PaintViewController.o
+t1311085476
+s126972
+
+N/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/i386/main.o
+t1311085476
+s6292
+
+N/Users/egepi/Documents/Paint/flatbrush2_wshad.png
+c000000004C4F8A340000000000009A22
+t1280281140
+s39458
+
+N/Users/egepi/Documents/Paint/flatbrush_wshad.png
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/egepi/Documents/Paint/icon.png
+c000000004C47390F000000000000CF23
+t1279736079
+s53027
+
+N/Users/egepi/Documents/Paint/main.m
+c000000004C0E8DC2000000000000015F
+t1276022210
+s351
+i<UIKit/UIKit.h>
+
+N/Users/egepi/Documents/Paint/paint blobs cropped/Burnt Sienna.png
+c000000004C463CB80000000000012390
+t1279671480
+s74640
+
+N/Users/egepi/Documents/Paint/paint blobs cropped/Cadmium Orange.png
+c000000004C463CB80000000000012936
+t1279671480
+s76086
+
+N/Users/egepi/Documents/Paint/paint blobs cropped/Cadmium Red Scarlet.png
+c000000004C463CB80000000000012C40
+t1279671480
+s76864
+
+N/Users/egepi/Documents/Paint/paint blobs cropped/Cobalt Green.png
+c000000004C463CB80000000000011A3B
+t1279671480
+s72251
+
+N/Users/egepi/Documents/Paint/paint blobs cropped/Old Holland Cold Gray.png
+c000000004C463CB80000000000012073
+t1279671480
+s73843
+
+N/Users/egepi/Documents/Paint/paint blobs cropped/Viridian Green Deep.png
+c000000004C463CB80000000000010FD7
+t1279671480
+s69591
+
+N/Users/egepi/Documents/Paint/paint blobs cropped/Yellow Ochre.png
+c000000004C463CB80000000000012A2F
+t1279671480
+s76335
+
+N/Users/egepi/Documents/Paint/paint blobs cropped/alizarin crimson.png
+c000000004C463CB80000000000011356
+t1279671480
+s70486
+
+N/Users/egepi/Documents/Paint/paint blobs cropped/burnt umber.png
+c000000004C463CB800000000000116B7
+t1279671480
+s71351
+
+N/Users/egepi/Documents/Paint/paint blobs cropped/cadmium red deep.png
+c000000004C463CB80000000000012207
+t1279671480
+s74247
+
+N/Users/egepi/Documents/Paint/paint blobs cropped/cadmium yellow pale.png
+c000000004C463CB800000000000132A2
+t1279671480
+s78498
+
+N/Users/egepi/Documents/Paint/paint blobs cropped/cerulean blue.png
+c000000004C463CB80000000000012B81
+t1279671480
+s76673
+
+N/Users/egepi/Documents/Paint/paint blobs cropped/lamp black.png
+c000000004C463CB80000000000009602
+t1279671480
+s38402
+
+N/Users/egepi/Documents/Paint/paint blobs cropped/red ochre.png
+c000000004C463CB800000000000125B2
+t1279671480
+s75186
+
+N/Users/egepi/Documents/Paint/paint blobs cropped/titanium white.png
+c000000004C463CB8000000000000AE62
+t1279671480
+s44642
+
+N/Users/egepi/Documents/Paint/paint blobs cropped/ultramarine blue.png
+c000000004C463CB8000000000001135F
+t1279671480
+s70495
+
+N/Users/egepi/Documents/Paint/pallete.png
+c000000004C2A791B00000000000BB1F9
+t1277851931
+s766457
+
+N/Users/egepi/Documents/Paint/pallete_mix.png
+c000000004C40B8D0000000000001A3B1
+t1279310032
+s107441
+
+N/Users/egepi/Documents/Paint/pencil2_wshad.png
+c000000004C4F89F80000000000008FAA
+t1280281080
+s36778
+
+N/Users/egepi/Documents/Paint/pencil_wshad.png
+c00000000000000000000000000000000
+t2
+s0
+
+N/var/folders/g7/g7tN9i5sHJSBAgVINaVOrU+++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Paint_Prefix-aidwjvusnvqlffenwwclqtgzztrt/Paint_Prefix.pch.gch
+t1279918742
+s9273920
+
+N/var/folders/g7/g7tN9i5sHJSBAgVINaVOrU+++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Paint_Prefix-avjrnksjewmylceovsurvszcyitn/Paint_Prefix.pch.gch
+t1311085476
+s10626972
+
+N/var/folders/g7/g7tN9i5sHJSBAgVINaVOrU+++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Paint_Prefix-cmxzrsmwazqwgpfrefsxabvdglhy/Paint_Prefix.pch.gch
+t1287527944
+s9273920
+
+N/var/folders/g7/g7tN9i5sHJSBAgVINaVOrU+++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Paint_Prefix-dlsxmspsaxophpbpqgqltktzctxi/Paint_Prefix.pch.gch
+t1300461651
+s9273920
+
+NPaint-Info.plist
+c000000004D9CB54A0000000000000544
+t1302115658
+s1348
+
+CCheck dependencies
+r0
+lSLF07#2@18"Check dependencies340669840#340669840#0(0"0(0#1#0"4261848#0"0#
+
+CCompileC build/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/i386/PaintAppDelegate.o /Users/egepi/Documents/Paint/Classes/PaintAppDelegate.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s332778276.210433
+e332778276.390491
+r1
+xCompileC
+xbuild/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/i386/PaintAppDelegate.o
+x/Users/egepi/Documents/Paint/Classes/PaintAppDelegate.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@63"Compile /Users/egepi/Documents/Paint/Classes/PaintAppDelegate.m332778276#332778276#0(0"0(0#0#55"/Users/egepi/Documents/Paint/Classes/PaintAppDelegate.m2456072848#1796"    cd /Users/egepi/Documents/Paint    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/Paint-generated-files.hmap -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/Paint-own-target-headers.hmap -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/Paint-all-target-headers.hmap -iquote /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/Paint-project-headers.hmap -F/Users/egepi/Documents/Paint/build/Debug-iphonesimulator -I/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/include -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/DerivedSources/i386 -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/DerivedSources -include /var/folders/g7/g7tN9i5sHJSBAgVINaVOrU+++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Paint_Prefix-avjrnksjewmylceovsurvszcyitn/Paint_Prefix.pch -c /Users/egepi/Documents/Paint/Classes/PaintAppDelegate.m -o /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/i386/PaintAppDelegate.o0#
+
+CCompileC build/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/i386/PaintViewController.o /Users/egepi/Documents/Paint/Classes/../PaintViewController.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s332778276.303616
+e332778276.669563
+r1
+xCompileC
+xbuild/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/i386/PaintViewController.o
+x/Users/egepi/Documents/Paint/Classes/../PaintViewController.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController sendData]':
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:181: warning: 'return' with a value, in function returning void
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController makeColorUserWell1]':
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:554: warning: assignment discards qualifiers from pointer target type
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController makeColorUserWell2]':
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:570: warning: assignment discards qualifiers from pointer target type
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController makeColorUserWell3]':
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:586: warning: assignment discards qualifiers from pointer target type
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController createUserWell1]':
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:607: warning: assignment discards qualifiers from pointer target type
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController createUserWell2]':
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:630: warning: assignment discards qualifiers from pointer target type
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController createUserWell3]':
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:651: warning: assignment discards qualifiers from pointer target type
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController Brush:]':
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:693: warning: assignment discards qualifiers from pointer target type
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController newMix]':
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:711: warning: assignment discards qualifiers from pointer target type
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:795: warning: assignment discards qualifiers from pointer target type
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController newClear]':
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:806: warning: assignment discards qualifiers from pointer target type
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: At top level:
+o/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:866: warning: property 'highlighted' requires the method 'setHighlighted:' to be defined - use @synthesize, @dynamic or provide a method implementation
+lSLF07#2@69"Compile /Users/egepi/Documents/Paint/Classes/../PaintViewController.m332778276#332778276#0(2884"/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController sendData]':/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:181: warning: 'return' with a value, in function returning void/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController makeColorUserWell1]':/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:554: warning: assignment discards qualifiers from pointer target type/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController makeColorUserWell2]':/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:570: warning: assignment discards qualifiers from pointer target type/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController makeColorUserWell3]':/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:586: warning: assignment discards qualifiers from pointer target type/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController createUserWell1]':/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:607: warning: assignment discards qualifiers from pointer target type/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController createUserWell2]':/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:630: warning: assignment discards qualifiers from pointer target type/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController createUserWell3]':/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:651: warning: assignment discards qualifiers from pointer target type/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController Brush:]':/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:693: warning: assignment discards qualifiers from pointer target type/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController newMix]':/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:711: warning: assignment discards qualifiers from pointer target type/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:795: warning: assignment discards qualifiers from pointer target type/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: In function '-[PaintViewController newClear]':/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:806: warning: assignment discards qualifiers from pointer target type/Users/egepi/Documents/Paint/Classes/../PaintViewController.m: At top level:/Users/egepi/Documents/Paint/Classes/../PaintViewController.m:866: warning: property 'highlighted' requires the method 'setHighlighted:' to be defined - use @synthesize, @dynamic or provide a method implementation13(22@49"'return' with a value, in function returning void332778276#110#126#0(6@61"/Users/egepi/Documents/Paint/Classes/../PaintViewController.m331149117#181#0#181#0#0"0(22@55"Assignment discards qualifiers from pointer target type332778276#356#132#0(6@61"/Users/egepi/Documents/Paint/Classes/../PaintViewController.m331149117#554#0#554#0#55"assignment discards qualifiers from pointer target type0(22@55"Assignment discards qualifiers from pointer target type332778276#608#132#0(6@61"/Users/egepi/Documents/Paint/Classes/../PaintViewController.m331149117#570#0#570#0#55"assignment discards qualifiers from pointer target type0(22@55"Assignment discards qualifiers from pointer target type332778276#860#132#0(6@61"/Users/egepi/Documents/Paint/Classes/../PaintViewController.m331149117#586#0#586#0#55"assignment discards qualifiers from pointer target type0(22@55"Assignment discards qualifiers from pointer target type332778276#1109#132#0(6@61"/Users/egepi/Documents/Paint/Classes/../PaintViewController.m331149117#607#0#607#0#55"assignment discards qualifiers from pointer target type0(22@55"Assignment discards qualifiers from pointer target type332778276#1358#132#0(6@61"/Users/egepi/Documents/Paint/Classes/../PaintViewController.m331149117#630#0#630#0#55"assignment discards qualifiers from pointer target type0(22@55"Assignment discards qualifiers from pointer target type332778276#1607#132#0(6@61"/Users/egepi/Documents/Paint/Classes/../PaintViewController.m331149117#651#0#651#0#55"assignment discards qualifiers from pointer target type0(22@55"Assignment discards qualifiers from pointer target type332778276#1847#132#0(6@61"/Users/egepi/Documents/Paint/Classes/../PaintViewController.m331149117#693#0#693#0#55"assignment discards qualifiers from pointer target type0(22@55"Assignment discards qualifiers from pointer target type332778276#2087#132#0(6@61"/Users/egepi/Documents/Paint/Classes/../PaintViewController.m331149117#711#0#711#0#55"assignment discards qualifiers from pointer target type0(22@55"Assignment discards qualifiers from pointer target type332778276#2219#132#0(6@61"/Users/egepi/Documents/Paint/Classes/../PaintViewController.m331149117#795#0#795#0#55"assignment discards qualifiers from pointer target type0(22@55"Assignment discards qualifiers from pointer target type332778276#2461#132#0(6@61"/Users/egepi/Documents/Paint/Classes/../PaintViewController.m331149117#806#0#806#0#55"assignment discards qualifiers from pointer target type0(23@13"At top level:332778276#2593#77#0(6@61"/Users/egepi/Documents/Paint/Classes/../PaintViewController.m331149117#0#0#0#0#0"0(22@137"Property 'highlighted' requires the method 'setHighlighted:' to be defined - use @synthesize, @dynamic or provide a method implementation332778276#2670#214#0(6@61"/Users/egepi/Documents/Paint/Classes/../PaintViewController.m331149117#866#0#866#0#0"0(0#0#61"/Users/egepi/Documents/Paint/Classes/../PaintViewController.m2456072848#1805"    cd /Users/egepi/Documents/Paint    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/Paint-generated-files.hmap -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/Paint-own-target-headers.hmap -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/Paint-all-target-headers.hmap -iquote /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/Paint-project-headers.hmap -F/Users/egepi/Documents/Paint/build/Debug-iphonesimulator -I/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/include -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/DerivedSources/i386 -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/DerivedSources -include /var/folders/g7/g7tN9i5sHJSBAgVINaVOrU+++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Paint_Prefix-avjrnksjewmylceovsurvszcyitn/Paint_Prefix.pch -c /Users/egepi/Documents/Paint/Classes/../PaintViewController.m -o /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/i386/PaintViewController.o0#
+
+CCompileC build/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/i386/main.o /Users/egepi/Documents/Paint/main.m normal i386 objective-c com.apple.compilers.gcc.4_2
+s332778276.188940
+e332778276.303464
+r1
+xCompileC
+xbuild/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/i386/main.o
+x/Users/egepi/Documents/Paint/main.m
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@43"Compile /Users/egepi/Documents/Paint/main.m332778276#332778276#0(0"0(0#0#35"/Users/egepi/Documents/Paint/main.m2456072848#1764"    cd /Users/egepi/Documents/Paint    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/Paint-generated-files.hmap -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/Paint-own-target-headers.hmap -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/Paint-all-target-headers.hmap -iquote /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/Paint-project-headers.hmap -F/Users/egepi/Documents/Paint/build/Debug-iphonesimulator -I/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/include -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/DerivedSources/i386 -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/DerivedSources -include /var/folders/g7/g7tN9i5sHJSBAgVINaVOrU+++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Paint_Prefix-avjrnksjewmylceovsurvszcyitn/Paint_Prefix.pch -c /Users/egepi/Documents/Paint/main.m -o /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/i386/main.o0#
+
+CCompileXIB /Users/egepi/Documents/Paint/MainWindow.xib
+s332778270.669340
+e332778272.900207
+r1
+xCompileXIB
+x/Users/egepi/Documents/Paint/MainWindow.xib
+lSLF07#2@25"CompileXIB MainWindow.xib332778270#332778272#0(0"0(0#0#43"/Users/egepi/Documents/Paint/MainWindow.xib2456072848#538"    cd /Users/egepi/Documents/Paint    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/MainWindow.nib /Users/egepi/Documents/Paint/MainWindow.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
+
+CCompileXIB /Users/egepi/Documents/Paint/PaintViewController.xib
+s332778270.670547
+e332778274.868085
+r1
+xCompileXIB
+x/Users/egepi/Documents/Paint/PaintViewController.xib
+oCouldn't open shared capabilities memory GSCapabilities (No such file or directory)
+lSLF07#2@34"CompileXIB PaintViewController.xib332778270#332778274#0(84"Couldn't open shared capabilities memory GSCapabilities (No such file or directory)0(0#0#52"/Users/egepi/Documents/Paint/PaintViewController.xib2456072848#556"    cd /Users/egepi/Documents/Paint    setenv IBC_MINIMUM_COMPATIBILITY_VERSION 4.3    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/ibtool --errors --warnings --notices --output-format human-readable-text --compile /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/PaintViewController.nib /Users/egepi/Documents/Paint/PaintViewController.xib --sdk /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk0#
+
+CCpResource "build/Debug-iphonesimulator/Paint.app/Burnt Sienna.png" "paint blobs cropped/Burnt Sienna.png"
+s332778272.905756
+e332778273.098312
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Paint.app/Burnt Sienna.png
+xpaint blobs cropped/Burnt Sienna.png
+lSLF07#2@41"Copy paint blobs cropped/Burnt Sienna.png332778272#332778273#0(0"0(0#0#65"/Users/egepi/Documents/Paint/paint blobs cropped/Burnt Sienna.png2456072848#464"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/egepi/Documents/Paint/paint blobs cropped/Burnt Sienna.png" /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app0#
+
+CCpResource "build/Debug-iphonesimulator/Paint.app/Cadmium Orange.png" "paint blobs cropped/Cadmium Orange.png"
+s332778272.908934
+e332778273.098685
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Paint.app/Cadmium Orange.png
+xpaint blobs cropped/Cadmium Orange.png
+lSLF07#2@43"Copy paint blobs cropped/Cadmium Orange.png332778272#332778273#0(0"0(0#0#67"/Users/egepi/Documents/Paint/paint blobs cropped/Cadmium Orange.png2456072848#466"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/egepi/Documents/Paint/paint blobs cropped/Cadmium Orange.png" /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app0#
+
+CCpResource "build/Debug-iphonesimulator/Paint.app/Cadmium Red Scarlet.png" "paint blobs cropped/Cadmium Red Scarlet.png"
+s332778272.912147
+e332778273.099057
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Paint.app/Cadmium Red Scarlet.png
+xpaint blobs cropped/Cadmium Red Scarlet.png
+lSLF07#2@48"Copy paint blobs cropped/Cadmium Red Scarlet.png332778272#332778273#0(0"0(0#0#72"/Users/egepi/Documents/Paint/paint blobs cropped/Cadmium Red Scarlet.png2456072848#471"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/egepi/Documents/Paint/paint blobs cropped/Cadmium Red Scarlet.png" /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app0#
+
+CCpResource "build/Debug-iphonesimulator/Paint.app/Cobalt Green.png" "paint blobs cropped/Cobalt Green.png"
+s332778273.099182
+e332778273.148837
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Paint.app/Cobalt Green.png
+xpaint blobs cropped/Cobalt Green.png
+lSLF07#2@41"Copy paint blobs cropped/Cobalt Green.png332778273#332778273#0(0"0(0#0#65"/Users/egepi/Documents/Paint/paint blobs cropped/Cobalt Green.png2456072848#464"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/egepi/Documents/Paint/paint blobs cropped/Cobalt Green.png" /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app0#
+
+CCpResource "build/Debug-iphonesimulator/Paint.app/Old Holland Cold Gray.png" "paint blobs cropped/Old Holland Cold Gray.png"
+s332778273.105749
+e332778273.138824
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Paint.app/Old Holland Cold Gray.png
+xpaint blobs cropped/Old Holland Cold Gray.png
+lSLF07#2@50"Copy paint blobs cropped/Old Holland Cold Gray.png332778273#332778273#0(0"0(0#0#74"/Users/egepi/Documents/Paint/paint blobs cropped/Old Holland Cold Gray.png2456072848#473"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/egepi/Documents/Paint/paint blobs cropped/Old Holland Cold Gray.png" /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app0#
+
+CCpResource "build/Debug-iphonesimulator/Paint.app/Viridian Green Deep.png" "paint blobs cropped/Viridian Green Deep.png"
+s332778273.137067
+e332778273.165338
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Paint.app/Viridian Green Deep.png
+xpaint blobs cropped/Viridian Green Deep.png
+lSLF07#2@48"Copy paint blobs cropped/Viridian Green Deep.png332778273#332778273#0(0"0(0#0#72"/Users/egepi/Documents/Paint/paint blobs cropped/Viridian Green Deep.png2456072848#471"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/egepi/Documents/Paint/paint blobs cropped/Viridian Green Deep.png" /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app0#
+
+CCpResource "build/Debug-iphonesimulator/Paint.app/Yellow Ochre.png" "paint blobs cropped/Yellow Ochre.png"
+s332778273.138957
+e332778273.346825
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Paint.app/Yellow Ochre.png
+xpaint blobs cropped/Yellow Ochre.png
+lSLF07#2@41"Copy paint blobs cropped/Yellow Ochre.png332778273#332778273#0(0"0(0#0#65"/Users/egepi/Documents/Paint/paint blobs cropped/Yellow Ochre.png2456072848#464"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/egepi/Documents/Paint/paint blobs cropped/Yellow Ochre.png" /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app0#
+
+CCpResource "build/Debug-iphonesimulator/Paint.app/alizarin crimson.png" "paint blobs cropped/alizarin crimson.png"
+s332778272.904190
+e332778273.091429
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Paint.app/alizarin crimson.png
+xpaint blobs cropped/alizarin crimson.png
+lSLF07#2@45"Copy paint blobs cropped/alizarin crimson.png332778272#332778273#0(0"0(0#0#69"/Users/egepi/Documents/Paint/paint blobs cropped/alizarin crimson.png2456072848#468"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/egepi/Documents/Paint/paint blobs cropped/alizarin crimson.png" /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app0#
+
+CCpResource "build/Debug-iphonesimulator/Paint.app/burnt umber.png" "paint blobs cropped/burnt umber.png"
+s332778272.907482
+e332778273.098497
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Paint.app/burnt umber.png
+xpaint blobs cropped/burnt umber.png
+lSLF07#2@40"Copy paint blobs cropped/burnt umber.png332778272#332778273#0(0"0(0#0#64"/Users/egepi/Documents/Paint/paint blobs cropped/burnt umber.png2456072848#463"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/egepi/Documents/Paint/paint blobs cropped/burnt umber.png" /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app0#
+
+CCpResource "build/Debug-iphonesimulator/Paint.app/cadmium red deep.png" "paint blobs cropped/cadmium red deep.png"
+s332778272.910705
+e332778273.098873
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Paint.app/cadmium red deep.png
+xpaint blobs cropped/cadmium red deep.png
+lSLF07#2@45"Copy paint blobs cropped/cadmium red deep.png332778272#332778273#0(0"0(0#0#69"/Users/egepi/Documents/Paint/paint blobs cropped/cadmium red deep.png2456072848#468"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/egepi/Documents/Paint/paint blobs cropped/cadmium red deep.png" /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app0#
+
+CCpResource "build/Debug-iphonesimulator/Paint.app/cadmium yellow pale.png" "paint blobs cropped/cadmium yellow pale.png"
+s332778273.087812
+e332778273.148576
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Paint.app/cadmium yellow pale.png
+xpaint blobs cropped/cadmium yellow pale.png
+lSLF07#2@48"Copy paint blobs cropped/cadmium yellow pale.png332778273#332778273#0(0"0(0#0#72"/Users/egepi/Documents/Paint/paint blobs cropped/cadmium yellow pale.png2456072848#471"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/egepi/Documents/Paint/paint blobs cropped/cadmium yellow pale.png" /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app0#
+
+CCpResource "build/Debug-iphonesimulator/Paint.app/cerulean blue.png" "paint blobs cropped/cerulean blue.png"
+s332778273.091766
+e332778273.136895
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Paint.app/cerulean blue.png
+xpaint blobs cropped/cerulean blue.png
+lSLF07#2@42"Copy paint blobs cropped/cerulean blue.png332778273#332778273#0(0"0(0#0#66"/Users/egepi/Documents/Paint/paint blobs cropped/cerulean blue.png2456072848#465"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/egepi/Documents/Paint/paint blobs cropped/cerulean blue.png" /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app0#
+
+CCpResource "build/Debug-iphonesimulator/Paint.app/lamp black.png" "paint blobs cropped/lamp black.png"
+s332778273.102324
+e332778273.149042
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Paint.app/lamp black.png
+xpaint blobs cropped/lamp black.png
+lSLF07#2@39"Copy paint blobs cropped/lamp black.png332778273#332778273#0(0"0(0#0#63"/Users/egepi/Documents/Paint/paint blobs cropped/lamp black.png2456072848#462"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/egepi/Documents/Paint/paint blobs cropped/lamp black.png" /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app0#
+
+CCpResource "build/Debug-iphonesimulator/Paint.app/red ochre.png" "paint blobs cropped/red ochre.png"
+s332778273.107981
+e332778273.149224
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Paint.app/red ochre.png
+xpaint blobs cropped/red ochre.png
+lSLF07#2@38"Copy paint blobs cropped/red ochre.png332778273#332778273#0(0"0(0#0#62"/Users/egepi/Documents/Paint/paint blobs cropped/red ochre.png2456072848#461"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/egepi/Documents/Paint/paint blobs cropped/red ochre.png" /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app0#
+
+CCpResource "build/Debug-iphonesimulator/Paint.app/titanium white.png" "paint blobs cropped/titanium white.png"
+s332778273.116418
+e332778273.149414
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Paint.app/titanium white.png
+xpaint blobs cropped/titanium white.png
+lSLF07#2@43"Copy paint blobs cropped/titanium white.png332778273#332778273#0(0"0(0#0#67"/Users/egepi/Documents/Paint/paint blobs cropped/titanium white.png2456072848#466"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/egepi/Documents/Paint/paint blobs cropped/titanium white.png" /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app0#
+
+CCpResource "build/Debug-iphonesimulator/Paint.app/ultramarine blue.png" "paint blobs cropped/ultramarine blue.png"
+s332778273.119927
+e332778273.149631
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Paint.app/ultramarine blue.png
+xpaint blobs cropped/ultramarine blue.png
+lSLF07#2@45"Copy paint blobs cropped/ultramarine blue.png332778273#332778273#0(0"0(0#0#69"/Users/egepi/Documents/Paint/paint blobs cropped/ultramarine blue.png2456072848#468"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/egepi/Documents/Paint/paint blobs cropped/ultramarine blue.png" /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app0#
+
+CCpResource build/Debug-iphonesimulator/Paint.app/GoodColor.png "Old images/GoodColor.png"
+s332778273.156700
+e332778273.307288
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Paint.app/GoodColor.png
+xOld images/GoodColor.png
+lSLF07#2@29"Copy Old images/GoodColor.png332778273#332778273#0(0"0(0#0#53"/Users/egepi/Documents/Paint/Old images/GoodColor.png2456072848#452"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks "/Users/egepi/Documents/Paint/Old images/GoodColor.png" /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app0#
+
+CCpResource build/Debug-iphonesimulator/Paint.app/Settings.bundle Settings.bundle
+s332778273.163460
+e332778273.344488
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Paint.app/Settings.bundle
+xSettings.bundle
+lSLF07#2@20"Copy Settings.bundle332778273#332778273#0(0"0(0#0#44"/Users/egepi/Documents/Paint/Settings.bundle2456072848#441"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/egepi/Documents/Paint/Settings.bundle /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app0#
+
+CCpResource build/Debug-iphonesimulator/Paint.app/flatbrush2_wshad.png flatbrush2_wshad.png
+s332778273.149746
+e332778273.327144
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Paint.app/flatbrush2_wshad.png
+xflatbrush2_wshad.png
+lSLF07#2@25"Copy flatbrush2_wshad.png332778273#332778273#0(0"0(0#0#49"/Users/egepi/Documents/Paint/flatbrush2_wshad.png2456072848#446"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/egepi/Documents/Paint/flatbrush2_wshad.png /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app0#
+
+CCpResource build/Debug-iphonesimulator/Paint.app/flatbrush_wshad.png flatbrush_wshad.png
+s301611539.938794
+e301611540.076092
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Paint.app/flatbrush_wshad.png
+xflatbrush_wshad.png
+lSLF07#2@24"Copy flatbrush_wshad.png301611539#301611540#0(0"0(0#0#48"/Users/egepi/Documents/Paint/flatbrush_wshad.png2504835008#431"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/egepi/Documents/Paint/flatbrush_wshad.png /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app0#
+
+CCpResource build/Debug-iphonesimulator/Paint.app/icon.png icon.png
+s332778272.901727
+e332778273.087652
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Paint.app/icon.png
+xicon.png
+lSLF07#2@13"Copy icon.png332778272#332778273#0(0"0(0#0#37"/Users/egepi/Documents/Paint/icon.png2456072848#434"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/egepi/Documents/Paint/icon.png /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app0#
+
+CCpResource build/Debug-iphonesimulator/Paint.app/pallete.png pallete.png
+s332778272.900465
+e332778273.358487
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Paint.app/pallete.png
+xpallete.png
+lSLF07#2@16"Copy pallete.png332778272#332778273#0(0"0(0#0#40"/Users/egepi/Documents/Paint/pallete.png2456072848#437"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/egepi/Documents/Paint/pallete.png /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app0#
+
+CCpResource build/Debug-iphonesimulator/Paint.app/pallete_mix.png pallete_mix.png
+s332778272.902905
+e332778273.098092
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Paint.app/pallete_mix.png
+xpallete_mix.png
+lSLF07#2@20"Copy pallete_mix.png332778272#332778273#0(0"0(0#0#44"/Users/egepi/Documents/Paint/pallete_mix.png2456072848#441"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/egepi/Documents/Paint/pallete_mix.png /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app0#
+
+CCpResource build/Debug-iphonesimulator/Paint.app/pencil2_wshad.png pencil2_wshad.png
+s332778273.152294
+e332778273.327502
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Paint.app/pencil2_wshad.png
+xpencil2_wshad.png
+lSLF07#2@22"Copy pencil2_wshad.png332778273#332778273#0(0"0(0#0#46"/Users/egepi/Documents/Paint/pencil2_wshad.png2456072848#443"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -resolve-src-symlinks /Users/egepi/Documents/Paint/pencil2_wshad.png /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app0#
+
+CCpResource build/Debug-iphonesimulator/Paint.app/pencil_wshad.png pencil_wshad.png
+s301611539.939977
+e301611539.982440
+r1
+xCpResource
+xbuild/Debug-iphonesimulator/Paint.app/pencil_wshad.png
+xpencil_wshad.png
+lSLF07#2@21"Copy pencil_wshad.png301611539#301611539#0(0"0(0#0#45"/Users/egepi/Documents/Paint/pencil_wshad.png2504835008#428"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Library/PrivateFrameworks/DevToolsCore.framework/Resources/pbxcp -exclude .DS_Store -exclude CVS -exclude .svn -resolve-src-symlinks /Users/egepi/Documents/Paint/pencil_wshad.png /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app0#
+
+CGenerateDSYMFile /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app.dSYM /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/Paint
+s332778277.626148
+e332778277.789222
+r1
+xGenerateDSYMFile
+x/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app.dSYM
+x/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/Paint
+lSLF07#2@103"GenerateDSYMFile build/Debug-iphonesimulator/Paint.app.dSYM build/Debug-iphonesimulator/Paint.app/Paint332778277#332778277#0(0"0(0#0#72"/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/Paint2456072848#347"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/usr/bin/dsymutil /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/Paint -o /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app.dSYM0#
+
+CLd /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/Paint normal i386
+s332778276.669704
+e332778277.625974
+r1
+xLd
+x/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/Paint
+xnormal
+xi386
+lSLF07#2@77"Link /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/Paint332778276#332778277#0(0"0(0#0#0"4750400#861"    cd /Users/egepi/Documents/Paint    setenv MACOSX_DEPLOYMENT_TARGET 10.6    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -arch i386 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -L/Users/egepi/Documents/Paint/build/Debug-iphonesimulator -F/Users/egepi/Documents/Paint/build/Debug-iphonesimulator -filelist /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/Objects-normal/i386/Paint.LinkFileList -mmacosx-version-min=10.6 -Xlinker -objc_abi_version -Xlinker 2 -framework Foundation -framework UIKit -framework CoreGraphics -framework CFNetwork -o /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/Paint0#
+
+CProcessInfoPlistFile /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/Info.plist Paint-Info.plist
+s340669840.527370
+e340669840.658121
+r1
+xProcessInfoPlistFile
+x/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/Info.plist
+xPaint-Info.plist
+lSLF07#2@24"Process Paint-Info.plist340669840#340669840#0(0"0(0#0#45"/Users/egepi/Documents/Paint/Paint-Info.plist4261848#443"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    builtin-infoPlistUtility Paint-Info.plist -genpkginfo /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/PkgInfo -expandbuildsettings -format binary -platform iphonesimulator -o /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app/Info.plist0#
+
+CProcessPCH /var/folders/g7/g7tN9i5sHJSBAgVINaVOrU+++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Paint_Prefix-aidwjvusnvqlffenwwclqtgzztrt/Paint_Prefix.pch.gch Paint_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s301611541.092657
+e301611542.062547
+r1
+xProcessPCH
+x/var/folders/g7/g7tN9i5sHJSBAgVINaVOrU+++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Paint_Prefix-aidwjvusnvqlffenwwclqtgzztrt/Paint_Prefix.pch.gch
+xPaint_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@27"Precompile Paint_Prefix.pch301611541#301611542#0(0"0(0#0#45"/Users/egepi/Documents/Paint/Paint_Prefix.pch2504835008#1655"    cd /Users/egepi/Documents/Paint    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -iquote /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/Paint-generated-files.hmap -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/Paint-own-target-headers.hmap -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/Paint-all-target-headers.hmap -iquote /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/Paint-project-headers.hmap -F/Users/egepi/Documents/Paint/build/Debug-iphonesimulator -I/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/include -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/DerivedSources/i386 -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/DerivedSources -c /Users/egepi/Documents/Paint/Paint_Prefix.pch -o /var/folders/g7/g7tN9i5sHJSBAgVINaVOrU+++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Paint_Prefix-aidwjvusnvqlffenwwclqtgzztrt/Paint_Prefix.pch.gch0#
+
+CProcessPCH /var/folders/g7/g7tN9i5sHJSBAgVINaVOrU+++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Paint_Prefix-avjrnksjewmylceovsurvszcyitn/Paint_Prefix.pch.gch Paint_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s332778274.868356
+e332778276.188788
+r1
+xProcessPCH
+x/var/folders/g7/g7tN9i5sHJSBAgVINaVOrU+++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Paint_Prefix-avjrnksjewmylceovsurvszcyitn/Paint_Prefix.pch.gch
+xPaint_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@27"Precompile Paint_Prefix.pch332778274#332778276#0(0"0(0#0#45"/Users/egepi/Documents/Paint/Paint_Prefix.pch2456072848#1668"    cd /Users/egepi/Documents/Paint    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator4.3.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.6 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=40300 -iquote /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/Paint-generated-files.hmap -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/Paint-own-target-headers.hmap -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/Paint-all-target-headers.hmap -iquote /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/Paint-project-headers.hmap -F/Users/egepi/Documents/Paint/build/Debug-iphonesimulator -I/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/include -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/DerivedSources/i386 -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/DerivedSources -c /Users/egepi/Documents/Paint/Paint_Prefix.pch -o /var/folders/g7/g7tN9i5sHJSBAgVINaVOrU+++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Paint_Prefix-avjrnksjewmylceovsurvszcyitn/Paint_Prefix.pch.gch0#
+
+CProcessPCH /var/folders/g7/g7tN9i5sHJSBAgVINaVOrU+++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Paint_Prefix-cmxzrsmwazqwgpfrefsxabvdglhy/Paint_Prefix.pch.gch Paint_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s309220741.645484
+e309220744.215006
+r1
+xProcessPCH
+x/var/folders/g7/g7tN9i5sHJSBAgVINaVOrU+++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Paint_Prefix-cmxzrsmwazqwgpfrefsxabvdglhy/Paint_Prefix.pch.gch
+xPaint_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@27"Precompile Paint_Prefix.pch309220741#309220744#0(0"0(0#0#45"/Users/egepi/Documents/Paint/Paint_Prefix.pch2439987136#1709"    cd /Users/egepi/Documents/Paint    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -iquote /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/Paint-generated-files.hmap -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/Paint-own-target-headers.hmap -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/Paint-all-target-headers.hmap -iquote /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/Paint-project-headers.hmap -F/Users/egepi/Documents/Paint/build/Debug-iphonesimulator -I/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/include -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/DerivedSources/i386 -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/DerivedSources -c /Users/egepi/Documents/Paint/Paint_Prefix.pch -o /var/folders/g7/g7tN9i5sHJSBAgVINaVOrU+++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Paint_Prefix-cmxzrsmwazqwgpfrefsxabvdglhy/Paint_Prefix.pch.gch0#
+
+CProcessPCH /var/folders/g7/g7tN9i5sHJSBAgVINaVOrU+++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Paint_Prefix-dlsxmspsaxophpbpqgqltktzctxi/Paint_Prefix.pch.gch Paint_Prefix.pch normal i386 objective-c com.apple.compilers.gcc.4_2
+s322154450.275600
+e322154451.721725
+r1
+xProcessPCH
+x/var/folders/g7/g7tN9i5sHJSBAgVINaVOrU+++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Paint_Prefix-dlsxmspsaxophpbpqgqltktzctxi/Paint_Prefix.pch.gch
+xPaint_Prefix.pch
+xnormal
+xi386
+xobjective-c
+xcom.apple.compilers.gcc.4_2
+lSLF07#2@27"Precompile Paint_Prefix.pch322154450#322154451#0(0"0(0#0#45"/Users/egepi/Documents/Paint/Paint_Prefix.pch2420662928#1709"    cd /Users/egepi/Documents/Paint    setenv LANG en_US.US-ASCII    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin/gcc-4.2 -x objective-c-header -arch i386 -fmessage-length=0 -pipe -std=c99 -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -isysroot /Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator3.2.sdk -fexceptions -fvisibility=hidden -mmacosx-version-min=10.5 -gdwarf-2 -fobjc-abi-version=2 -fobjc-legacy-dispatch -D__IPHONE_OS_VERSION_MIN_REQUIRED=30200 -iquote /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/Paint-generated-files.hmap -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/Paint-own-target-headers.hmap -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/Paint-all-target-headers.hmap -iquote /Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/Paint-project-headers.hmap -F/Users/egepi/Documents/Paint/build/Debug-iphonesimulator -I/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/include -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/DerivedSources/i386 -I/Users/egepi/Documents/Paint/build/Paint.build/Debug-iphonesimulator/Paint.build/DerivedSources -c /Users/egepi/Documents/Paint/Paint_Prefix.pch -o /var/folders/g7/g7tN9i5sHJSBAgVINaVOrU+++TU/-Caches-/com.apple.Xcode.504/SharedPrecompiledHeaders/Paint_Prefix-dlsxmspsaxophpbpqgqltktzctxi/Paint_Prefix.pch.gch0#
+
+CTouch /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app
+s340669840.662991
+e340669840.863779
+r1
+xTouch
+x/Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app
+lSLF07#2@72"Touch /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app340669840#340669840#0(0"0(0#0#0"4261848#256"    cd /Users/egepi/Documents/Paint    setenv PATH "/Developer/Platforms/iPhoneSimulator.platform/Developer/usr/bin:/Developer/usr/bin:/usr/bin:/bin:/usr/sbin:/sbin"    /usr/bin/touch -c /Users/egepi/Documents/Paint/build/Debug-iphonesimulator/Paint.app0#
+

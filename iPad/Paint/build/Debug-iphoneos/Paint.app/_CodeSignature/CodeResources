@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>files</key>
+	<dict>
+		<key>Burnt Sienna.png</key>
+		<data>
+		EMsQ9MX5rPgkWl9upkyTSultZGM=
+		</data>
+		<key>Cadmium Orange.png</key>
+		<data>
+		nLU4nKFI1BR3fG18niFIh6+zv0Y=
+		</data>
+		<key>Cadmium Red Scarlet.png</key>
+		<data>
+		gxznLlwxivzkFpKBiE4B7de1W9c=
+		</data>
+		<key>Cobalt Green.png</key>
+		<data>
+		1uYsD6+HO5/9TUX+4TTDk5+iyhw=
+		</data>
+		<key>GoodColor.png</key>
+		<data>
+		2lGDtzlfRSpAafSavSrVNI15c8M=
+		</data>
+		<key>MainWindow.nib</key>
+		<data>
+		DNjqADIAlnvxkSlqBHl1ZnNIhmU=
+		</data>
+		<key>Old Holland Cold Gray.png</key>
+		<data>
+		LrQgvYGt80VBnXTkJ/fbIG914tM=
+		</data>
+		<key>PaintViewController.nib</key>
+		<data>
+		lJQbBc7+Fc6wkl73TMb2Nya1Kbc=
+		</data>
+		<key>PkgInfo</key>
+		<data>
+		n57qDP4tZfLD1rCS43W0B4LQjzE=
+		</data>
+		<key>Settings.bundle/Root.plist</key>
+		<data>
+		cV+oPuprK/Q1QdiAsLnn264K/XE=
+		</data>
+		<key>Settings.bundle/en.lproj/Root.strings</key>
+		<data>
+		t4KY9Gh4uIiOv7VnHtRrKEuPRY8=
+		</data>
+		<key>Viridian Green Deep.png</key>
+		<data>
+		78bUikLHAMROcBngpoOOAESjkWQ=
+		</data>
+		<key>Yellow Ochre.png</key>
+		<data>
+		DaQ/jgolM2N86ZDU0nQ3UyvPCwg=
+		</data>
+		<key>alizarin crimson.png</key>
+		<data>
+		64lp4SqLSC1rVGQpqeaVpyXEG1k=
+		</data>
+		<key>burnt umber.png</key>
+		<data>
+		lJwHXkC5YslTi6NCD2IH0CA8qZI=
+		</data>
+		<key>cadmium red deep.png</key>
+		<data>
+		MF3talVYJAWzlfrlScM1VdTj3Ag=
+		</data>
+		<key>cadmium yellow pale.png</key>
+		<data>
+		VB5az1/eUjpFkmSz+SJWSVxFh+Y=
+		</data>
+		<key>cerulean blue.png</key>
+		<data>
+		GOBtIJQeMYnP50Ig1d5d6Ecr0m4=
+		</data>
+		<key>embedded.mobileprovision</key>
+		<data>
+		X9auzIbPrAVCus4jHxOcoYWoMWE=
+		</data>
+		<key>flatbrush2_wshad.png</key>
+		<data>
+		sBVOMSurk1OVSSRwUtKvImm2rko=
+		</data>
+		<key>flatbrush_wshad.png</key>
+		<data>
+		VIM4YVcXwlbNR4eHFTIGwcIk40Q=
+		</data>
+		<key>icon.png</key>
+		<data>
+		EdHmUX6nauMCwIwO9ml/qpx0kPU=
+		</data>
+		<key>lamp black.png</key>
+		<data>
+		8mf9jMOIBJopL4mCf8IW4wrCKDY=
+		</data>
+		<key>pallete.png</key>
+		<data>
+		6ROMInN8MAqYT09RtSsLDNBYPt0=
+		</data>
+		<key>pallete_mix.png</key>
+		<data>
+		i0En2b2etNoUpmst+9DK09cUeRg=
+		</data>
+		<key>pencil2_wshad.png</key>
+		<data>
+		NfQ149X7HvhogF+N4YbJapQishw=
+		</data>
+		<key>pencil_wshad.png</key>
+		<data>
+		RXrPkMKAsZB4gUb2JYUe6dSv230=
+		</data>
+		<key>red ochre.png</key>
+		<data>
+		XKzano6VCcDFOrFEwHzMeuZWK/g=
+		</data>
+		<key>titanium white.png</key>
+		<data>
+		g7xDuXMRw5saChGQB7kpB94n87k=
+		</data>
+		<key>ultramarine blue.png</key>
+		<data>
+		DKtI9FsIWryDacfzTpG9RMzLtps=
+		</data>
+	</dict>
+	<key>rules</key>
+	<dict>
+		<key>.*</key>
+		<true/>
+		<key>Info.plist</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>10</real>
+		</dict>
+		<key>ResourceRules.plist</key>
+		<dict>
+			<key>omit</key>
+			<true/>
+			<key>weight</key>
+			<real>100</real>
+		</dict>
+	</dict>
+</dict>
+</plist>
